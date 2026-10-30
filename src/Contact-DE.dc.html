@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Kontakt — Markus Rozkalns</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+/* linked images: the picture zooms in a little inside a fixed frame */
+a[href]:has(>img,>video){clip-path:inset(0 round 12px)}
+a[href]:has(>img,>video)>img,a[href]:has(>img,>video)>video{transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1) !important}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){a[href]:has(>img,>video):hover>img,a[href]:has(>img,>video):hover>video,a[href]:has(>img,>video):focus-visible>img,a[href]:has(>img,>video):focus-visible>video{transform:scale(1.04)}}
+::selection{background:#eeede9;color:#121211}
+body{margin:0;background:#121211}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a{--t:1px;color:#eeede9;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% var(--t);background-position:100% 100%;padding-bottom:0.14em}
+a:hover{color:#eeede9;animation:uline .8s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes uline{0%{background-size:100% var(--t);background-position:100% 100%}45%{background-size:0 var(--t);background-position:100% 100%}46%{background-size:0 2px;background-position:0 100%}100%{background-size:100% 2px;background-position:0 100%}}
+a[aria-current="page"],a[style*="text-decoration-thickness: 2px"]{--t:2px}
+a.ph,a[style*="text-decoration: none"]{background-image:none;padding-bottom:0}
+@media (prefers-reduced-motion:reduce){a:hover{animation:none;background-size:100% 2px}}
+a[aria-current="page"]{background-image:none !important;padding-bottom:0.14em}
+a:focus-visible{outline:2px solid #eeede9;outline-offset:4px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.meta{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;line-height:22px;color:#8c8c89;margin:0}
+.disp{font-weight:500;letter-spacing:-0.045em;margin:0}
+.title{font-size:clamp(56px,9vw,132px);line-height:0.9}
+.lead{font-size:clamp(24px,2.3vw,32px);line-height:1.3;letter-spacing:-0.015em;margin:0}
+.ind{padding-left:calc((100vw - 72px) / 12)}
+.ph{border:1px solid #262626;background:#1c1c1b;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+.ph span{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;padding:16px;text-align:center}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{border-top:1px solid #262626;padding:22px 0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));column-gap:24px;align-items:baseline}
+.rows li:last-child{border-bottom:1px solid #262626}
+.rows .k{grid-column:1 / span 2;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#8c8c89}
+.rows .v{grid-column:3 / span 5;font-size:20px;line-height:1.4;color:#eeede9}
+.rise{animation:rise 1s ease-out both}
+.d1{animation-delay:0.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}}
+.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:768px){
+section[style*="padding: 168px"],section[style*="padding: 200px"],section[style*="padding: 240px"]{padding-top:104px !important}
+section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],section[style*="padding-top: 240px"]{padding-top:104px !important}
+
+.grid>*{grid-column:1 / -1 !important;margin-top:0 !important;padding-top:0 !important}
+.wrap{padding-left:16px !important;padding-right:16px !important}
+.ind{padding-left:0}
+.head{grid-template-columns:1fr auto !important}
+.head nav.main{grid-column:1 / -1 !important;grid-row:2 !important;justify-content:flex-start !important;justify-self:start !important}.head .who{justify-self:end !important}
+.rows li{grid-template-columns:1fr;row-gap:4px}
+.rows .k,.rows .v{grid-column:1 / -1}
+.hidesm{display:none !important}
+}
+.site-foot{position:relative;background:#1c1c1b;margin-top:96px;padding:152px 48px 48px}
+.site-foot .foot-tab{position:absolute;left:0;right:calc(48px + (100vw - 72px) / 12);top:0;height:104px;background:#121211}
+.site-foot .foot-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px}
+.site-foot .foot-up{position:absolute;right:48px;top:28px;display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;background-image:none;padding-bottom:0}
+@media (max-width:768px){.site-foot{padding:40px 16px}.site-foot .foot-tab,.site-foot .foot-up{display:none}}
+/* rounded corners: images, videos, placeholders, footer tab */
+#page img,#page video,#page .ph{border-radius:12px}
+#services>.ph{border-radius:0}
+.site-foot .foot-tab{border-radius:0 0 16px 0}
+/* arrow gap: rounded where it meets the ground colour */
+.site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
+
+</style>
+</helmet>
+<div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
+
+<header class="wrap head" style="padding: 28px 48px; display: grid; grid-template-columns: calc((100vw - 72px) / 12) 1fr auto; align-items: center; gap: 16px 0;">
+  <div style="justify-self: start; font-size: 16px;"><a href="Contact.dc.html" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></div>
+  <p class="who" style="justify-self: start; margin: 0;"><a href="V4-DE.dc.html" style="text-decoration: none; font-weight: 500; font-size: 19px; letter-spacing: -0.015em;">Markus Rozkalns</a></p>
+  <nav aria-label="Hauptnavigation" class="main" style="justify-self: end; display: flex; flex-wrap: wrap; gap: 12px 36px; font-size: 16px;">
+    <a href="Work-DE.dc.html">Projekte</a>
+    <a href="Approach-DE.dc.html">Vorgehen</a>
+    <a href="About-DE.dc.html">Profil</a>
+    <a href="#top" aria-current="page" style="text-decoration-thickness: 2px;">Kontakt</a>
+  </nav>
+</header>
+
+<section id="top" class="wrap grid" style="padding: 120px 48px 0; row-gap: 48px;">
+  <h1 class="disp title rise" style="grid-column: 2 / span 9;">Kontakt aufnehmen</h1>
+  <p class="lead rise d1" style="grid-column: 5 / span 7;">Ich suche eine Senior-Rolle im UX/UI Design in der Aviatik, Simulation oder Robotik, idealerweise im deutschsprachigen Raum. Freelance-Projekte sind ebenfalls willkommen.</p>
+</section>
+
+<section class="wrap grid" style="padding: 104px 48px 0; align-items: start;">
+  <div style="grid-column: 5 / span 7;">
+    <a href="mailto:markus@rozkalns.design" class="disp" style="display: inline-block; font-size: clamp(32px, 4vw, 56px); line-height: 1; letter-spacing: -0.035em; text-decoration-thickness: 2px;">markus@rozkalns.design</a>
+    <ul class="rows ind" style="margin-top: 72px;">
+      <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/markusrozkalns/">linkedin.com/in/markusrozkalns</a></span></li>
+      <li><span class="k">CV</span><span class="v"><a href="files/Markus-Rozkalns-CV.pdf">CV herunterladen (PDF)</a></span></li>
+      <li><span class="k">Referenz</span><span class="v"><a href="#recommendation">Referenzschreiben Loft Dynamics (PDF, Deutsch)</a></span></li>
+      <li><span class="k">Standort</span><span class="v">Riga, Lettland · regelmässig in Zürich, Schweiz</span></li>
+      <li><span class="k">Sprachen</span><span class="v">Englisch, Deutsch, Lettisch</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-foot" style="margin-top: 200px;">
+  <div class="foot-tab" aria-hidden="true"></div>
+  <a href="#page" class="foot-up" aria-label="Nach oben"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
+  <div class="foot-row">
+    <p class="meta">© 2026 Markus Rozkalns · Riga · Zürich</p>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="Imprint-DE.dc.html" style="color: #a3a3a3;">Impressum</a><a href="Privacy-DE.dc.html" style="color: #a3a3a3;">Datenschutz</a><a href="Contact.dc.html" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1980}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

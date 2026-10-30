@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>About — Markus Rozkalns</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+/* linked images: the picture zooms in a little inside a fixed frame */
+a[href]:has(>img,>video){clip-path:inset(0 round 12px)}
+a[href]:has(>img,>video)>img,a[href]:has(>img,>video)>video{transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1) !important}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){a[href]:has(>img,>video):hover>img,a[href]:has(>img,>video):hover>video,a[href]:has(>img,>video):focus-visible>img,a[href]:has(>img,>video):focus-visible>video{transform:scale(1.04)}}
+@media (max-width:768px){.contact-rule{margin-bottom:72px !important}#contact{padding-top:88px !important}}
+::selection{background:#eeede9;color:#121211}
+body{margin:0;background:#121211}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a{--t:1px;color:#eeede9;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% var(--t);background-position:100% 100%;padding-bottom:0.14em}
+a:hover{color:#eeede9;animation:uline .8s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes uline{0%{background-size:100% var(--t);background-position:100% 100%}45%{background-size:0 var(--t);background-position:100% 100%}46%{background-size:0 2px;background-position:0 100%}100%{background-size:100% 2px;background-position:0 100%}}
+a[aria-current="page"],a[style*="text-decoration-thickness: 2px"]{--t:2px}
+a.ph,a[style*="text-decoration: none"]{background-image:none;padding-bottom:0}
+@media (prefers-reduced-motion:reduce){a:hover{animation:none;background-size:100% 2px}}
+a[aria-current="page"]{background-image:none !important;padding-bottom:0.14em}
+a:focus-visible{outline:2px solid #eeede9;outline-offset:4px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.meta{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;line-height:22px;color:#8c8c89;margin:0}
+.copy{font-size:18px;line-height:1.55;color:#a3a3a3;margin:0}
+.body{font-size:20px;line-height:1.5;color:#eeede9;margin:0}
+.disp{font-weight:500;letter-spacing:-0.045em;margin:0}
+.title{font-size:clamp(48px,7vw,104px);line-height:0.92}
+.sec{font-size:clamp(36px,4vw,56px);line-height:0.95;letter-spacing:-0.04em}
+.lead{font-size:clamp(24px,2.3vw,32px);line-height:1.3;letter-spacing:-0.015em;margin:0}
+.ind{padding-left:calc((100vw - 72px) / 12)}
+.ph{border:1px solid #262626;background:#1c1c1b;display:flex;align-items:center;justify-content:center;box-sizing:border-box;text-decoration:none}
+.ph span{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;padding:16px;text-align:center}
+.sticky{position:-webkit-sticky;position:sticky;top:48px;align-self:start;z-index:1}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0}
+.facts div{border-top:1px solid #262626;padding-top:14px}
+.facts dt{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89}
+.facts dd{margin:6px 0 0;font-size:16px;line-height:1.4;color:#eeede9}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{border-top:1px solid #262626;padding:22px 0;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:24px;align-items:baseline}
+.rows li:last-child{border-bottom:1px solid #262626}
+.rows .k{grid-column:1 / span 2;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#8c8c89}
+.rows .t{grid-column:3 / span 4}
+.rows .t b{display:block;font-weight:500;font-size:20px;line-height:1.3;color:#eeede9}
+.rows .t span{display:block;font-size:16px;line-height:1.5;color:#a3a3a3;margin-top:4px}
+.rows .r{grid-column:7 / span 2;text-align:right;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#8c8c89}
+.rise{animation:rise 1s ease-out both}
+.d1{animation-delay:0.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}}
+@media (prefers-reduced-motion:reduce){video.drone{display:none}}
+.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:768px){
+section[style*="padding: 168px"],section[style*="padding: 200px"],section[style*="padding: 240px"]{padding-top:104px !important}
+section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],section[style*="padding-top: 240px"]{padding-top:104px !important}
+
+.grid>*{grid-column:1 / -1 !important;margin-top:0 !important;padding-top:0 !important}
+.wrap{padding-left:16px !important;padding-right:16px !important}
+.sticky{position:static;margin-bottom:32px}
+.ind{padding-left:0}
+.head{grid-template-columns:1fr auto !important}
+.head nav.main{grid-column:1 / -1 !important;grid-row:2 !important;justify-content:flex-start !important;justify-self:start !important}.head .who{justify-self:end !important}
+.rows li{grid-template-columns:1fr;row-gap:6px}
+.rows .k,.rows .t,.rows .r{grid-column:1 / -1;text-align:left}
+.photo{margin-bottom:40px}
+}
+.site-foot{position:relative;background:#1c1c1b;margin-top:96px;padding:152px 48px 48px}
+.site-foot .foot-tab{position:absolute;left:0;right:calc(48px + (100vw - 72px) / 12);top:0;height:104px;background:#121211}
+.site-foot .foot-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px}
+.site-foot .foot-up{position:absolute;right:48px;top:28px;display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;background-image:none;padding-bottom:0}
+@media (max-width:768px){.site-foot{padding:40px 16px}.site-foot .foot-tab,.site-foot .foot-up{display:none}}
+/* rounded corners: images, videos, placeholders, footer tab */
+#page img,#page video,#page .ph{border-radius:12px}
+#services>.ph{border-radius:0}
+.site-foot .foot-tab{border-radius:0 0 16px 0}
+/* arrow gap: rounded where it meets the ground colour */
+.site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
+
+</style>
+</helmet>
+<div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
+
+<header class="wrap head" style="padding: 28px 48px; display: grid; grid-template-columns: calc((100vw - 72px) / 12) 1fr auto; align-items: center; gap: 16px 0;">
+  <div style="justify-self: start; font-size: 16px;"><a href="About-DE.dc.html" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></div>
+  <p class="who" style="justify-self: start; margin: 0;"><a href="V4.dc.html" style="text-decoration: none; font-weight: 500; font-size: 19px; letter-spacing: -0.015em;">Markus Rozkalns</a></p>
+  <nav aria-label="Main" class="main" style="justify-self: end; display: flex; flex-wrap: wrap; gap: 12px 36px; font-size: 16px;">
+    <a href="Work.dc.html">Work</a>
+    <a href="Approach.dc.html">Approach</a>
+    <a href="About.dc.html" aria-current="page" style="text-decoration-thickness: 2px;">About</a>
+    <a href="Contact.dc.html">Contact</a>
+  </nav>
+</header>
+
+<section class="wrap grid" style="padding: 120px 48px 0;">
+  <h1 class="disp title rise" style="grid-column: 2 / span 10;">Markus Rozkalns</h1>
+</section>
+
+<section class="wrap grid" style="padding: 72px 48px 0; align-items: start;">
+  <img class="photo" src="img/portrait-wide.jpg" alt="Markus Rozkalns" width="1366" height="912" style="grid-column: 1 / span 4; width: 100%; height: auto; aspect-ratio: 1366 / 912; object-fit: cover; display: block;">
+  <div style="grid-column: 6 / span 7; padding-top: 144px;">
+    <p class="lead rise d1">UX/UI designer based in Riga and working closely with Switzerland. I design interfaces for complex, high-stakes systems, from flight simulators to banks and railways.</p>
+    <div class="ind" style="margin-top: 48px; display: flex; flex-direction: column; gap: 24px;">
+      <p class="body">Most recently I led UX/UI at Loft Dynamics, the Swiss maker of EASA and FAA qualified VR flight simulators: the instructor operating station, the LoftHUB pilot portal, the website and the brand.</p>
+      <p class="copy">Before that I founded the design studio Graftik and ran it until it was sold in 2025. Along the way I’ve designed for Roche, DNB, Apple, IIHF and Metrohm.</p>
+      <p class="copy">I also teach UX/UI and digital design at the Art Academy of Latvia and supervise BA theses. One student project I led, <a href="https://www.lma.lv/en/actual-3/emotion-regulation-app-emori-wins-prestigious-red-dot-design-award">EMORI</a>, won a Red Dot Award.</p>
+      <p class="copy">When I’m not designing, I love to be in the mountains. I film my hikes for my <a href="https://www.youtube.com/@markusrosehill">YouTube channel</a>.</p>
+    </div>
+    <dl class="facts ind" style="margin-top: 56px;">
+      <div><dt>Based in</dt><dd>Riga · Zurich</dd></div>
+      <div><dt>Languages</dt><dd>English, German, Latvian</dd></div>
+      <div><dt>Focus</dt><dd>Aviation, simulation, complex systems</dd></div>
+      <div><dt>AI training</dt><dd>UC Berkeley Haas School of Business, 2025</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="wrap grid" style="padding: 200px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Experience</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <ol class="rows">
+      <li><span class="k">2024–2026</span><span class="t"><b>Loft Dynamics</b><span>UX/UI designer: the website via Graftik from 2024, then freelance from 2025, about one week a month on site: instructor operating station, LoftHUB, website and brand</span></span><span class="r">Switzerland</span></li>
+      <li><span class="k">2016–now</span><span class="t"><b>Art Academy of Latvia</b><span>Docent, UX/UI and digital design; BA thesis supervisor</span></span><span class="r">Latvia</span></li>
+      <li><span class="k">2009–2025</span><span class="t"><b>Graftik</b><span>Founder of a design studio, sold in 2025</span></span><span class="r">Latvia</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Recognition</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <ol class="rows">
+      <li><span class="k">2025</span><span class="t"><b>Executive AI program certificate</b><span>UC Berkeley Haas School of Business · AI for Executives Program</span></span><span class="r">USA</span></li>
+      <li><span class="k">2024</span><span class="t"><b>Erasmus+ Quality Award</b><span>Human Rights Guide</span></span><span class="r">EU</span></li>
+      <li><span class="k">2023</span><span class="t"><b>Red Dot Award</b><span><a href="https://www.lma.lv/en/actual-3/emotion-regulation-app-emori-wins-prestigious-red-dot-design-award">EMORI</a>, a student project I led at the Art Academy of Latvia</span></span><span class="r">Germany</span></li>
+      <li><span class="k">2020</span><span class="t"><b>Latvian National Design Award</b><span>Asya, an AI conversation coach</span></span><span class="r">Latvia</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="approach" class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">How I work</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 720px;">I go to the people who use the product, let them dream the ideal, and design for the need behind it. Every decision traces back to evidence. AI speeds up my delivery, but it never replaces the research.</p>
+    <ol class="rows ind" style="margin-top: 48px;">
+      <li><span class="k">8–10 weeks</span><span class="t"><b>UX audit</b><span>Audit report and Figma file</span></span><span class="r">6 steps</span></li>
+      <li><span class="k">4–6 months</span><span class="t"><b>New product</b><span>Figma, working prototype and design system</span></span><span class="r">7 steps</span></li>
+      <li><span class="k">3–5 months</span><span class="t"><b>Redesign</b><span>Figma, prototype, design system and a before/after report</span></span><span class="r">7 steps</span></li>
+    </ol>
+    <p class="ind" style="margin: 32px 0 0;"><a href="Approach.dc.html">See the full approach</a></p>
+  </div>
+</section>
+
+<section aria-label="Recommendation" class="wrap grid" style="padding: 240px 48px 0;">
+  <figure style="grid-column: 2 / span 10; margin: 0;">
+    <blockquote style="margin: 0;">
+      <p class="disp" style="font-size: clamp(30px, 3.6vw, 52px); line-height: 1.08; letter-spacing: -0.035em;">“He was excellent at turning insights from interviews and workshops into concrete requirements, user journeys, user stories, priorities and, ultimately, compelling UX and UI concepts.”</p>
+    </blockquote>
+    <figcaption class="meta ind" style="margin-top: 36px; color: #a3a3a3; display: flex; align-items: center; gap: 16px;"><img src="img/fabi-riesen.jpg" alt="" width="44" height="44" loading="lazy" style="flex: none; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; display: block;"><span>Fabi Riesen, founder and former CEO &amp; CTO · Loft Dynamics · Switzerland<br>Translated from the German reference letter</span></figcaption>
+    <p class="ind" style="margin: 20px 0 0; font-size: 16px;"><a href="Contact.dc.html">Read the full recommendation</a></p>
+  </figure>
+</section>
+
+<section aria-label="Outside work" style="padding-top: 240px;">
+  <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden;"><img src="img/alps-drone-poster.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><video class="drone" src="img/alps-drone.mp4" poster="img/alps-drone-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></div>
+  <div class="wrap grid" style="padding: 48px 48px 0;">
+    <p class="copy" style="grid-column: 6 / span 6;">The aerial footage on this site comes from my own hikes in the Swiss Alps. More on my <a href="https://www.youtube.com/@markusrosehill">YouTube channel</a>.</p>
+  </div>
+</section>
+
+<section id="contact" class="wrap" style="padding: 120px 48px 0;">
+  <div class="contact-rule" style="border-top: 1px solid #555553; margin-bottom: 96px;"></div>
+  <div class="grid" style="align-items: end; row-gap: 32px;">
+    <h2 class="disp" style="grid-column: 1 / span 7; font-size: clamp(48px, 6.7vw, 96px); line-height: 0.92;">Let’s talk</h2>
+    <div style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 10px; padding-bottom: 8px;">
+      <a href="mailto:markus@rozkalns.design" style="align-self: flex-start; font-size: clamp(24px, 2.3vw, 32px); letter-spacing: -0.015em;">markus@rozkalns.design</a>
+      <p style="margin: 6px 0 0; display: flex; gap: 24px; font-size: 16px;"><a href="https://www.linkedin.com/in/markusrozkalns/">LinkedIn</a><a href="files/Markus-Rozkalns-CV.pdf">Download CV</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot" style="margin-top: 24px;">
+  <div class="foot-tab" aria-hidden="true"></div>
+  <a href="#page" class="foot-up" aria-label="Back to top"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
+  <div class="foot-row">
+    <p class="meta">© 2026 Markus Rozkalns · Riga · Zurich</p>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="Imprint.dc.html" style="color: #a3a3a3;">Imprint</a><a href="Privacy.dc.html" style="color: #a3a3a3;">Privacy</a><a href="About-DE.dc.html" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

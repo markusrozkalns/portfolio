@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Human Rights Guide — case study</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+.aband .node.hollow{background:#1c1c1b}@media (max-width:768px){.aband{margin-top:104px !important;padding-top:72px !important;padding-bottom:88px !important}}
+/* linked images: the picture zooms in a little inside a fixed frame */
+a[href]:has(>img,>video){clip-path:inset(0 round 12px)}
+a[href]:has(>img,>video)>img,a[href]:has(>img,>video)>video{transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1) !important}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){a[href]:has(>img,>video):hover>img,a[href]:has(>img,>video):hover>video,a[href]:has(>img,>video):focus-visible>img,a[href]:has(>img,>video):focus-visible>video{transform:scale(1.04)}}
+::selection{background:#eeede9;color:#121211}
+body{margin:0;background:#121211}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a{--t:1px;color:#eeede9;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% var(--t);background-position:100% 100%;padding-bottom:0.14em}
+a:hover{color:#eeede9;animation:uline .8s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes uline{0%{background-size:100% var(--t);background-position:100% 100%}45%{background-size:0 var(--t);background-position:100% 100%}46%{background-size:0 2px;background-position:0 100%}100%{background-size:100% 2px;background-position:0 100%}}
+a[aria-current="page"],a[style*="text-decoration-thickness: 2px"]{--t:2px}
+a.ph,a[style*="text-decoration: none"]{background-image:none;padding-bottom:0}
+@media (prefers-reduced-motion:reduce){a:hover{animation:none;background-size:100% 2px}}
+a[aria-current="page"]{background-image:none !important;padding-bottom:0.14em}
+a:focus-visible,button:focus-visible{outline:2px solid #eeede9;outline-offset:4px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.sub{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:24px}
+.meta{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;line-height:22px;color:#8c8c89;margin:0}
+.copy{font-size:18px;line-height:1.55;color:#a3a3a3;margin:0}
+.body{font-size:20px;line-height:1.5;color:#eeede9;margin:0}
+.disp{font-weight:500;letter-spacing:-0.045em;margin:0}
+.title{font-size:clamp(48px,7vw,104px);line-height:0.92}
+.sec{font-size:clamp(36px,4vw,56px);line-height:0.95;letter-spacing:-0.04em}
+.h3{font-size:clamp(24px,2.2vw,30px);line-height:1.1;letter-spacing:-0.025em;font-weight:500;margin:0}
+.lead{font-size:clamp(24px,2.3vw,32px);line-height:1.3;letter-spacing:-0.015em;margin:0}
+.ph{border:1px solid #262626;background:#1c1c1b;display:flex;align-items:center;justify-content:center;box-sizing:border-box;text-decoration:none}
+.ph span{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;padding:16px;text-align:center}
+.ind{padding-left:calc((100vw - 72px) / 12)}
+.sticky{position:-webkit-sticky;position:sticky;top:48px;align-self:start;z-index:1}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0}
+.facts div{border-top:1px solid #262626;padding-top:14px}
+.facts dt{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89}
+.facts dd{margin:6px 0 0;font-size:16px;line-height:1.4;color:#eeede9}
+.list{list-style:none;padding:0;margin:0}
+.list li{border-top:1px solid #262626;padding:18px 0;font-size:18px;line-height:1.5;color:#eeede9}
+.status{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#eeede9;border:1px solid #626260;padding:4px 10px;display:inline-block}
+.iconbtn{background:none;border:0;color:#eeede9;width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.iconbtn:hover svg{stroke-width:2}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 48px 12px calc(48px + (100vw - 72px) / 12);scroll-padding-left:calc(48px + (100vw - 72px) / 12);scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.step{flex:0 0 340px;scroll-snap-align:start;border-top:1px solid #626260;padding:0 32px 0 0;position:relative}
+.step:last-child{flex-basis:300px}
+.node{position:absolute;top:-5px;left:0;width:9px;height:9px;background:#eeede9}
+.node.hollow{background:#121211;outline:1px solid #eeede9;outline-offset:-1px}
+.step .id{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:32px;line-height:1;letter-spacing:-0.03em;margin:32px 0 0;color:#eeede9}
+.step .type{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;margin:10px 0 0}
+.step h3{font-size:20px;line-height:1.25;font-weight:500;margin:20px 0 0;color:#eeede9}
+.step .copy{font-size:16px;margin-top:8px}
+.step .from{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;color:#8c8c89;margin:16px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.stats div{border-top:1px solid #262626;padding-top:16px}
+.stats b{display:block;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-weight:400;font-size:clamp(40px,4vw,56px);line-height:1;letter-spacing:-0.04em;color:#eeede9}
+.stats span{display:block;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#a3a3a3;margin-top:12px}
+.pillars{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+.pillars li{border-top:1px solid #262626;padding:16px 0;display:flex;gap:16px}
+.pillars li b{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-weight:400;font-size:15px;color:#8c8c89;min-width:20px}
+.pillars li span{font-size:17px;line-height:1.45;color:#eeede9}
+.pillars li em{font-style:normal;color:#a3a3a3}
+.rise{animation:rise 1s ease-out both}
+.d1{animation-delay:0.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}}
+.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:768px){
+section[style*="padding: 168px"],section[style*="padding: 200px"],section[style*="padding: 240px"]{padding-top:104px !important}
+section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],section[style*="padding-top: 240px"]{padding-top:104px !important}
+
+.grid>*,.sub>*{grid-column:1 / -1 !important;margin-top:0 !important}
+.wrap{padding-left:16px !important;padding-right:16px !important}
+.track{padding:0 16px 12px;scroll-padding-left:16px}
+.step{flex-basis:280px}
+.sticky{position:static;margin-bottom:32px}
+.head{grid-template-columns:1fr auto !important}
+.head nav.main{grid-column:1 / -1 !important;grid-row:2 !important;justify-content:flex-start !important;justify-self:start !important}.head .who{justify-self:end !important}
+.facts,.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pillars{grid-template-columns:1fr}
+.hidesm{display:none !important}
+.ind{padding-left:0}
+}
+.site-foot{position:relative;background:#1c1c1b;margin-top:96px;padding:152px 48px 48px}
+.site-foot .foot-tab{position:absolute;left:0;right:calc(48px + (100vw - 72px) / 12);top:0;height:104px;background:#121211}
+.site-foot .foot-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px}
+.site-foot .foot-up{position:absolute;right:48px;top:28px;display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;background-image:none;padding-bottom:0}
+@media (max-width:768px){.site-foot{padding:40px 16px}.site-foot .foot-tab,.site-foot .foot-up{display:none}}
+/* rounded corners: images, videos, placeholders, footer tab */
+#page img,#page video,#page .ph{border-radius:12px}
+#services>.ph{border-radius:0}
+.site-foot .foot-tab{border-radius:0 0 16px 0}
+/* arrow gap: rounded where it meets the ground colour */
+.site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
+
+</style>
+</helmet>
+<div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
+
+<header class="wrap head" style="padding: 28px 48px; display: grid; grid-template-columns: calc((100vw - 72px) / 12) 1fr auto; align-items: center; gap: 16px 0;">
+  <div style="justify-self: start; font-size: 16px;"><a href="Case-HRG-DE.dc.html" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></div>
+  <p class="who" style="justify-self: start; margin: 0;"><a href="V4.dc.html" style="text-decoration: none; font-weight: 500; font-size: 19px; letter-spacing: -0.015em;">Markus Rozkalns</a></p>
+  <nav aria-label="Main" class="main" style="justify-self: end; display: flex; flex-wrap: wrap; gap: 12px 36px; font-size: 16px;">
+    <a href="Work.dc.html" aria-current="page" style="text-decoration-thickness: 2px;">Work</a>
+    <a href="Approach.dc.html">Approach</a>
+    <a href="About.dc.html">About</a>
+    <a href="Contact.dc.html">Contact</a>
+  </nav>
+</header>
+
+<section class="wrap grid" style="padding: 120px 48px 0; row-gap: 40px;">
+  <p class="meta" style="grid-column: 2 / span 11;"><a href="Work.dc.html" style="color: #a3a3a3;">Work</a> · <a href="Work.dc.html#other-industries" style="color: #a3a3a3;">Other industries</a></p>
+  <h1 class="disp title rise" style="grid-column: 2 / span 10;">Human Rights Guide</h1>
+  <p class="lead rise d1" style="grid-column: 5 / span 7;">A text-only, color-coded guide that explains human rights to the public. Built to expand, it grew from 1 to 12 countries and won the Erasmus+ Quality Award 2024.</p>
+  <dl class="facts" style="grid-column: 5 / span 8; margin-top: 24px;">
+    <div><dt>Client</dt><dd>Baltic Human Rights Society</dd></div><div><dt>Country</dt><dd>EU</dd></div><div><dt>Industry</dt><dd>NGO, education</dd></div><div><dt>Year</dt><dd>2022–2025</dd></div><div><dt>My role</dt><dd>UX and UI designer</dd></div><div><dt>Team</dt><dd>An external strategist, a UI designer and a PM</dd></div>
+  </dl>
+</section>
+
+<section style="padding: 104px 48px 0;" class="wrap">
+  <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden;"><img src="img/hrg-demo-poster.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><video class="loop" src="img/hrg-demo.mp4" poster="img/hrg-demo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Screen recording of the Human Rights Guide: the themes page, a theme and its sub-pages" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></div>
+</section>
+
+<section class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Problem</h2></div>
+  <div style="grid-column: 5 / span 7;">
+    <p class="body">Human rights had to be understandable to people without legal knowledge, in a text-only format that is easy to roll out to new countries.</p>
+    <ul class="list ind" style="margin-top: 40px;"><li>Citizens and inhabitants: rights holders in everyday situations</li><li>Professionals</li><li style="border-bottom: 1px solid #262626;">Educators and learners</li></ul>
+    
+  </div>
+</section>
+
+<section id="approach" class="aband" style="margin-top: 168px; padding: 144px 0 160px; background: #1c1c1b;">
+  <div class="wrap grid" style="padding: 0 48px; align-items: end; margin-bottom: 64px;">
+    <div style="grid-column: 1 / span 8;">
+      <h2 class="disp sec">Approach</h2>
+      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Every decision traces back to evidence. Each step has an ID, and every insight and decision names the evidence it came from.</p>
+    </div>
+    <div class="hidesm" style="grid-column: 10 / span 3; display: flex; justify-content: flex-end; gap: 8px;">
+      <button type="button" class="iconbtn" aria-label="Previous step" onClick="{{prev}}"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M30 11H2M12 1L2 11l10 10"/></svg></button>
+      <button type="button" class="iconbtn" aria-label="Next step" onClick="{{next}}"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M0 11h28M18 1l10 10-10 10"/></svg></button>
+    </div>
+  </div>
+
+  <ol class="track" ref="{{trackRef}}" style="list-style: none; margin: 0;">
+    <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Project brief</h3><p class="copy">Three audiences, a text-only format, more countries to come.</p></li>
+    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>No legal background</h3><p class="copy">Most readers don’t know the law.</p><p class="from">From S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>Different kinds of content</h3><p class="copy">Themes, rights, case law and knowledge tests.</p><p class="from">From S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">E003</p><p class="type">Evidence</p><h3>More countries ahead</h3><p class="copy">Each country adds its own content.</p><p class="from">From S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Start from daily life</h3><p class="copy">People meet human rights in everyday situations, not in legal terms.</p><p class="from">From E001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>Themes and situations</h3><p class="copy">Learn through themes and daily-life situations.</p><p class="from">From I001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>One color per kind of content</h3><p class="copy">Light blue, green, pink and orange.</p><p class="from">From E002</p></li>
+    <li class="step"><span class="node"></span><p class="id">D003</p><p class="type">Decision</p><h3>An expandable structure</h3><p class="copy">New countries can be added without a redesign.</p><p class="from">From E003</p></li>
+  </ol>
+</section>
+
+<section class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Solution</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 720px;">I designed the UX and the UI, working with an external strategist, a UI designer and a project manager.</p>
+    <div style="margin-top: 104px;"><h3 class="h3" style="margin-top: 0;">Eight main topics</h3><p class="copy ind" style="margin-top: 16px; max-width: 728px;">People learn about human rights through themes and daily-life situations. Topics include:</p><ul class="list ind" style="margin-top: 32px;"><li>What human rights are</li><li>Freedom of expression and media</li><li>Discrimination</li><li>Domestic violence</li><li>Hate crimes and hate speech</li><li style="border-bottom: 1px solid #262626;">Human-rights institutions and organizations that can help</li></ul><figure style="margin: 56px 0 0;"><img src="img/hrg-ipad.jpg" alt="The Human Rights Guide themes page on an iPad held in portrait" width="2000" height="1424" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">The themes page on a tablet</figcaption></figure></div><div style="margin-top: 144px;"><h3 class="h3" style="margin-top: 0;">A color system</h3><ul class="list ind" style="margin-top: 32px;"><li>Light blue for themes, also the identity color</li><li>Green for rights</li><li>Pink for case law</li><li style="border-bottom: 1px solid #262626;">Orange for knowledge tests</li></ul><div class="sub" style="margin-top: 56px; align-items: start; row-gap: 48px;"><figure style="grid-column: 1 / span 4; margin: 0;"><img src="img/hrg-color-themes.jpg" alt="Light-blue theme tiles" width="1200" height="752" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Themes, light blue</figcaption></figure><figure style="grid-column: 5 / span 4; margin: 0;"><img src="img/hrg-color-rights.jpg" alt="Green rights tiles" width="1200" height="752" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Rights, green</figcaption></figure><figure style="grid-column: 1 / span 4; margin: 0;"><img src="img/hrg-color-case-law.jpg" alt="Pink case law tiles" width="1200" height="752" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Case law, pink</figcaption></figure><figure style="grid-column: 5 / span 4; margin: 0;"><img src="img/hrg-color-tests.jpg" alt="Orange knowledge test tiles" width="1200" height="752" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Tests, orange</figcaption></figure></div></div>
+  </div>
+</section>
+
+<section class="wrap grid aband" style="margin-top: 168px; padding: 144px 48px 160px; background: #1c1c1b;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Outcome</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 720px;">The guide grew from 1 country to 12. Co-funded by the European Union, it won the Erasmus+ Quality Award 2024.</p>
+  </div>
+</section>
+
+<section class="wrap grid" style="padding: 200px 48px 48px;">
+  <div style="grid-column: 1 / span 12; border-top: 1px solid #262626; padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px;">
+    <div>
+      <p class="meta">Next project</p>
+      <a href="Case-Asya.dc.html" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">Asya conversation app</a>
+    </div>
+    <a href="Work.dc.html" style="font-size: 16px;">All work</a>
+  </div>
+</section>
+
+<footer class="site-foot" style="margin-top: 96px;">
+  <div class="foot-tab" aria-hidden="true"></div>
+  <a href="#page" class="foot-up" aria-label="Back to top"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
+  <div class="foot-row">
+    <p class="meta">© 2026 Markus Rozkalns · Riga · Zurich</p>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="Imprint.dc.html" style="color: #a3a3a3;">Imprint</a><a href="Privacy.dc.html" style="color: #a3a3a3;">Privacy</a><a href="Case-HRG-DE.dc.html" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      trackRef: (el) => { this.track = el; },
+      prev: () => { if (this.track) this.track.scrollBy({ left: -340, behavior: 'smooth' }); },
+      next: () => { if (this.track) this.track.scrollBy({ left: 340, behavior: 'smooth' }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

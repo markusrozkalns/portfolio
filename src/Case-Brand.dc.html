@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Loft Dynamics website and brand — case study</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+.aband .node.hollow{background:#1c1c1b}@media (max-width:768px){.aband{margin-top:104px !important;padding-top:72px !important;padding-bottom:88px !important}}
+/* linked images: the picture zooms in a little inside a fixed frame */
+a[href]:has(>img,>video){clip-path:inset(0 round 12px)}
+a[href]:has(>img,>video)>img,a[href]:has(>img,>video)>video{transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1) !important}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){a[href]:has(>img,>video):hover>img,a[href]:has(>img,>video):hover>video,a[href]:has(>img,>video):focus-visible>img,a[href]:has(>img,>video):focus-visible>video{transform:scale(1.04)}}
+::selection{background:#eeede9;color:#121211}
+body{margin:0;background:#121211}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a{--t:1px;color:#eeede9;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% var(--t);background-position:100% 100%;padding-bottom:0.14em}
+a:hover{color:#eeede9;animation:uline .8s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes uline{0%{background-size:100% var(--t);background-position:100% 100%}45%{background-size:0 var(--t);background-position:100% 100%}46%{background-size:0 2px;background-position:0 100%}100%{background-size:100% 2px;background-position:0 100%}}
+a[aria-current="page"],a[style*="text-decoration-thickness: 2px"]{--t:2px}
+a.ph,a[style*="text-decoration: none"]{background-image:none;padding-bottom:0}
+@media (prefers-reduced-motion:reduce){a:hover{animation:none;background-size:100% 2px}}
+a[aria-current="page"]{background-image:none !important;padding-bottom:0.14em}
+a:focus-visible,button:focus-visible{outline:2px solid #eeede9;outline-offset:4px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.sub{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:24px}
+.meta{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;line-height:22px;color:#8c8c89;margin:0}
+.copy{font-size:18px;line-height:1.55;color:#a3a3a3;margin:0}
+.body{font-size:20px;line-height:1.5;color:#eeede9;margin:0}
+.disp{font-weight:500;letter-spacing:-0.045em;margin:0}
+.title{font-size:clamp(48px,7vw,104px);line-height:0.92}
+.sec{font-size:clamp(36px,4vw,56px);line-height:0.95;letter-spacing:-0.04em}
+.h3{font-size:clamp(24px,2.2vw,30px);line-height:1.1;letter-spacing:-0.025em;font-weight:500;margin:0}
+.lead{font-size:clamp(24px,2.3vw,32px);line-height:1.3;letter-spacing:-0.015em;margin:0}
+.ph{border:1px solid #262626;background:#1c1c1b;display:flex;align-items:center;justify-content:center;box-sizing:border-box;text-decoration:none}
+.ph span{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;padding:16px;text-align:center}
+.ind{padding-left:calc((100vw - 72px) / 12)}
+.sticky{position:-webkit-sticky;position:sticky;top:48px;align-self:start;z-index:1}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0}
+.facts div{border-top:1px solid #262626;padding-top:14px}
+.facts dt{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89}
+.facts dd{margin:6px 0 0;font-size:16px;line-height:1.4;color:#eeede9}
+.list{list-style:none;padding:0;margin:0}
+.list li{border-top:1px solid #262626;padding:18px 0;font-size:18px;line-height:1.5;color:#eeede9}
+.status{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#eeede9;border:1px solid #626260;padding:4px 10px;display:inline-block}
+.iconbtn{background:none;border:0;color:#eeede9;width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.iconbtn:hover svg{stroke-width:2}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 48px 12px calc(48px + (100vw - 72px) / 12);scroll-padding-left:calc(48px + (100vw - 72px) / 12);scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.step{flex:0 0 340px;scroll-snap-align:start;border-top:1px solid #626260;padding:0 32px 0 0;position:relative}
+.step:last-child{flex-basis:300px}
+.node{position:absolute;top:-5px;left:0;width:9px;height:9px;background:#eeede9}
+.node.hollow{background:#121211;outline:1px solid #eeede9;outline-offset:-1px}
+.step .id{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:32px;line-height:1;letter-spacing:-0.03em;margin:32px 0 0;color:#eeede9}
+.step .type{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;margin:10px 0 0}
+.step h3{font-size:20px;line-height:1.25;font-weight:500;margin:20px 0 0;color:#eeede9}
+.step .copy{font-size:16px;margin-top:8px}
+.step .from{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;color:#8c8c89;margin:16px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.stats div{border-top:1px solid #262626;padding-top:16px}
+.stats b{display:block;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-weight:400;font-size:clamp(40px,4vw,56px);line-height:1;letter-spacing:-0.04em;color:#eeede9}
+.stats span{display:block;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#a3a3a3;margin-top:12px}
+.pillars{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+.pillars li{border-top:1px solid #262626;padding:16px 0;display:flex;gap:16px}
+.pillars li b{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-weight:400;font-size:15px;color:#8c8c89;min-width:20px}
+.pillars li span{font-size:17px;line-height:1.45;color:#eeede9}
+.pillars li em{font-style:normal;color:#a3a3a3}
+.rise{animation:rise 1s ease-out both}
+.d1{animation-delay:0.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}}
+.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:768px){
+section[style*="padding: 168px"],section[style*="padding: 200px"],section[style*="padding: 240px"]{padding-top:104px !important}
+section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],section[style*="padding-top: 240px"]{padding-top:104px !important}
+
+.grid>*,.sub>*{grid-column:1 / -1 !important;margin-top:0 !important}
+.wrap{padding-left:16px !important;padding-right:16px !important}
+.track{padding:0 16px 12px;scroll-padding-left:16px}
+.step{flex-basis:280px}
+.sticky{position:static;margin-bottom:32px}
+.head{grid-template-columns:1fr auto !important}
+.head nav.main{grid-column:1 / -1 !important;grid-row:2 !important;justify-content:flex-start !important;justify-self:start !important}.head .who{justify-self:end !important}
+.facts,.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pillars{grid-template-columns:1fr}
+.hidesm{display:none !important}
+.ind{padding-left:0}
+}
+.site-foot{position:relative;background:#1c1c1b;margin-top:96px;padding:152px 48px 48px}
+.site-foot .foot-tab{position:absolute;left:0;right:calc(48px + (100vw - 72px) / 12);top:0;height:104px;background:#121211}
+.site-foot .foot-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px}
+.site-foot .foot-up{position:absolute;right:48px;top:28px;display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;background-image:none;padding-bottom:0}
+@media (max-width:768px){.site-foot{padding:40px 16px}.site-foot .foot-tab,.site-foot .foot-up{display:none}}
+/* rounded corners: images, videos, placeholders, footer tab */
+#page img,#page video,#page .ph{border-radius:12px}
+#services>.ph{border-radius:0}
+.site-foot .foot-tab{border-radius:0 0 16px 0}
+/* arrow gap: rounded where it meets the ground colour */
+.site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
+
+</style>
+</helmet>
+<div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
+
+<header class="wrap head" style="padding: 28px 48px; display: grid; grid-template-columns: calc((100vw - 72px) / 12) 1fr auto; align-items: center; gap: 16px 0;">
+  <div style="justify-self: start; font-size: 16px;"><a href="Case-Brand-DE.dc.html" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></div>
+  <p class="who" style="justify-self: start; margin: 0;"><a href="V4.dc.html" style="text-decoration: none; font-weight: 500; font-size: 19px; letter-spacing: -0.015em;">Markus Rozkalns</a></p>
+  <nav aria-label="Main" class="main" style="justify-self: end; display: flex; flex-wrap: wrap; gap: 12px 36px; font-size: 16px;">
+    <a href="Work.dc.html" aria-current="page" style="text-decoration-thickness: 2px;">Work</a>
+    <a href="Approach.dc.html">Approach</a>
+    <a href="About.dc.html">About</a>
+    <a href="Contact.dc.html">Contact</a>
+  </nav>
+</header>
+
+<section class="wrap grid" style="padding: 120px 48px 0; row-gap: 40px;">
+  <p class="meta" style="grid-column: 2 / span 11;"><a href="Work.dc.html" style="color: #a3a3a3;">Work</a> · <a href="Work.dc.html#aviation" style="color: #a3a3a3;">Aviation</a></p>
+  <h1 class="disp title rise" style="grid-column: 2 / span 10;">Loft Dynamics website and brand</h1>
+  <p class="lead rise d1" style="grid-column: 5 / span 7;">A focused brand refresh, from navy to sky blue and light to dark, and a leaner website built around four customer profiles.</p>
+  <dl class="facts" style="grid-column: 5 / span 8; margin-top: 24px;">
+    <div><dt>Client</dt><dd>Loft Dynamics</dd></div>
+    <div><dt>Country</dt><dd>Switzerland</dd></div>
+    <div><dt>Industry</dt><dd>Aviation, VR flight simulation</dd></div>
+    <div><dt>Year</dt><dd>2024–2026</dd></div>
+    <div><dt>My role</dt><dd>Project lead, UX and UI designer</dd></div>
+    <div><dt>Team</dt><dd>A front-end and a back-end developer; a PM on the client side</dd></div>
+    
+    
+  </dl>
+</section>
+
+<section style="padding: 104px 48px 0;" class="wrap">
+  <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden;"><img src="img/loft-website-home-poster.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><video class="loop" src="img/loft-website-home.mp4" poster="img/loft-website-home-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></div>
+</section>
+
+<section class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Problem</h2></div>
+  <div style="grid-column: 5 / span 7;">
+    <p class="body">Loft Dynamics sells to very different people, from helicopter operators and pilots to aircraft manufacturers and airlines. Its brand and website spoke to none of them in particular.</p>
+    <ul class="list ind" style="margin-top: 40px;">
+      <li>A product-centric look, in the navy blue the whole industry uses</li>
+      <li style="border-bottom: 1px solid #262626;">A website too heavy for audiences with very different needs</li>
+    </ul>
+    <figure style="margin: 64px 0 0;"><img src="img/loft-logo-before-after.png" alt="Loft Dynamics logo before, navy on light, and after, sky blue on dark" width="1920" height="1080" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Before and after: the owl stays, navy on light becomes sky blue on dark</figcaption></figure>
+  </div>
+</section>
+
+<section id="approach" class="aband" style="margin-top: 168px; padding: 144px 0 160px; background: #1c1c1b;">
+  <div class="wrap grid" style="padding: 0 48px; align-items: end; margin-bottom: 64px;">
+    <div style="grid-column: 1 / span 8;">
+      <h2 class="disp sec">Approach</h2>
+      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Every decision traces back to evidence. Each step has an ID, and every insight and decision names the evidence it came from.</p>
+    </div>
+    <div class="hidesm" style="grid-column: 10 / span 3; display: flex; justify-content: flex-end; gap: 8px;">
+      <button type="button" class="iconbtn" aria-label="Previous step" onClick="{{prev}}"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M30 11H2M12 1L2 11l10 10"></path></svg></button>
+      <button type="button" class="iconbtn" aria-label="Next step" onClick="{{next}}"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M0 11h28M18 1l10 10-10 10"></path></svg></button>
+    </div>
+  </div>
+
+  <ol class="track" ref="{{trackRef}}" style="list-style: none; margin: 0;">
+    <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Stakeholder interviews</h3><p class="copy">Across the company, on who Loft sells to and what each group needs.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S002</p><p class="type">Source</p><h3>Website analytics</h3><p class="copy">How visitors actually moved through the old site.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S003</p><p class="type">Source</p><h3>Market research</h3><p class="copy">How other simulator and aviation brands present themselves.</p></li>
+    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Navy everywhere</h3><p class="copy">Navy blue is used heavily across the industry.</p><p class="from">From S003</p></li>
+    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>Too much site</h3><p class="copy">Many pages and deep navigation for visitors with very different goals.</p><p class="from">From S002</p></li>
+    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Four audiences</h3><p class="copy">Operators, pilots, OEMs and airlines, each with its own needs and its own path through the site.</p><p class="from">From S001, S002</p></li>
+    <li class="step"><span class="node"></span><p class="id">I002</p><p class="type">Insight</p><h3>Sell the experience</h3><p class="copy">Customers buy the full service, not only the simulator as an object.</p><p class="from">From S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>Sky blue, not navy</h3><p class="copy">From the sea to the sky. The owl logo stays.</p><p class="from">From E001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>Dark mode</h3><p class="copy">The white simulator stands out, and the brand shows the whole experience.</p><p class="from">From I002</p></li>
+    <li class="step"><span class="node"></span><p class="id">D003</p><p class="type">Decision</p><h3>Fewer pages, one-level menu</h3><p class="copy">A lighter site that’s easy to find your way around.</p><p class="from">From E002</p></li>
+    <li class="step"><span class="node"></span><p class="id">D004</p><p class="type">Decision</p><h3>Products and Solutions</h3><p class="copy">The three simulators on one side; what each audience gets on the other.</p><p class="from">From I001</p></li>
+  </ol>
+</section>
+
+<section class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Solution</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 720px;">I led the brand refresh and the website redesign and did the work myself, from the stakeholder interviews to the trade-show look, with a front-end and a back-end developer on the build and a project manager at the client.</p>
+
+    <div style="margin-top: 104px;">
+      <h3 class="h3" style="margin-top: 0;">Brand: a light facelift</h3>
+      <p class="copy ind" style="margin-top: 16px; max-width: 728px;">The owl logo stayed. Everything around it moved from the sea to the sky, and from light to dark.</p>
+      <ul class="list ind" style="margin-top: 32px;">
+        <li>Navy blue became sky blue</li>
+        <li>Light mode became dark mode, so the white simulator stands out</li>
+        <li>Trade-show boxing, packaging and backdrops in dark mode, using dark VR scenes of the flight environment</li>
+        <li>A redesigned trade-show outfit for the team</li>
+        <li style="border-bottom: 1px solid #262626;">A trade-show booking platform set up on Microsoft Bookings</li>
+      </ul>
+      <div class="sub" style="margin-top: 72px; align-items: start;"><figure style="grid-column: 1 / span 4; margin: 0;"><img src="img/loft-outfit-team.jpg" alt="The Loft Dynamics team in the new trade-show outfit at the booth, in front of a simulator" width="1200" height="1600" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">The team in the new trade-show outfit</figcaption></figure><figure style="grid-column: 5 / span 4; margin: 96px 0 0;"><img src="img/loft-outfit-sim.jpg" alt="A team member in the outfit flying the H145 simulator at the booth, with the dark backdrop and the owl logo" width="1200" height="1600" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">At the booth: outfit, dark backdrop and the H145 simulator</figcaption></figure></div>
+    </div>
+
+    <div style="margin-top: 144px;">
+      <h3 class="h3" style="margin-top: 0;">Website: built around the audiences</h3>
+      <p class="copy ind" style="margin-top: 16px; max-width: 728px;">Fewer pages and a single-level menu. Products show the three simulators; Solutions show what each audience gets for its own needs.</p>
+      <div class="sub" style="margin-top: 72px; align-items: start;"><figure style="grid-column: 1 / span 4; margin: 0;"><img src="img/loft-web-audiences.jpg" alt="Four audience cards: for operators, pilots, OEMs and airlines" width="1800" height="1126" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">One entry per audience: operators, pilots, OEMs and airlines</figcaption></figure><figure style="grid-column: 5 / span 4; margin: 96px 0 0;"><img src="img/loft-web-airlines.jpg" alt="Solutions page for airlines with a 3D render of two simulators" width="1800" height="1126" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">A Solutions page per audience, here for airlines</figcaption></figure></div>
+      <div class="sub" style="margin-top: 72px; align-items: start;"><figure style="grid-column: 1 / span 4; margin: 0;"><img src="img/loft-web-products.jpg" alt="Products overview with the Airbus H145, Airbus H125 and Robinson R22 simulators" width="1800" height="1051" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Products: the three simulators</figcaption></figure><figure style="grid-column: 5 / span 4; margin: 96px 0 0;"><img src="img/loft-web-product-h145.jpg" alt="Product page for the Airbus H145 simulator" width="1800" height="1123" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Product page: Airbus H145</figcaption></figure></div>
+      <figure style="margin: 72px 0 0;"><img src="img/loft-web-news.jpg" alt="News article page in the dark look" width="1800" height="1098" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">News, in the same dark look</figcaption></figure>
+    </div>
+
+    <div style="margin-top: 144px;">
+      <h3 class="h3" style="margin-top: 0;">Loft Fest: the main stage</h3>
+      <p class="copy ind" style="margin-top: 16px; max-width: 728px;">The brand also carried Loft Dynamics’ annual Loft Fest. I helped with the visuals, including animations and videos for the main stage screen.</p>
+      <figure style="margin: 40px 0 0;"><img src="img/loft-fest.jpg" alt="Award ceremony at Loft Fest, with the Instructor Award shown on the main stage screen" width="1200" height="900" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">The Instructor Award at Loft Fest, on the main stage screen</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="wrap grid aband" style="margin-top: 168px; padding: 144px 48px 160px; background: #1c1c1b;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Outcome</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 720px;">Website traffic grew 30% the following year, and the conversion rate rose by 10 percentage points. The brand was well received: more serious, yet more dynamic.</p>
+    <p class="copy ind" style="margin-top: 24px; max-width: 808px;">At trade shows, sky blue now stands apart from the navy used across the industry.</p>
+  </div>
+</section>
+
+<section aria-label="Quote" class="wrap grid" style="padding: 200px 48px 0;">
+  <figure style="grid-column: 2 / span 10; margin: 0;">
+    <blockquote style="margin: 0;">
+      <p class="disp" style="font-size: clamp(30px, 3.6vw, 52px); line-height: 1.08; letter-spacing: -0.035em;">“He played a key role in bringing Loft Dynamics’ corporate identity, website, product design and internal and external communications together into one consistent whole.”</p>
+    </blockquote>
+    <figcaption class="meta ind" style="margin-top: 36px; color: #a3a3a3; display: flex; align-items: center; gap: 16px;"><img src="img/fabi-riesen.jpg" alt="" width="44" height="44" loading="lazy" style="flex: none; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; display: block;"><span>Fabi Riesen, founder and former CEO &amp; CTO · Loft Dynamics · Switzerland<br>Translated from the German reference letter</span></figcaption>
+  </figure>
+</section>
+
+<section class="wrap grid" style="padding: 200px 48px 48px;">
+  <div style="grid-column: 1 / span 12; border-top: 1px solid #262626; padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px;">
+    <div>
+      <p class="meta">Next project</p>
+      <a href="Case-DNB.dc.html" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">DNB pan-Baltic websites</a>
+    </div>
+    <a href="Work.dc.html" style="font-size: 16px;">All work</a>
+  </div>
+</section>
+
+<footer class="site-foot" style="margin-top: 96px;">
+  <div class="foot-tab" aria-hidden="true"></div>
+  <a href="#page" class="foot-up" aria-label="Back to top"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
+  <div class="foot-row">
+    <p class="meta">© 2026 Markus Rozkalns · Riga · Zurich</p>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="Imprint.dc.html" style="color: #a3a3a3;">Imprint</a><a href="Privacy.dc.html" style="color: #a3a3a3;">Privacy</a><a href="Case-Brand-DE.dc.html" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      trackRef: (el) => { this.track = el; },
+      prev: () => { if (this.track) this.track.scrollBy({ left: -340, behavior: 'smooth' }); },
+      next: () => { if (this.track) this.track.scrollBy({ left: 340, behavior: 'smooth' }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

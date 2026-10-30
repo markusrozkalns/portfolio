@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Geldmuseum der Bank of Latvia — Fallstudie</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+.aband .node.hollow{background:#1c1c1b}@media (max-width:768px){.aband{margin-top:104px !important;padding-top:72px !important;padding-bottom:88px !important}}
+/* linked images: the picture zooms in a little inside a fixed frame */
+a[href]:has(>img,>video){clip-path:inset(0 round 12px)}
+a[href]:has(>img,>video)>img,a[href]:has(>img,>video)>video{transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1) !important}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){a[href]:has(>img,>video):hover>img,a[href]:has(>img,>video):hover>video,a[href]:has(>img,>video):focus-visible>img,a[href]:has(>img,>video):focus-visible>video{transform:scale(1.04)}}
+::selection{background:#eeede9;color:#121211}
+body{margin:0;background:#121211}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a{--t:1px;color:#eeede9;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% var(--t);background-position:100% 100%;padding-bottom:0.14em}
+a:hover{color:#eeede9;animation:uline .8s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes uline{0%{background-size:100% var(--t);background-position:100% 100%}45%{background-size:0 var(--t);background-position:100% 100%}46%{background-size:0 2px;background-position:0 100%}100%{background-size:100% 2px;background-position:0 100%}}
+a[aria-current="page"],a[style*="text-decoration-thickness: 2px"]{--t:2px}
+a.ph,a[style*="text-decoration: none"]{background-image:none;padding-bottom:0}
+@media (prefers-reduced-motion:reduce){a:hover{animation:none;background-size:100% 2px}}
+a[aria-current="page"]{background-image:none !important;padding-bottom:0.14em}
+a:focus-visible,button:focus-visible{outline:2px solid #eeede9;outline-offset:4px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.sub{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:24px}
+.meta{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;line-height:22px;color:#8c8c89;margin:0}
+.copy{font-size:18px;line-height:1.55;color:#a3a3a3;margin:0}
+.body{font-size:20px;line-height:1.5;color:#eeede9;margin:0}
+.disp{font-weight:500;letter-spacing:-0.045em;margin:0}
+.title{font-size:clamp(48px,7vw,104px);line-height:0.92}
+.sec{font-size:clamp(36px,4vw,56px);line-height:0.95;letter-spacing:-0.04em}
+.h3{font-size:clamp(24px,2.2vw,30px);line-height:1.1;letter-spacing:-0.025em;font-weight:500;margin:0}
+.lead{font-size:clamp(24px,2.3vw,32px);line-height:1.3;letter-spacing:-0.015em;margin:0}
+.ph{border:1px solid #262626;background:#1c1c1b;display:flex;align-items:center;justify-content:center;box-sizing:border-box;text-decoration:none}
+.ph span{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;padding:16px;text-align:center}
+.ind{padding-left:calc((100vw - 72px) / 12)}
+.sticky{position:-webkit-sticky;position:sticky;top:48px;align-self:start;z-index:1}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0}
+.facts div{border-top:1px solid #262626;padding-top:14px}
+.facts dt{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89}
+.facts dd{margin:6px 0 0;font-size:16px;line-height:1.4;color:#eeede9}
+.list{list-style:none;padding:0;margin:0}
+.list li{border-top:1px solid #262626;padding:18px 0;font-size:18px;line-height:1.5;color:#eeede9}
+.status{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#eeede9;border:1px solid #626260;padding:4px 10px;display:inline-block}
+.iconbtn{background:none;border:0;color:#eeede9;width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.iconbtn:hover svg{stroke-width:2}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 48px 12px calc(48px + (100vw - 72px) / 12);scroll-padding-left:calc(48px + (100vw - 72px) / 12);scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.step{flex:0 0 340px;scroll-snap-align:start;border-top:1px solid #626260;padding:0 32px 0 0;position:relative}
+.step:last-child{flex-basis:300px}
+.node{position:absolute;top:-5px;left:0;width:9px;height:9px;background:#eeede9}
+.node.hollow{background:#121211;outline:1px solid #eeede9;outline-offset:-1px}
+.step .id{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:32px;line-height:1;letter-spacing:-0.03em;margin:32px 0 0;color:#eeede9}
+.step .type{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;margin:10px 0 0}
+.step h3{font-size:20px;line-height:1.25;font-weight:500;margin:20px 0 0;color:#eeede9}
+.step .copy{font-size:16px;margin-top:8px}
+.step .from{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;color:#8c8c89;margin:16px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.stats div{border-top:1px solid #262626;padding-top:16px}
+.stats b{display:block;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-weight:400;font-size:clamp(40px,4vw,56px);line-height:1;letter-spacing:-0.04em;color:#eeede9}
+.stats span{display:block;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#a3a3a3;margin-top:12px}
+.pillars{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+.pillars li{border-top:1px solid #262626;padding:16px 0;display:flex;gap:16px}
+.pillars li b{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-weight:400;font-size:15px;color:#8c8c89;min-width:20px}
+.pillars li span{font-size:17px;line-height:1.45;color:#eeede9}
+.pillars li em{font-style:normal;color:#a3a3a3}
+.rise{animation:rise 1s ease-out both}
+.d1{animation-delay:0.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}video.loop{display:none}}
+.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:768px){
+section[style*="padding: 168px"],section[style*="padding: 200px"],section[style*="padding: 240px"]{padding-top:104px !important}
+section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],section[style*="padding-top: 240px"]{padding-top:104px !important}
+
+.grid>*,.sub>*{grid-column:1 / -1 !important;margin-top:0 !important}
+.wrap{padding-left:16px !important;padding-right:16px !important}
+.track{padding:0 16px 12px;scroll-padding-left:16px}
+.step{flex-basis:280px}
+.sticky{position:static;margin-bottom:32px}
+.head{grid-template-columns:1fr auto !important}
+.head nav.main{grid-column:1 / -1 !important;grid-row:2 !important;justify-content:flex-start !important;justify-self:start !important}.head .who{justify-self:end !important}
+.facts,.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pillars{grid-template-columns:1fr}
+.hidesm{display:none !important}
+.ind{padding-left:0}
+}
+.site-foot{position:relative;background:#1c1c1b;margin-top:96px;padding:152px 48px 48px}
+.site-foot .foot-tab{position:absolute;left:0;right:calc(48px + (100vw - 72px) / 12);top:0;height:104px;background:#121211}
+.site-foot .foot-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px}
+.site-foot .foot-up{position:absolute;right:48px;top:28px;display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;background-image:none;padding-bottom:0}
+@media (max-width:768px){.site-foot{padding:40px 16px}.site-foot .foot-tab,.site-foot .foot-up{display:none}}
+/* rounded corners: images, videos, placeholders, footer tab */
+#page img,#page video,#page .ph{border-radius:12px}
+#services>.ph{border-radius:0}
+.site-foot .foot-tab{border-radius:0 0 16px 0}
+/* arrow gap: rounded where it meets the ground colour */
+.site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
+
+</style>
+</helmet>
+<div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
+
+<header class="wrap head" style="padding: 28px 48px; display: grid; grid-template-columns: calc((100vw - 72px) / 12) 1fr auto; align-items: center; gap: 16px 0;">
+  <div style="justify-self: start; font-size: 16px;"><a href="Case-BankOfLatvia.dc.html" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></div>
+  <p class="who" style="justify-self: start; margin: 0;"><a href="V4-DE.dc.html" style="text-decoration: none; font-weight: 500; font-size: 19px; letter-spacing: -0.015em;">Markus Rozkalns</a></p>
+  <nav aria-label="Hauptnavigation" class="main" style="justify-self: end; display: flex; flex-wrap: wrap; gap: 12px 36px; font-size: 16px;">
+    <a href="Work-DE.dc.html" aria-current="page" style="text-decoration-thickness: 2px;">Projekte</a>
+    <a href="Approach-DE.dc.html">Vorgehen</a>
+    <a href="About-DE.dc.html">Profil</a>
+    <a href="Contact-DE.dc.html">Kontakt</a>
+  </nav>
+</header>
+
+<section class="wrap grid" style="padding: 120px 48px 0; row-gap: 40px;">
+  <p class="meta" style="grid-column: 2 / span 11;"><a href="Work-DE.dc.html" style="color: #a3a3a3;">Projekte</a> · <a href="Work-DE.dc.html#other-industries" style="color: #a3a3a3;">Weitere Branchen</a></p>
+  <h1 class="disp title rise" style="grid-column: 2 / span 10;">Geldmuseum der Bank of Latvia</h1>
+  <p class="lead rise d1" style="grid-column: 5 / span 7;">Die zwei wichtigsten Medienstationen im Geldmuseum der Zentralbank, darunter ein Tool, das bis zu drei Indikatoren für ganz Europa vergleicht.</p>
+  <dl class="facts" style="grid-column: 5 / span 8; margin-top: 24px;">
+    <div><dt>Kunde</dt><dd>Bank of Latvia</dd></div><div><dt>Land</dt><dd>Lettland</dd></div><div><dt>Branche</dt><dd>Finanzen, Museum, Datenvisualisierung</dd></div><div><dt>Jahr</dt><dd>2016–2026</dd></div><div><dt>Meine Rolle</dt><dd>Projektleitung und UX Design der Datenvisualisierung</dd></div><div><dt>Team</dt><dd>UI-Designer, Entwickler, Historiker und Datenrechercheur; Mitarbeitende der Bank prüften die Daten</dd></div>
+  </dl>
+</section>
+
+<section style="padding: 104px 48px 0;" class="wrap">
+  <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden;"><img src="img/bank-of-latvia-poster.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><video class="loop" src="img/bank-of-latvia.mp4" poster="img/bank-of-latvia-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></div>
+</section>
+
+<section class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Problem</h2></div>
+  <div style="grid-column: 5 / span 7;">
+    <p class="body">Das Museum wurde neu gestaltet, mit mehr als 20 Bildschirmen und Exponaten. Die zwei Herzstücke sollten komplexe Wirtschaftsdaten für spontane Besucher erkundbar machen.</p>
+    <ul class="list ind" style="margin-top: 40px;"><li>Wirtschafts-, Geografie- und Bevölkerungsdaten für Länder in ganz Europa</li><li style="border-bottom: 1px solid #262626;">Zwei sehr unterschiedliche Exponate: ein physischer Globus und der grösste Touchscreen des Museums</li></ul>
+    
+  </div>
+</section>
+
+<section id="approach" class="aband" style="margin-top: 168px; padding: 144px 0 160px; background: #1c1c1b;">
+  <div class="wrap grid" style="padding: 0 48px; align-items: end; margin-bottom: 64px;">
+    <div style="grid-column: 1 / span 8;">
+      <h2 class="disp sec">Vorgehen</h2>
+      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Jede Entscheidung lässt sich auf Evidenz zurückführen. Jeder Schritt hat eine ID, und jedes Insight und jede Entscheidung nennt die Evidenz, aus der es stammt.</p>
+    </div>
+    <div class="hidesm" style="grid-column: 10 / span 3; display: flex; justify-content: flex-end; gap: 8px;">
+      <button type="button" class="iconbtn" aria-label="Vorheriger Schritt" onClick="{{prev}}"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M30 11H2M12 1L2 11l10 10"/></svg></button>
+      <button type="button" class="iconbtn" aria-label="Nächster Schritt" onClick="{{next}}"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M0 11h28M18 1l10 10-10 10"/></svg></button>
+    </div>
+  </div>
+
+  <ol class="track" ref="{{trackRef}}" style="list-style: none; margin: 0;">
+    <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Datenrecherche</h3><p class="copy">Zahlen, gesammelt von einem Historiker und Datenrechercheur.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S002</p><p class="type">Source</p><h3>Mitarbeitende der Bank</h3><p class="copy">Prüften die Daten, bevor sie auf den Bildschirm kamen.</p></li>
+    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Viele Kategorien</h3><p class="copy">Wirtschaft, Geografie, Bevölkerung und mehr.</p><p class="from">Aus S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>Lücken in den Daten</h3><p class="copy">Nicht jedes Land hat Daten zu jedem Indikator.</p><p class="from">Aus S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Vergleich macht es lesbar</h3><p class="copy">Wenige Indikatoren nebeneinander sagen mehr als eine Tabelle.</p><p class="from">Aus E001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>Bis zu drei Parameter</h3><p class="copy">Besucher wählen zum Beispiel BIP und Sterberate.</p><p class="from">Aus I001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>Ein Ranking, von grün bis rot</h3><p class="copy">Die Auswahl ergibt ein relatives Ranking auf der Europakarte.</p><p class="from">Aus I001, E002</p></li>
+    <li class="step"><span class="node"></span><p class="id">D003</p><p class="type">Decision</p><h3>Ein Touchscreen für den Globus</h3><p class="copy">Projektoren im Globus, von aussen gesteuert.</p><p class="from">Aus S001</p></li>
+  </ol>
+</section>
+
+<section class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Lösung</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 720px;">Ich habe das Projekt und die UX der Datenvisualisierung geleitet. Mein Team hat ausserdem das Bedieninterface des Globus gestaltet.</p>
+    <div style="margin-top: 104px;"><h3 class="h3" style="margin-top: 0;">Datenvisualisierung</h3><p class="copy ind" style="margin-top: 16px; max-width: 728px;">Auf dem grössten Touchscreen des Museums erkunden Besucher Europa nach Kategorien.</p><ul class="list ind" style="margin-top: 32px;"><li>Kategorien wie Wirtschaft, Geografie und Bevölkerung</li><li>Bis zu drei Parameter gleichzeitig, zum Beispiel BIP und Sterberate</li><li>Die Auswahl ergibt ein relatives Ranking der Länder, für die alle Daten vorliegen</li><li style="border-bottom: 1px solid #262626;">Dargestellt auf der Europakarte, auf einer Skala von grün bis rot</li></ul><div class="sub" style="margin-top: 56px; align-items: start;"><figure style="grid-column: 1 / span 5; margin: 0;"><img src="img/bank-of-latvia-touchscreen.jpg" alt="Besucher erkundet die Datenvisualisierung auf dem grössten Touchscreen des Museums" width="1800" height="1200" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block;"><figcaption class="meta" style="margin-top: 12px;">Die Datenvisualisierung auf dem grössten Touchscreen des Museums</figcaption></figure><figure style="grid-column: 6 / span 3; margin: 96px 0 0;"><img src="img/bank-of-latvia-parameters.jpg" alt="Besucher wählt auf dem Touchscreen neben dem Globus eine Kategorie" width="900" height="1200" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; display: block;"><figcaption class="meta" style="margin-top: 12px;">Kategorienwahl auf dem Touchscreen</figcaption></figure></div></div><div style="margin-top: 144px;"><h3 class="h3" style="margin-top: 0;">Globus</h3><p class="copy ind" style="margin-top: 16px; max-width: 728px;">Projektoren in einem physischen Globus, gesteuert über einen externen Touchscreen. Wir haben das Touchscreen-Interface gestaltet.</p><figure style="margin: 48px 0 0;"><img src="img/bank-of-latvia-globe.jpg" alt="Besucher bedient den Touchscreen, der den Globus steuert" width="1800" height="1156" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 50% 60%; display: block;"><figcaption class="meta" style="margin-top: 12px;">Der Globus und sein Touchscreen zur Steuerung</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="wrap grid aband" style="margin-top: 168px; padding: 144px 48px 160px; background: #1c1c1b;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Ergebnis</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 720px;">Beide zentralen Exponate sind noch in Betrieb. Besucher vergleichen bis zu drei Indikatoren gleichzeitig, und die Daten werden zweimal im Jahr aktualisiert.</p>
+    
+  </div>
+</section>
+
+<section class="wrap grid" style="padding: 200px 48px 48px;">
+  <div style="grid-column: 1 / span 12; border-top: 1px solid #262626; padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px;">
+    <div>
+      <p class="meta">Nächstes Projekt</p>
+      <a href="Case-Vivi-DE.dc.html" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">Vivi Ticketentwerter</a>
+    </div>
+    <a href="Work-DE.dc.html" style="font-size: 16px;">Alle Projekte</a>
+  </div>
+</section>
+
+<footer class="site-foot" style="margin-top: 96px;">
+  <div class="foot-tab" aria-hidden="true"></div>
+  <a href="#page" class="foot-up" aria-label="Nach oben"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
+  <div class="foot-row">
+    <p class="meta">© 2026 Markus Rozkalns · Riga · Zürich</p>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="Imprint-DE.dc.html" style="color: #a3a3a3;">Impressum</a><a href="Privacy-DE.dc.html" style="color: #a3a3a3;">Datenschutz</a><a href="Case-BankOfLatvia.dc.html" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5720}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      trackRef: (el) => { this.track = el; },
+      prev: () => { if (this.track) this.track.scrollBy({ left: -340, behavior: 'smooth' }); },
+      next: () => { if (this.track) this.track.scrollBy({ left: 340, behavior: 'smooth' }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

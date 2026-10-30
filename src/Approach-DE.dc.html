@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Vorgehen — Markus Rozkalns</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+/* linked images: the picture zooms in a little inside a fixed frame */
+a[href]:has(>img,>video){clip-path:inset(0 round 12px)}
+a[href]:has(>img,>video)>img,a[href]:has(>img,>video)>video{transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1) !important}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){a[href]:has(>img,>video):hover>img,a[href]:has(>img,>video):hover>video,a[href]:has(>img,>video):focus-visible>img,a[href]:has(>img,>video):focus-visible>video{transform:scale(1.04)}}
+@media (max-width:768px){.contact-rule{margin-bottom:72px !important}#contact{padding-top:88px !important}}
+.aiband img,.aiband video{border-radius:0 !important}@media (max-width:768px){.aiband{margin-top:104px !important;padding-top:104px !important;padding-bottom:104px !important}.aiband>div:nth-of-type(2){margin-bottom:32px !important}.aiband>img,.aiband>video,.aiband>div[aria-hidden]{grid-column:auto !important}#services{padding-top:104px !important}}
+::selection{background:#eeede9;color:#121211}
+body{margin:0;background:#121211}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a{--t:1px;color:#eeede9;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% var(--t);background-position:100% 100%;padding-bottom:0.14em}
+a:hover{color:#eeede9;animation:uline .8s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes uline{0%{background-size:100% var(--t);background-position:100% 100%}45%{background-size:0 var(--t);background-position:100% 100%}46%{background-size:0 2px;background-position:0 100%}100%{background-size:100% 2px;background-position:0 100%}}
+a[aria-current="page"],a[style*="text-decoration-thickness: 2px"]{--t:2px}
+a.ph,a[style*="text-decoration: none"]{background-image:none;padding-bottom:0}
+@media (prefers-reduced-motion:reduce){a:hover{animation:none;background-size:100% 2px}}
+a[aria-current="page"]{background-image:none !important;padding-bottom:0.14em}
+a:focus-visible{outline:2px solid #eeede9;outline-offset:4px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.meta{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;line-height:22px;color:#8c8c89;margin:0}
+.copy{font-size:18px;line-height:1.55;color:#a3a3a3;margin:0}
+.body{font-size:20px;line-height:1.5;color:#eeede9;margin:0}
+.disp{font-weight:500;letter-spacing:-0.045em;margin:0}
+.title{font-size:clamp(48px,7vw,104px);line-height:0.92}
+.sec{font-size:clamp(36px,4vw,56px);line-height:0.95;letter-spacing:-0.04em}
+.lead{font-size:clamp(24px,2.3vw,32px);line-height:1.3;letter-spacing:-0.015em;margin:0}
+.ind{padding-left:calc((100vw - 72px) / 12)}
+.sticky{position:-webkit-sticky;position:sticky;top:48px;align-self:start;z-index:1}
+.chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px;position:relative;list-style:none;margin:0;padding:0}
+.chain li{border-top:1px solid #626260;position:relative;padding-right:16px}
+.node{position:absolute;top:-5px;left:0;width:9px;height:9px;background:#eeede9}
+.node.hollow{background:#121211;outline:1px solid #eeede9;outline-offset:-1px}
+.chain .id{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:40px;line-height:1;letter-spacing:-0.03em;margin:32px 0 0;color:#eeede9}
+.chain .type{font-size:20px;font-weight:500;margin:20px 0 0;color:#eeede9}
+.chain .copy{font-size:16px;margin-top:8px}
+.chain .ex{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;line-height:1.5;color:#8c8c89;margin:20px 0 0;border-top:1px solid #262626;padding-top:12px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 40px;margin:0}
+.facts div dt{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89}
+.facts div dd{margin:4px 0 0;font-size:16px;color:#eeede9}
+.steps{list-style:none;margin:0;padding:0}
+.steps li{border-top:1px solid #262626;padding:24px 0;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:24px;align-items:baseline}
+.steps li:last-child{border-bottom:1px solid #262626}
+.steps .t{grid-column:1 / span 3;font-size:22px;font-weight:500;line-height:1.25;color:#eeede9;margin:0}
+.steps .d{grid-column:4 / span 4;font-size:17px;line-height:1.5;color:#a3a3a3;margin:0}
+.steps .tags{grid-column:8 / span 1;text-align:right;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#eeede9;margin:0;white-space:nowrap}
+.svc-rule{grid-column:1 / -1;border-top:1px solid #eeede9;margin-bottom:48px}
+.ph{border:1px solid #262626;background:#1c1c1b;display:flex;align-items:center;justify-content:center;box-sizing:border-box}
+.ph span{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;padding:16px;text-align:center}
+.rise{animation:rise 1s ease-out both}
+.d1{animation-delay:0.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}}
+.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:768px){
+section[style*="padding: 168px"],section[style*="padding: 200px"],section[style*="padding: 240px"]{padding-top:104px !important}
+section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],section[style*="padding-top: 240px"]{padding-top:104px !important}
+
+.grid>*{grid-column:1 / -1 !important;margin-top:0 !important;padding-top:0 !important}
+.wrap{padding-left:16px !important;padding-right:16px !important}
+.sticky{position:static;margin-bottom:32px}
+.ind{padding-left:0}
+.head{grid-template-columns:1fr auto !important}
+.head nav.main{grid-column:1 / -1 !important;grid-row:2 !important;justify-content:flex-start !important;justify-self:start !important}.head .who{justify-self:end !important}
+.chain{grid-template-columns:1fr;row-gap:40px}
+.steps li{grid-template-columns:1fr;row-gap:8px}
+.steps .t,.steps .d,.steps .tags{grid-column:1 / -1;text-align:left}
+}
+.site-foot{position:relative;background:#1c1c1b;margin-top:96px;padding:152px 48px 48px}
+.site-foot .foot-tab{position:absolute;left:0;right:calc(48px + (100vw - 72px) / 12);top:0;height:104px;background:#121211}
+.site-foot .foot-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px}
+.site-foot .foot-up{position:absolute;right:48px;top:28px;display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;background-image:none;padding-bottom:0}
+@media (max-width:768px){.site-foot{padding:40px 16px}.site-foot .foot-tab,.site-foot .foot-up{display:none}}
+/* rounded corners: images, videos, placeholders, footer tab */
+#page img,#page video,#page .ph{border-radius:12px}
+#services>.ph{border-radius:0}
+.site-foot .foot-tab{border-radius:0 0 16px 0}
+/* arrow gap: rounded where it meets the ground colour */
+.site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
+
+</style>
+</helmet>
+<div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
+
+<header class="wrap head" style="padding: 28px 48px; display: grid; grid-template-columns: calc((100vw - 72px) / 12) 1fr auto; align-items: center; gap: 16px 0;">
+  <div style="justify-self: start; font-size: 16px;"><a href="Approach.dc.html" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></div>
+  <p class="who" style="justify-self: start; margin: 0;"><a href="V4-DE.dc.html" style="text-decoration: none; font-weight: 500; font-size: 19px; letter-spacing: -0.015em;">Markus Rozkalns</a></p>
+  <nav aria-label="Hauptnavigation" class="main" style="justify-self: end; display: flex; flex-wrap: wrap; gap: 12px 36px; font-size: 16px;">
+    <a href="Work-DE.dc.html">Projekte</a>
+    <a href="Approach-DE.dc.html" aria-current="page" style="text-decoration-thickness: 2px;">Vorgehen</a>
+    <a href="About-DE.dc.html">Profil</a>
+    <a href="Contact-DE.dc.html">Kontakt</a>
+  </nav>
+</header>
+
+<section id="top" class="wrap grid" style="padding: 120px 48px 0; row-gap: 48px;">
+  <h1 class="disp title rise" style="grid-column: 2 / span 10;">Jede Entscheidung lässt sich auf Evidenz zurückführen</h1>
+  <p class="lead rise d1" style="grid-column: 5 / span 7;">Evidenzbasiertes Design in der Praxis: Ich beobachte Menschen bei der Arbeit, lasse sie vom Ideal träumen und halte jede Erkenntnis fest, damit sich jede Designentscheidung bis zu ihrer Quelle zurückverfolgen lässt. KI beschleunigt das Ordnen, nie das Zuhören.</p>
+  <nav aria-label="Leistungen" class="ind" style="grid-column: 5 / span 7; display: flex; flex-wrap: wrap; gap: 12px 32px; font-size: 16px;"><span style="display: inline-flex; align-items: center; gap: 10px;"><svg width="11" height="15" viewBox="0 0 11 15" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true" style="flex: none;"><path d="M5.5 0v13.5M1 9l4.5 4.5L10 9"/></svg><a href="#audit">UX-Audit</a></span>
+    <span style="display: inline-flex; align-items: center; gap: 10px;"><svg width="11" height="15" viewBox="0 0 11 15" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true" style="flex: none;"><path d="M5.5 0v13.5M1 9l4.5 4.5L10 9"/></svg><a href="#new">Neues Produkt</a></span>
+    <span style="display: inline-flex; align-items: center; gap: 10px;"><svg width="11" height="15" viewBox="0 0 11 15" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true" style="flex: none;"><path d="M5.5 0v13.5M1 9l4.5 4.5L10 9"/></svg><a href="#redesign">Redesign</a></span>
+  </nav>
+</section>
+
+<section class="wrap" style="padding: 200px 48px 0;">
+  <div class="grid" style="margin-bottom: 72px;">
+    <h2 class="disp sec" style="grid-column: 1 / span 6;">Die Kette</h2>
+    <p class="copy" style="grid-column: 5 / span 7; margin-top: 24px;">Jeder Arbeitsschritt erhält eine feste ID. Insights nennen die Evidenz dahinter, Entscheidungen nennen die Insights. So lässt sich jede Designentscheidung zum Interview, zur Beobachtung oder zur Zahl zurückverfolgen, aus der sie stammt.</p>
+  </div>
+  <ol class="chain">
+    <li><span class="node"></span><p class="id">S</p><p class="type">Source</p><p class="copy">Woher es kommt: ein Interview, ein Besuch vor Ort, ein Analytics-Export.</p><p class="ex">S001 · Rund 20 Interviews mit Instruktoren</p></li>
+    <li><span class="node"></span><p class="id">E</p><p class="type">Evidence</p><p class="copy">Was tatsächlich beobachtet oder gesagt wurde, ohne Interpretation.</p><p class="ex">E002 · Das Wetter brauchte fünf Tabs, ein Ort nach dem anderen</p></li>
+    <li><span class="node"></span><p class="id">I</p><p class="type">Insight</p><p class="copy">Was es für die Menschen bedeutet, die das Produkt nutzen.</p><p class="ex">I001 · Instruktoren denken in Höhen</p></li>
+    <li><span class="node"></span><p class="id">D</p><p class="type">Decision</p><p class="copy">Was ich gestaltet habe und auf welche Insights es antwortet.</p><p class="ex">D001 · Eine höhenbasierte Wetterseite</p></li>
+  </ol>
+  <div class="grid" style="margin-top: 56px;">
+    <p style="grid-column: 1 / span 8; margin: 0; font-size: 16px;">Beispiel aus der <a href="Case-IOS-DE.dc.html#approach">Fallstudie Instructor Operating Station</a></p>
+  </div>
+</section>
+
+<section class="wrap grid aiband" style="position: relative; overflow: hidden; margin-top: 200px; padding: 200px 48px;">
+  <img src="img/clients-blur-poster.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+  <video class="loop" src="img/clients-blur.mp4" poster="img/clients-blur-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"></video>
+  <div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(18, 18, 17, 0.55); z-index: 0;"></div>
+  <div style="position: relative; z-index: 1; grid-column: 1 / span 3;"><h2 class="disp sec">Wo KI hilft</h2></div>
+  <div style="position: relative; z-index: 1; grid-column: 5 / span 7;">
+    <p class="body">Ich sammle Research in Notion und halte Arbeitsnotizen in Markdown fest. KI hilft mir, Aussagen zu taggen und zu clustern, und schlägt protokollierte Entscheidungen vor: D001, D002 und so weiter.</p>
+    <p class="copy ind" style="margin-top: 24px;">Ich prüfe jeden Vorschlag und verantworte jede Entscheidung. KI macht die Synthese schneller und die Spur lückenlos; das Zuhören passiert weiterhin persönlich, im Cockpit, in der Kabine oder im Büro.</p>
+  </div>
+</section>
+
+<section id="services" style="padding-top: 160px;">
+  <div class="wrap grid" style="padding: 0 48px; align-items: end;">
+    <h2 class="disp" style="grid-column: 1 / span 5; font-size: clamp(48px, 6.7vw, 96px); line-height: 0.92;">Leistungen</h2>
+    <p class="lead" style="grid-column: 6 / span 7; padding-bottom: 6px;">Drei Wege, mit mir zu arbeiten. Alle folgen derselben Evidenzkette.</p>
+  </div>
+</section>
+
+<section id="audit" class="wrap grid" style="padding: 120px 48px 0;">
+  <div class="svc-rule"></div>
+  <div class="sticky" style="grid-column: 1 / span 3;">
+    <h2 class="disp sec">UX-Audit</h2>
+    <dl class="facts ind" style="margin-top: 24px; flex-direction: column;">
+      <div><dt>Dauer</dt><dd>8–10 Wochen</dd></div>
+      <div><dt>Lieferumfang</dt><dd>Audit-Bericht, Figma-Datei</dd></div>
+    </dl>
+  </div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 680px;">Für ein bestehendes Produkt, das nicht leistet, was es soll. Ich finde, was nicht funktioniert, belege es mit Nutzern und übergebe einen priorisierten Plan.</p>
+    <ol class="steps" style="margin-top: 48px;">
+      <li><p class="t">Entdecken</p><p class="d">Ein bis zwei Stakeholder-Interviews zu Geschäftszielen, bisherigen Erfahrungen, KPIs, Analytics und vorhandener Research.</p><p class="tags">S</p></li>
+      <li><p class="t">Evaluieren</p><p class="d">Expert Walkthrough, heuristische Evaluation und ein Accessibility-Check nach WCAG 2.1 AA.</p><p class="tags">S · E</p></li>
+      <li><p class="t">Hypothesen bilden</p><p class="d">Probleme benennen, Hypothesen bilden und mit RICE oder MoSCoW priorisieren.</p><p class="tags">I</p></li>
+      <li><p class="t">Validieren</p><p class="d">Research-Methoden passend zu den Hypothesen wählen und mit Nutzern testen.</p><p class="tags">E</p></li>
+      <li><p class="t">Synthetisieren</p><p class="d">Die Evidenz triangulieren und die bestätigten Probleme gewichten.</p><p class="tags">I</p></li>
+      <li><p class="t">Empfehlen</p><p class="d">Verbesserungen in Figma, eine Umsetzungs-Roadmap und die KPIs, die gemessen werden.</p><p class="tags">D</p></li>
+    </ol>
+    
+  </div>
+</section>
+
+<section id="new" class="wrap grid" style="padding: 160px 48px 0;">
+  <div class="svc-rule"></div>
+  <div class="sticky" style="grid-column: 1 / span 3;">
+    <h2 class="disp sec">Neues Produkt</h2>
+    <dl class="facts ind" style="margin-top: 24px; flex-direction: column;">
+      <div><dt>Dauer</dt><dd>4–6 Monate</dd></div>
+      <div><dt>Lieferumfang</dt><dd>Figma-Datei, funktionierender Prototyp, Designsystem</dd></div>
+    </dl>
+  </div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 680px;">Vom leeren Blatt zu einem getesteten Produkt, das Entwickler ohne mich bauen und erweitern können.</p>
+    <ol class="steps" style="margin-top: 48px;">
+      <li><p class="t">Entdecken</p><p class="d">Stakeholder-Interviews zu Zielen, Rahmenbedingungen, Zielgruppen und Erfolgskennzahlen; Sichtung vorhandener Daten und Research.</p><p class="tags">S</p></li>
+      <li><p class="t">Research</p><p class="d">Nutzerinterviews und Beobachtung im realen Umfeld, dazu ein Wettbewerbs- und Marktscan.</p><p class="tags">S · E</p></li>
+      <li><p class="t">Definieren</p><p class="d">Insights, primäre Workflows und Designprinzipien, priorisiert mit RICE oder MoSCoW.</p><p class="tags">I</p></li>
+      <li><p class="t">Ideen entwickeln</p><p class="d">Sessions, in denen Nutzer vom Ideal träumen, danach Konzepte, Informationsarchitektur und zentrale Flows.</p><p class="tags">I · D</p></li>
+      <li><p class="t">Prototyp</p><p class="d">Wireframes, dann interaktive Figma-Prototypen; KI beschleunigt die Iterationen.</p><p class="tags">D</p></li>
+      <li><p class="t">Validieren</p><p class="d">Konzeptvalidierung und Usability-Tests mit echten Nutzern, bis der primäre Workflow funktioniert.</p><p class="tags">E · D</p></li>
+      <li><p class="t">Liefern und messen</p><p class="d">Finales UI und Designsystem, Übergabe, Launch-KPIs und Messung nach dem Launch, die neue Evidenz zurückspielt.</p><p class="tags">D · E</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="redesign" class="wrap grid" style="padding: 160px 48px 0;">
+  <div class="svc-rule"></div>
+  <div class="sticky" style="grid-column: 1 / span 3;">
+    <h2 class="disp sec">Redesign</h2>
+    <dl class="facts ind" style="margin-top: 24px; flex-direction: column;">
+      <div><dt>Dauer</dt><dd>3–5 Monate</dd></div>
+      <div><dt>Lieferumfang</dt><dd>Figma-Datei, funktionierender Prototyp, Designsystem, Vorher-nachher-Bericht</dd></div>
+    </dl>
+  </div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 680px;">Für ein Produkt, auf das sich Menschen bereits verlassen. Ich behalte, was funktioniert, behebe, was nicht funktioniert, und messe den Unterschied.</p>
+    <ol class="steps" style="margin-top: 48px;">
+      <li><p class="t">Entdecken</p><p class="d">Stakeholder-Interviews zu Zielen, Schwachstellen und Rahmenbedingungen, dazu eine Baseline aus Analytics, Conversion und Nutzung als Messgrundlage.</p><p class="tags">S</p></li>
+      <li><p class="t">Audit</p><p class="d">Expert Walkthrough, heuristische Evaluation, ein Check nach WCAG 2.1 AA sowie eine Funnel- und Analytics-Analyse.</p><p class="tags">S · E</p></li>
+      <li><p class="t">Research und Träumen</p><p class="d">Interviews mit heutigen Nutzern: worauf sie sich verlassen und womit sie kämpfen, dazu Traum-Sessions zur idealen Version.</p><p class="tags">S · E</p></li>
+      <li><p class="t">Definieren</p><p class="d">Insights, eine Liste mit Behalten, Beheben und Streichen, Designprinzipien und Prioritäten.</p><p class="tags">I</p></li>
+      <li><p class="t">Redesign und Prototyp</p><p class="d">Neue Informationsarchitektur, Flows und Figma-Prototypen; das Designsystem wird parallel aufgebaut oder erweitert.</p><p class="tags">D</p></li>
+      <li><p class="t">Validieren</p><p class="d">Usability-Tests, die alte und neue Version bei den primären Workflows vergleichen.</p><p class="tags">E · D</p></li>
+      <li><p class="t">Ausrollen und messen</p><p class="d">Ein schrittweiser Rollout, wo sinnvoll, Übergabe, dann Messung gegen die Baseline.</p><p class="tags">D · E</p></li>
+    </ol>
+    
+  </div>
+</section>
+
+<section class="wrap grid" style="padding: 200px 48px 0;">
+  <p class="disp" style="grid-column: 1 / span 10; font-size: clamp(32px, 4vw, 56px); line-height: 1.05; letter-spacing: -0.035em; color: #a3a3a3;"><span style="color: #eeede9;">Jedes neue Produkt und jedes Redesign kommt mit einem Designsystem.</span> Visuell in Figma, schriftlich in Markdown, damit Menschen und KI-Tools gleichermassen damit bauen können.</p>
+</section>
+
+<section id="contact" class="wrap" style="padding: 120px 48px 0;">
+  <div class="contact-rule" style="border-top: 1px solid #555553; margin-bottom: 96px;"></div>
+  <div class="grid" style="align-items: end; row-gap: 32px;">
+    <h2 class="disp" style="grid-column: 1 / span 7; font-size: clamp(48px, 6.7vw, 96px); line-height: 0.92;">Kontakt aufnehmen</h2>
+    <div style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 10px; padding-bottom: 8px;">
+      <a href="mailto:markus@rozkalns.design" style="align-self: flex-start; font-size: clamp(24px, 2.3vw, 32px); letter-spacing: -0.015em;">markus@rozkalns.design</a>
+      <p style="margin: 6px 0 0; display: flex; gap: 24px; font-size: 16px;"><a href="https://www.linkedin.com/in/markusrozkalns/">LinkedIn</a><a href="files/Markus-Rozkalns-CV.pdf">CV herunterladen</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot" style="margin-top: 24px;">
+  <div class="foot-tab" aria-hidden="true"></div>
+  <a href="#page" class="foot-up" aria-label="Nach oben"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
+  <div class="foot-row">
+    <p class="meta">© 2026 Markus Rozkalns · Riga · Zürich</p>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="Imprint-DE.dc.html" style="color: #a3a3a3;">Impressum</a><a href="Privacy-DE.dc.html" style="color: #a3a3a3;">Datenschutz</a><a href="Approach.dc.html" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7370}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

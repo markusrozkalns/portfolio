@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Work — Markus Rozkalns</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+
+/* linked images: the picture zooms in a little inside a fixed frame */
+a[href]:has(>img,>video){clip-path:inset(0 round 12px)}
+a[href]:has(>img,>video)>img,a[href]:has(>img,>video)>video{transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1) !important}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){a[href]:has(>img,>video):hover>img,a[href]:has(>img,>video):hover>video,a[href]:has(>img,>video):focus-visible>img,a[href]:has(>img,>video):focus-visible>video{transform:scale(1.04)}}
+@media (max-width:768px){.contact-rule{margin-bottom:72px !important}#contact{padding-top:88px !important}}
+::selection{background:#eeede9;color:#121211}
+body{margin:0;background:#121211}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a{--t:1px;color:#eeede9;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% var(--t);background-position:100% 100%;padding-bottom:0.14em}
+a:hover{color:#eeede9;animation:uline .8s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes uline{0%{background-size:100% var(--t);background-position:100% 100%}45%{background-size:0 var(--t);background-position:100% 100%}46%{background-size:0 2px;background-position:0 100%}100%{background-size:100% 2px;background-position:0 100%}}
+a[aria-current="page"],a[style*="text-decoration-thickness: 2px"]{--t:2px}
+a.ph,a[style*="text-decoration: none"]{background-image:none;padding-bottom:0}
+@media (prefers-reduced-motion:reduce){a:hover{animation:none;background-size:100% 2px}}
+a[aria-current="page"]{background-image:none !important;padding-bottom:0.14em}
+a:focus-visible{outline:2px solid #eeede9;outline-offset:4px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.meta{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;line-height:22px;color:#8c8c89;margin:0}
+.copy{font-size:18px;line-height:1.55;color:#a3a3a3;margin:0}
+.body{font-size:20px;line-height:1.5;color:#eeede9;margin:0}
+.disp{font-weight:500;letter-spacing:-0.045em;margin:0}
+.title{font-size:clamp(48px,7vw,104px);line-height:0.92}
+.sec{font-size:clamp(36px,4vw,56px);line-height:0.95;letter-spacing:-0.04em}
+.lead{font-size:clamp(24px,2.3vw,32px);line-height:1.3;letter-spacing:-0.015em;margin:0}
+.ind{padding-left:calc((100vw - 72px) / 12)}
+.ph{border:1px solid #262626;background:#1c1c1b;display:flex;align-items:center;justify-content:center;box-sizing:border-box;text-decoration:none}
+.ph span{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;padding:16px;text-align:center}
+.sticky{position:-webkit-sticky;position:sticky;top:48px;align-self:start;z-index:1}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0}
+.facts div{border-top:1px solid #262626;padding-top:14px}
+.facts dt{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89}
+.facts dd{margin:6px 0 0;font-size:16px;line-height:1.4;color:#eeede9}
+.rows{list-style:none;margin:0;padding:0}
+.rows li{border-top:1px solid #262626;padding:22px 0;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:24px;align-items:baseline}
+.rows li:last-child{border-bottom:1px solid #262626}
+.rows .k{grid-column:1 / span 2;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#8c8c89}
+.rows .t{grid-column:3 / span 4}
+.rows .t b{display:block;font-weight:500;font-size:20px;line-height:1.3;color:#eeede9}
+.rows .t span{display:block;font-size:16px;line-height:1.5;color:#a3a3a3;margin-top:4px}
+.rows .r{grid-column:7 / span 2;text-align:right;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#8c8c89}
+.rise{animation:rise 1s ease-out both}
+.d1{animation-delay:0.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}video.loop{display:none}}
+.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:768px){
+section[style*="padding: 168px"],section[style*="padding: 200px"],section[style*="padding: 240px"]{padding-top:104px !important}
+section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],section[style*="padding-top: 240px"]{padding-top:104px !important}
+
+.grid>*{grid-column:1 / -1 !important;margin-top:0 !important;padding-top:0 !important}
+.wrap{padding-left:16px !important;padding-right:16px !important}
+.sticky{position:static;margin-bottom:32px}
+.ind{padding-left:0}
+.head{grid-template-columns:1fr auto !important}
+.head nav.main{grid-column:1 / -1 !important;grid-row:2 !important;justify-content:flex-start !important;justify-self:start !important}.head .who{justify-self:end !important}
+.rows li{grid-template-columns:1fr;row-gap:6px}
+.rows .k,.rows .t,.rows .r{grid-column:1 / -1;text-align:left}
+.photo{margin-bottom:40px}
+}
+.item{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:24px;align-items:start;border-top:1px solid #262626;padding:40px 0}.item:last-child{border-bottom:1px solid #262626}.item .ph,.item .media{grid-column:1 / span 3}.item .txt{grid-column:4 / span 5}.ttl{font-size:clamp(28px,2.8vw,40px);line-height:1.02;letter-spacing:-0.03em;font-weight:500;margin:0}@media (max-width:768px){.item{grid-template-columns:1fr;row-gap:24px}.item .ph,.item .media,.item .txt{grid-column:1 / -1}}
+.site-foot{position:relative;background:#1c1c1b;margin-top:96px;padding:152px 48px 48px}
+.site-foot .foot-tab{position:absolute;left:0;right:calc(48px + (100vw - 72px) / 12);top:0;height:104px;background:#121211}
+.site-foot .foot-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px}
+.site-foot .foot-up{position:absolute;right:48px;top:28px;display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;background-image:none;padding-bottom:0}
+@media (max-width:768px){.site-foot{padding:40px 16px}.site-foot .foot-tab,.site-foot .foot-up{display:none}}
+.band{background:#1c1c1b}
+.gapstrip img,.gapstrip video{border-radius:0 !important}
+@media (max-width:768px){.gapstrip{height:104px !important}#other-industries{margin-top:0 !important}}
+@media (max-width:768px){section.band{margin-top:104px !important;padding-top:72px !important;padding-bottom:88px !important}}
+/* rounded corners: images, videos, placeholders, footer tab */
+#page img,#page video,#page .ph{border-radius:12px}
+#services>.ph{border-radius:0}
+.site-foot .foot-tab{border-radius:0 0 16px 0}
+/* arrow gap: rounded where it meets the ground colour */
+.site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
+
+</style>
+</helmet>
+<div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
+
+<header class="wrap head" style="padding: 28px 48px; display: grid; grid-template-columns: calc((100vw - 72px) / 12) 1fr auto; align-items: center; gap: 16px 0;">
+  <div style="justify-self: start; font-size: 16px;"><a href="Work-DE.dc.html" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></div>
+  <p class="who" style="justify-self: start; margin: 0;"><a href="V4.dc.html" style="text-decoration: none; font-weight: 500; font-size: 19px; letter-spacing: -0.015em;">Markus Rozkalns</a></p>
+  <nav aria-label="Main" class="main" style="justify-self: end; display: flex; flex-wrap: wrap; gap: 12px 36px; font-size: 16px;">
+    <a href="Work.dc.html" aria-current="page" style="text-decoration-thickness: 2px;">Work</a>
+    <a href="Approach.dc.html">Approach</a>
+    <a href="About.dc.html">About</a>
+    <a href="Contact.dc.html">Contact</a>
+  </nav>
+</header>
+
+<section class="wrap grid" style="padding: 120px 48px 0; row-gap: 48px;">
+  <h1 class="disp title rise" style="grid-column: 2 / span 10;">Work</h1>
+  <p class="lead rise d1" style="grid-column: 5 / span 7;">Selected projects from aviation and beyond. Each one started with the people who use it.</p>
+</section>
+
+<section id="aviation" class="wrap grid band" style="margin-top: 168px; padding: 144px 48px 160px;">
+  <div class="sticky" style="grid-column: 1 / span 3;">
+    <h2 class="disp sec">Aviation</h2>
+    <p class="copy ind" style="margin-top: 20px;">Three projects for Loft Dynamics in Switzerland, makers of EASA and FAA qualified VR flight simulators.</p>
+  </div>
+  <div style="grid-column: 5 / span 8;">
+    <ol style="list-style: none; margin: 0; padding: 0;">
+      <li class="item">
+        <a href="Case-IOS.dc.html" aria-label="Instructor Operating Station case study" class="media" style="display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/ios-simulator.jpg" alt="An instructor at the operating station, with a pilot flying the H125 VR simulator behind him" width="900" height="506" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-IOS.dc.html" style="text-decoration: none;">Instructor Operating Station</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Loft Dynamics · Switzerland</p>
+            <p class="copy" style="margin-top: 16px;">Turned an engineer-built IOS into a coherent, instructor-driven system, led by a weather page that went from five tabs to one.</p>
+            <p style="margin: 20px 0 0;"><a href="Case-IOS.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-LoftHUB.dc.html" aria-label="LoftHUB case study" class="media" style="display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/lofthub-ipad-home.jpg" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-LoftHUB.dc.html" style="text-decoration: none;">LoftHUB</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Loft Dynamics · Switzerland</p>
+            <p class="copy" style="margin-top: 16px;">Redesigned an unused portal into a pilot debriefing tool with route maps, data, video and maneuver timelines.</p>
+            
+            <p style="margin: 20px 0 0;"><a href="Case-LoftHUB.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-Brand.dc.html" aria-label="Loft Dynamics website and brand case study" class="media" style="display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/loft-website-home-poster.jpg" alt="" aria-hidden="true" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 0% 50%;"><video class="loop" src="img/loft-website-home.mp4" poster="img/loft-website-home-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 0% 50%;"></video></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-Brand.dc.html" style="text-decoration: none;">Loft Dynamics website and brand</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Loft Dynamics · Switzerland</p>
+            <p class="copy" style="margin-top: 16px;">A focused brand refresh and a leaner website built around four customer profiles.</p>
+            <p style="margin: 20px 0 0;"><a href="Case-Brand.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<div class="gapstrip" aria-hidden="true" style="position: relative; height: 200px; overflow: hidden;">
+  <img src="img/clients-blur-poster.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+  <video class="loop" src="img/clients-blur.mp4" poster="img/clients-blur-poster.jpg" autoplay muted loop playsinline preload="metadata" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video>
+  <div style="position: absolute; inset: 0; background: rgba(18, 18, 17, 0.55);"></div>
+</div>
+
+<section id="other-industries" class="wrap grid band" style="margin-top: 0; padding: 144px 48px 160px;">
+  <div class="sticky" style="grid-column: 1 / span 3;">
+    <h2 class="disp sec">Other industries</h2>
+    <p class="copy ind" style="margin-top: 20px;">Nine projects across banking, rail, health, culture, sport and public institutions.</p>
+  </div>
+  <div style="grid-column: 5 / span 8;">
+    <ol style="list-style: none; margin: 0; padding: 0;">
+      <li class="item">
+        <a href="Case-DNB.dc.html" aria-label="DNB pan-Baltic websites case study" class="media" style="display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/dnb-laptop.jpg" alt="" aria-hidden="true" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-DNB.dc.html" style="text-decoration: none;">DNB pan-Baltic websites</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">DNB Bank · Baltics</p>
+            <p class="copy" style="margin-top: 16px;">Websites and a design system for three countries. After the merger, Luminor kept our site as its platform.</p>
+            <p style="margin: 20px 0 0;"><a href="Case-DNB.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-BankOfLatvia.dc.html" aria-label="Bank of Latvia money museum case study" class="media" style="display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/bank-of-latvia-globe.jpg" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-BankOfLatvia.dc.html" style="text-decoration: none;">Bank of Latvia money museum</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Bank of Latvia · Latvia</p>
+            <p class="copy" style="margin-top: 16px;">A walk-up touchscreen tool comparing up to three indicators across Europe, and the control interface of a projected globe.</p>
+            <p style="margin: 20px 0 0;"><a href="Case-BankOfLatvia.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-Vivi.dc.html" aria-label="Vivi ticket validators case study" class="media" style="display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/vivi-train.jpg" alt="" aria-hidden="true" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-Vivi.dc.html" style="text-decoration: none;">Vivi ticket validators</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Vivi · Latvia</p>
+            <p class="copy" style="margin-top: 16px;">Field research on trains led to one visual cue so clear that the instruction sheet was removed.</p>
+            <p style="margin: 20px 0 0;"><a href="Case-Vivi.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-Metrohm.dc.html" aria-label="Metrohm global websites case study" class="media" style="display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/metrohm-macbook.jpg" alt="" aria-hidden="true" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; display: block;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-Metrohm.dc.html" style="text-decoration: none;">Metrohm global websites</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Metrohm · Switzerland</p>
+            <p class="copy" style="margin-top: 16px;">A global website system with a user-tested instrument filter that gets people to the right product faster.</p>
+            
+            <p style="margin: 20px 0 0;"><a href="Case-Metrohm.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-Roche.dc.html" aria-label="Roche personalized healthcare campaign case study" class="media" style="display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/roche-home-poster.jpg" alt="" aria-hidden="true" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;"><video class="loop" src="img/roche-home.mp4" poster="img/roche-home-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%;"></video></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-Roche.dc.html" style="text-decoration: none;">Roche personalized healthcare campaign</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Roche · Switzerland</p>
+            <p class="copy" style="margin-top: 16px;">Personalized health explained to the public through an interactive network of health elements.</p>
+            <p style="margin: 20px 0 0;"><a href="Case-Roche.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-Theapolis.dc.html" aria-label="Theapolis platform case study" class="media" style="display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/theapolis-poster.jpg" alt="" aria-hidden="true" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-Theapolis.dc.html" style="text-decoration: none;">Theapolis platform</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Theapolis · Germany</p>
+            <p class="copy" style="margin-top: 16px;">A redesign and rebrand of the professional network for theater people in Germany, Austria and Switzerland.</p>
+            
+            <p style="margin: 20px 0 0;"><a href="Case-Theapolis.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-HRG.dc.html" aria-label="Human Rights Guide case study" class="media" style="display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/hrg-ipad.jpg" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 40%;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-HRG.dc.html" style="text-decoration: none;">Human Rights Guide</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Baltic Human Rights Society · EU</p>
+            <p class="copy" style="margin-top: 16px;">A text-only, color-coded guide to human rights that grew from 1 to 12 countries.</p>
+            <p style="margin: 20px 0 0;"><a href="Case-HRG.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-Asya.dc.html" aria-label="Asya conversation app case study" class="media" style="display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/asya-hero.jpg" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-Asya.dc.html" style="text-decoration: none;">Asya conversation app</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">Asya · Latvia</p>
+            <p class="copy" style="margin-top: 16px;">An AI app that shows a conversation as a blooming flower. Latvian National Design Award 2020.</p>
+            
+            <p style="margin: 20px 0 0;"><a href="Case-Asya.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <a href="Case-IIHF.dc.html" aria-label="IIHF ticketing platform case study" class="media" style="display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; text-decoration: none;"><img src="img/iihf-imac.jpg" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%;"></a>
+        <div class="txt">
+          <h3 class="ttl"><a href="Case-IIHF.dc.html" style="text-decoration: none;">IIHF ticketing platform</a></h3>
+          <div class="ind">
+            <p class="meta" style="margin-top: 12px;">IIHF · Switzerland</p>
+            <p class="copy" style="margin-top: 16px;">The Riga ticketing site for the 2023 World Championship, built on an external API.</p>
+            
+            <p style="margin: 20px 0 0;"><a href="Case-IIHF.dc.html">Read case study</a></p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="contact" class="wrap" style="padding: 120px 48px 0;">
+  <div class="contact-rule" style="border-top: 1px solid #555553; margin-bottom: 96px;"></div>
+  <div class="grid" style="align-items: end; row-gap: 32px;">
+    <h2 class="disp" style="grid-column: 1 / span 7; font-size: clamp(48px, 6.7vw, 96px); line-height: 0.92;">Let’s talk</h2>
+    <div style="grid-column: 8 / span 5; display: flex; flex-direction: column; gap: 10px; padding-bottom: 8px;">
+      <a href="mailto:markus@rozkalns.design" style="align-self: flex-start; font-size: clamp(24px, 2.3vw, 32px); letter-spacing: -0.015em;">markus@rozkalns.design</a>
+      <p style="margin: 6px 0 0; display: flex; gap: 24px; font-size: 16px;"><a href="https://www.linkedin.com/in/markusrozkalns/">LinkedIn</a><a href="files/Markus-Rozkalns-CV.pdf">Download CV</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot" style="margin-top: 24px;">
+  <div class="foot-tab" aria-hidden="true"></div>
+  <a href="#page" class="foot-up" aria-label="Back to top"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
+  <div class="foot-row">
+    <p class="meta">© 2026 Markus Rozkalns · Riga · Zurich</p>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="Imprint.dc.html" style="color: #a3a3a3;">Imprint</a><a href="Privacy.dc.html" style="color: #a3a3a3;">Privacy</a><a href="Work-DE.dc.html" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":7400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

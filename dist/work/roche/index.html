@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roche personalized healthcare campaign — case study</title>
+<meta name="description" content="A campaign site that explains personalized health to the public through an interactive network of health elements. It ran for five years and was extended several times.">
+<meta name="theme-color" content="#121211">
+<link rel="canonical" href="https://rozkalns.design/work/roche/">
+<link rel="alternate" hreflang="en" href="https://rozkalns.design/work/roche/">
+<link rel="alternate" hreflang="de" href="https://rozkalns.design/de/work/roche/">
+<meta property="og:title" content="Roche personalized healthcare campaign — case study">
+<meta property="og:description" content="A campaign site that explains personalized health to the public through an interactive network of health elements. It ran for five years and was extended several times.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rozkalns.design/work/roche/">
+<meta property="og:image" content="https://rozkalns.design/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../../img/favicon-32.png">
+<link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+<link rel="preload" href="../../fonts/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Geist";src:url("../../fonts/Geist-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Geist";src:url("../../fonts/Geist-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("../../fonts/GeistMono-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("../../fonts/GeistMono-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+.js img[data-fade]{opacity:0;transition:opacity .9s ease}.js img[data-fade].in{opacity:1}@media (prefers-reduced-motion:reduce){.js img[data-fade]{opacity:1;transition:none}}
+.skip{position:absolute;left:16px;top:-80px;z-index:100;background:#eeede9;color:#121211 !important;padding:10px 16px;border-radius:8px;font-size:16px;background-image:none !important}.skip:focus{top:16px}main:focus{outline:none}
+.vctl{position:absolute;right:16px;bottom:16px;z-index:4;width:40px;height:40px;display:flex;align-items:center;justify-content:center;padding:0;border:1px solid rgba(238,237,233,.3);border-radius:8px;background:rgba(18,18,17,.6);cursor:pointer}.vctl:hover{background:rgba(18,18,17,.85)}.vctl:focus-visible{outline:2px solid #eeede9;outline-offset:3px}.vctl-hero{right:16px;left:auto}@media (prefers-reduced-motion:reduce){.vctl{display:none}}
+.pinbar{position:fixed;top:0;left:0;right:0;z-index:50;background:#121211;transform:translateY(-100%);transition:transform .5s cubic-bezier(.2,.7,.2,1)}.pinbar.on{transform:none}@media (prefers-reduced-motion:reduce){.pinbar{transition:none}}
+</style>
+<style>
+.aband .node.hollow{background:#1c1c1b}@media (max-width:768px){.aband{margin-top:104px !important;padding-top:72px !important;padding-bottom:88px !important}}
+/* linked images: the picture zooms in a little inside a fixed frame */
+a[href]:has(>img,>video){clip-path:inset(0 round 12px)}
+a[href]:has(>img,>video)>img,a[href]:has(>img,>video)>video{transition:opacity .9s ease,transform 1.2s cubic-bezier(.2,.7,.2,1) !important}
+@media (hover:hover) and (prefers-reduced-motion:no-preference){a[href]:has(>img,>video):hover>img,a[href]:has(>img,>video):hover>video,a[href]:has(>img,>video):focus-visible>img,a[href]:has(>img,>video):focus-visible>video{transform:scale(1.04)}}
+::selection{background:#eeede9;color:#121211}
+body{margin:0;background:#121211}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+a{--t:1px;color:#eeede9;text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% var(--t);background-position:100% 100%;padding-bottom:0.14em}
+a:hover{color:#eeede9;animation:uline .8s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes uline{0%{background-size:100% var(--t);background-position:100% 100%}45%{background-size:0 var(--t);background-position:100% 100%}46%{background-size:0 2px;background-position:0 100%}100%{background-size:100% 2px;background-position:0 100%}}
+a[aria-current="page"],a[style*="text-decoration-thickness: 2px"]{--t:2px}
+a.ph,a[style*="text-decoration: none"]{background-image:none;padding-bottom:0}
+@media (prefers-reduced-motion:reduce){a:hover{animation:none;background-size:100% 2px}}
+a[aria-current="page"]{background-image:none !important;padding-bottom:0.14em}
+a:focus-visible,button:focus-visible{outline:2px solid #eeede9;outline-offset:4px}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.sub{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:24px}
+.meta{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;line-height:22px;color:#8c8c89;margin:0}
+.copy{font-size:18px;line-height:1.55;color:#a3a3a3;margin:0}
+.body{font-size:20px;line-height:1.5;color:#eeede9;margin:0}
+.disp{font-weight:500;letter-spacing:-0.045em;margin:0}
+.title{font-size:clamp(48px,7vw,104px);line-height:0.92}
+.sec{font-size:clamp(36px,4vw,56px);line-height:0.95;letter-spacing:-0.04em}
+.h3{font-size:clamp(24px,2.2vw,30px);line-height:1.1;letter-spacing:-0.025em;font-weight:500;margin:0}
+.lead{font-size:clamp(24px,2.3vw,32px);line-height:1.3;letter-spacing:-0.015em;margin:0}
+.ph{border:1px solid #262626;background:#1c1c1b;display:flex;align-items:center;justify-content:center;box-sizing:border-box;text-decoration:none}
+.ph span{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;padding:16px;text-align:center}
+.ind{padding-left:calc((100vw - 72px) / 12)}
+.sticky{position:-webkit-sticky;position:sticky;top:48px;align-self:start;z-index:1}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0}
+.facts div{border-top:1px solid #262626;padding-top:14px}
+.facts dt{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89}
+.facts dd{margin:6px 0 0;font-size:16px;line-height:1.4;color:#eeede9}
+.list{list-style:none;padding:0;margin:0}
+.list li{border-top:1px solid #262626;padding:18px 0;font-size:18px;line-height:1.5;color:#eeede9}
+.status{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#eeede9;border:1px solid #626260;padding:4px 10px;display:inline-block}
+.iconbtn{background:none;border:0;color:#eeede9;width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.iconbtn:hover svg{stroke-width:2}
+.track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 48px 12px calc(48px + (100vw - 72px) / 12);scroll-padding-left:calc(48px + (100vw - 72px) / 12);scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.step{flex:0 0 340px;scroll-snap-align:start;border-top:1px solid #626260;padding:0 32px 0 0;position:relative}
+.step:last-child{flex-basis:300px}
+.node{position:absolute;top:-5px;left:0;width:9px;height:9px;background:#eeede9}
+.node.hollow{background:#121211;outline:1px solid #eeede9;outline-offset:-1px}
+.step .id{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:32px;line-height:1;letter-spacing:-0.03em;margin:32px 0 0;color:#eeede9}
+.step .type{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:14px;color:#8c8c89;margin:10px 0 0}
+.step h3{font-size:20px;line-height:1.25;font-weight:500;margin:20px 0 0;color:#eeede9}
+.step .copy{font-size:16px;margin-top:8px}
+.step .from{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;color:#8c8c89;margin:16px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.stats div{border-top:1px solid #262626;padding-top:16px}
+.stats b{display:block;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-weight:400;font-size:clamp(40px,4vw,56px);line-height:1;letter-spacing:-0.04em;color:#eeede9}
+.stats span{display:block;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:15px;color:#a3a3a3;margin-top:12px}
+.pillars{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+.pillars li{border-top:1px solid #262626;padding:16px 0;display:flex;gap:16px}
+.pillars li b{font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-weight:400;font-size:15px;color:#8c8c89;min-width:20px}
+.pillars li span{font-size:17px;line-height:1.45;color:#eeede9}
+.pillars li em{font-style:normal;color:#a3a3a3}
+.rise{animation:rise 1s ease-out both}
+.d1{animation-delay:0.2s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}}
+.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+a[href^="mailto:"]{overflow-wrap:anywhere}
+@media (max-width:768px){
+section[style*="padding: 168px"],section[style*="padding: 200px"],section[style*="padding: 240px"]{padding-top:104px !important}
+section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],section[style*="padding-top: 240px"]{padding-top:104px !important}
+
+.grid>*,.sub>*{grid-column:1 / -1 !important;margin-top:0 !important}
+.wrap{padding-left:16px !important;padding-right:16px !important}
+.track{padding:0 16px 12px;scroll-padding-left:16px}
+.step{flex-basis:280px}
+.sticky{position:static;margin-bottom:32px}
+.head{grid-template-columns:1fr auto !important}
+.head nav.main{grid-column:1 / -1 !important;grid-row:2 !important;justify-content:flex-start !important;justify-self:start !important}.head .who{justify-self:end !important}
+.facts,.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pillars{grid-template-columns:1fr}
+.hidesm{display:none !important}
+.ind{padding-left:0}
+}
+.site-foot{position:relative;background:#1c1c1b;margin-top:96px;padding:152px 48px 48px}
+.site-foot .foot-tab{position:absolute;left:0;right:calc(48px + (100vw - 72px) / 12);top:0;height:104px;background:#121211}
+.site-foot .foot-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px}
+.site-foot .foot-up{position:absolute;right:48px;top:28px;display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;background-image:none;padding-bottom:0}
+@media (max-width:768px){.site-foot{padding:40px 16px}.site-foot .foot-tab,.site-foot .foot-up{display:none}}
+/* rounded corners: images, videos, placeholders, footer tab */
+#page img,#page video,#page .ph{border-radius:12px}
+#services>.ph{border-radius:0}
+.site-foot .foot-tab{border-radius:0 0 16px 0}
+/* arrow gap: rounded where it meets the ground colour */
+.site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
+
+<header class="wrap head" style="padding: 28px 48px; display: grid; grid-template-columns: calc((100vw - 72px) / 12) 1fr auto; align-items: center; gap: 16px 0;">
+  <div style="justify-self: start; font-size: 16px;"><a href="../../de/work/roche/" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></div>
+  <p class="who" style="justify-self: start; margin: 0;"><a href="../../" style="text-decoration: none; font-weight: 500; font-size: 19px; letter-spacing: -0.015em;">Markus Rozkalns</a></p>
+  <nav aria-label="Main" class="main" style="justify-self: end; display: flex; flex-wrap: wrap; gap: 12px 36px; font-size: 16px;">
+    <a href="../../work/" aria-current="page" style="text-decoration-thickness: 2px;">Work</a>
+    <a href="../../approach/">Approach</a>
+    <a href="../../about/">About</a>
+    <a href="../../contact/">Contact</a>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+
+<section class="wrap grid" style="padding: 120px 48px 0; row-gap: 40px;">
+  <p class="meta" style="grid-column: 2 / span 11;"><a href="../../work/" style="color: #a3a3a3;">Work</a> · <a href="../../work/#other-industries" style="color: #a3a3a3;">Other industries</a></p>
+  <h1 class="disp title rise" style="grid-column: 2 / span 10;">Roche personalized healthcare campaign</h1>
+  <p class="lead rise d1" style="grid-column: 5 / span 7;">A campaign site that explains personalized health to the public through an interactive network of health elements. It ran for five years and was extended several times.</p>
+  <dl class="facts" style="grid-column: 5 / span 8; margin-top: 24px;">
+    <div><dt>Client</dt><dd>Roche</dd></div><div><dt>Country</dt><dd>Switzerland</dd></div><div><dt>Industry</dt><dd>Healthcare, pharma</dd></div><div><dt>Year</dt><dd>2018–2023</dd></div><div><dt>My role</dt><dd>Project lead and UX designer</dd></div><div><dt>Team</dt><dd>A UI designer on the visuals</dd></div>
+  </dl>
+</section>
+
+<section style="padding: 104px 48px 0;" class="wrap">
+  <div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden;"><img src="../../img/roche-home-poster.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><video class="loop" src="../../img/roche-home.mp4" poster="../../img/roche-home-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></div>
+</section>
+
+<section class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Problem</h2></div>
+  <div style="grid-column: 5 / span 7;">
+    <p class="body">Personalized health was largely unknown to the general public.</p>
+    <ul class="list ind" style="margin-top: 40px;"><li>A complex medical idea for a general audience</li><li style="border-bottom: 1px solid #262626;">It had to show what personalized care offers compared with generalized care</li></ul>
+    
+  </div>
+</section>
+
+<section id="approach" data-track-wrap class="aband" style="margin-top: 168px; padding: 144px 0 160px; background: #1c1c1b;">
+  <div class="wrap grid" style="padding: 0 48px; align-items: end; margin-bottom: 64px;">
+    <div style="grid-column: 1 / span 8;">
+      <h2 class="disp sec">Approach</h2>
+      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Every decision traces back to evidence. Each step has an ID, and every insight and decision names the evidence it came from.</p>
+    </div>
+    <div class="hidesm" style="grid-column: 10 / span 3; display: flex; justify-content: flex-end; gap: 8px;">
+      <button type="button" class="iconbtn" aria-label="Previous step" data-step="-1"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M30 11H2M12 1L2 11l10 10"/></svg></button>
+      <button type="button" class="iconbtn" aria-label="Next step" data-step="1"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M0 11h28M18 1l10 10-10 10"/></svg></button>
+    </div>
+  </div>
+
+  <ol class="track" data-track style="list-style: none; margin: 0;">
+    <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Campaign brief</h3><p class="copy">Make personalized health understandable to the public.</p></li>
+    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>An unknown idea</h3><p class="copy">Most people had never heard of personalized health.</p><p class="from">From S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Show the connections</h3><p class="copy">Personalized health links many health factors together.</p><p class="from">From E001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>A neural network</h3><p class="copy">Health elements as connected, animated nodes.</p><p class="from">From I001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>Click to compare</h3><p class="copy">Each node shows the benefits of personalized versus generalized care.</p><p class="from">From I001</p></li>
+  </ol>
+</section>
+
+<section class="wrap grid" style="padding: 168px 48px 0;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Solution</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 720px;">I led the project and the UX. A UI designer did the visuals.</p>
+    <div style="margin-top: 104px;"><h3 class="h3" style="margin-top: 0;">A network of health elements</h3><p class="copy ind" style="margin-top: 16px; max-width: 728px;">Health elements appear as connected, animated nodes, like a neural network. Click a node to see the benefits of personalized versus generalized healthcare. The campaign also introduced artificial intelligence as a core part of personalized healthcare.</p><figure style="margin: 56px 0 0;"><img data-fade src="../../img/roche-category.jpg" alt="Category page with the article, the four topics around the animated element and the key facts" width="1440" height="810" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Category page: a health element opens into its topics, key facts and an article</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="wrap grid aband" style="margin-top: 168px; padding: 144px 48px 160px; background: #1c1c1b;">
+  <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Outcome</h2></div>
+  <div style="grid-column: 5 / span 8;">
+    <p class="body" style="max-width: 720px;">The campaign ran for five years and was extended several times because of its success. Reach numbers were not shared, but each extension showed the concept kept working for the client.</p>
+    
+  </div>
+</section>
+
+<section class="wrap grid" style="padding: 200px 48px 48px;">
+  <div style="grid-column: 1 / span 12; border-top: 1px solid #262626; padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px;">
+    <div>
+      <p class="meta">Next project</p>
+      <a href="../../work/theapolis/" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">Theapolis platform</a>
+    </div>
+    <a href="../../work/" style="font-size: 16px;">All work</a>
+  </div>
+</section>
+
+</main>
+<footer class="site-foot" style="margin-top: 96px;">
+  <div class="foot-tab" aria-hidden="true"></div>
+  <a href="#page" class="foot-up" aria-label="Back to top"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
+  <div class="foot-row">
+    <p class="meta">© 2026 Markus Rozkalns · Riga · Zurich</p>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="../../imprint/" style="color: #a3a3a3;">Imprint</a><a href="../../privacy/" style="color: #a3a3a3;">Privacy</a><a href="../../de/work/roche/" lang="de" aria-label="Deutsch" style="color: #a3a3a3;">DE</a></span>
+  </div>
+</footer>
+
+</div>
+<script>
+(function () {
+  // a link to a page always opens it at the top (back/forward keeps the browser's own position)
+  var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+  if (location.hash || (nav && nav.type === 'back_forward')) return;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  var top = function () { var d = document.documentElement; d.style.scrollBehavior = 'auto'; window.scrollTo(0, 0); try { d.scrollIntoView({ block: 'start', behavior: 'instant' }); } catch (e) {} d.style.scrollBehavior = ''; };
+  var moved = false; ['wheel', 'touchstart', 'keydown'].forEach(function (e) { window.addEventListener(e, function () { moved = true; }, { once: true, passive: true }); });
+  top(); window.addEventListener('load', function () { if (!moved) top(); });
+})();
+
+// photos marked data-fade fade in once loaded
+(function () {
+  document.querySelectorAll('img[data-fade]').forEach(function (img) {
+    var show = function () { requestAnimationFrame(function () { img.classList.add('in'); }); };
+    if (img.complete && img.naturalWidth) show(); else { img.addEventListener('load', show); img.addEventListener('error', show); }
+  });
+})();
+// videos start only when they scroll into view, and pause when they leave it
+(function () {
+  var vids = document.querySelectorAll('video.loop');
+  if (!vids.length) return;
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  vids.forEach(function (v) { v.removeAttribute('autoplay'); v.autoplay = false; try { v.pause(); } catch (e) {} });
+  if (still) return;
+  if (!('IntersectionObserver' in window)) { vids.forEach(function (v) { v.play().catch(function () {}); }); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      var v = en.target;
+      v.dataset.inview = en.isIntersecting ? '1' : '0';
+      if (en.isIntersecting) { if (!v.dataset.started) { v.dataset.started = '1'; try { v.currentTime = 0; } catch (e) {} } if (!(window.rzPaused && window.rzPaused())) v.play().catch(function () {}); }
+      else v.pause();
+    });
+  }, { threshold: 0.35 });
+  vids.forEach(function (v) { io.observe(v); });
+})();
+document.querySelectorAll('[data-track-wrap]').forEach(function (wrap) {
+  var track = wrap.querySelector('[data-track]');
+  wrap.querySelectorAll('[data-step]').forEach(function (b) {
+    b.addEventListener('click', function () { track.scrollBy({ left: (+wrap.dataset.trackWrap || 340) * +b.dataset.step, behavior: 'smooth' }); });
+  });
+});
+</script>
+<script>
+// scrolling up brings the menu back as a bar pinned to the top; scrolling down hides it again
+(function () {
+  var head = document.querySelector('header.head'); if (!head) return;
+  var bar = document.createElement('div'); bar.className = 'pinbar'; bar.setAttribute('aria-hidden', 'true'); bar.inert = true;
+  var c = head.cloneNode(true); c.removeAttribute('id'); c.querySelectorAll('[id]').forEach(function (n) { n.removeAttribute('id'); });
+  c.style.position = 'static'; var cs = getComputedStyle(head.parentNode); ['fontFamily', 'fontSize', 'lineHeight', 'letterSpacing', 'color', 'fontFeatureSettings'].forEach(function (k) { bar.style[k] = cs[k]; }); bar.appendChild(c); document.body.appendChild(bar);
+  var last = window.scrollY, shown = false;
+  var set = function (v) { if (v === shown) return; shown = v; bar.classList.toggle('on', v); bar.inert = !v; if (v) bar.removeAttribute('aria-hidden'); else bar.setAttribute('aria-hidden', 'true'); };
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY, past = y > head.offsetTop + head.offsetHeight, d = y - last;
+    if (!past) set(false); else if (d < -4) set(true); else if (d > 4) set(false);
+    if (Math.abs(d) > 4) last = y;
+  }, { passive: true });
+})();
+</script>
+<script>
+// every looping video gets a pause button; the choice is shared by all videos and remembered across pages
+(function () {
+  var vids = [].slice.call(document.querySelectorAll('video[loop]')); if (!vids.length) return;
+  var de = document.documentElement.lang === 'de';
+  var get = function () { try { return localStorage.getItem('rz-motion') === 'paused'; } catch (e) { return false; } };
+  var paused = get(); window.rzPaused = function () { return paused; };
+  var P = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 2v10M10 2v10" stroke="#eeede9" stroke-width="2"/></svg>';
+  var Y = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>';
+  var btns = [];
+  var paint = function () { btns.forEach(function (b) { b.innerHTML = paused ? Y : P; b.setAttribute('aria-label', paused ? (de ? 'Videos abspielen' : 'Play videos') : (de ? 'Videos pausieren' : 'Pause videos')); b.setAttribute('aria-pressed', paused ? 'true' : 'false'); }); };
+  var apply = function () { vids.forEach(function (v) { if (paused) v.pause(); else if (v.dataset.inview !== '0') v.play().catch(function () {}); }); paint(); };
+  vids.forEach(function (v) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'vctl';
+    var link = v.closest('a'), host = link ? link.parentElement : v.parentElement;
+    if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+    if (v.classList.contains('hero-video')) { b.classList.add('vctl-hero'); var bar = host.querySelector('.bar'); var lift = function () { b.style.bottom = ((bar ? bar.offsetHeight : 0) + 16) + 'px'; }; lift(); window.addEventListener('resize', lift); window.addEventListener('load', lift); }
+    if (link) { var place = function () { b.style.top = (link.offsetTop + link.offsetHeight - 52) + 'px'; b.style.left = (link.offsetLeft + link.offsetWidth - 52) + 'px'; b.style.right = 'auto'; b.style.bottom = 'auto'; }; place(); window.addEventListener('resize', place); window.addEventListener('load', place); }
+    b.addEventListener('click', function () { paused = !paused; try { localStorage.setItem('rz-motion', paused ? 'paused' : 'play'); } catch (e) {} apply(); });
+    host.appendChild(b); btns.push(b);
+  });
+  apply();
+})();
+</script>
+</body>
+</html>
