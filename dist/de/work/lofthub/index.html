@@ -30,6 +30,7 @@
 .js img[data-fade]{opacity:0;transition:opacity .9s ease}.js img[data-fade].in{opacity:1}@media (prefers-reduced-motion:reduce){.js img[data-fade]{opacity:1;transition:none}}
 .skip{position:absolute;left:16px;top:-80px;z-index:100;background:#eeede9;color:#121211 !important;padding:10px 16px;border-radius:8px;font-size:16px;background-image:none !important}.skip:focus{top:16px}main:focus{outline:none}
 .vctl{position:absolute;right:16px;bottom:16px;z-index:4;width:40px;height:40px;display:flex;align-items:center;justify-content:center;padding:0;border:1px solid rgba(238,237,233,.3);border-radius:8px;background:rgba(18,18,17,.6);cursor:pointer}.vctl:hover{background:rgba(18,18,17,.85)}.vctl:focus-visible{outline:2px solid #eeede9;outline-offset:3px}.vctl-hero{right:16px;left:auto}@media (prefers-reduced-motion:reduce){.vctl{display:none}}
+.burger{display:none;position:relative;width:44px;height:44px;margin:-10px -10px -10px 0;padding:0;border:0;background:none;cursor:pointer;-webkit-tap-highlight-color:transparent}.burger span{position:absolute;left:10px;right:10px;height:1.5px;background:#eeede9;transition:transform .35s cubic-bezier(.2,.7,.2,1)}.burger span:nth-child(1){top:18px}.burger span:nth-child(2){top:25px}.burger:focus-visible{outline:2px solid #eeede9;outline-offset:2px}.mnav[hidden]{display:none !important}.mnav{position:fixed;inset:0;z-index:80;background:#121211;color:#eeede9;font-family:"Geist","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:18px;line-height:1.5;display:flex;flex-direction:column;padding:20px 16px 32px;opacity:0;transition:opacity .3s ease;overflow-y:auto}.mnav.open{opacity:1}.mnav .mrow{display:flex;justify-content:space-between;align-items:center}.mnav .burger{display:block}.mnav.open .burger span:nth-child(1){transform:translateY(3.5px) rotate(45deg)}.mnav.open .burger span:nth-child(2){transform:translateY(-3.5px) rotate(-45deg)}.mnav .mwho{font-weight:500;font-size:19px;letter-spacing:-.015em;background-image:none;padding-bottom:0}.mnav .mlinks{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:88px}.mnav .mlinks a{font-weight:500;font-size:44px;line-height:1.05;letter-spacing:-.04em;--t:2px}.mnav .mlang{margin-top:auto;align-self:flex-start;font-size:18px;color:#a3a3a3}.mnav-open,.mnav-open body{overflow:hidden}@media (max-width:768px){header.head{display:flex !important;justify-content:space-between;align-items:center;padding:20px 16px !important}header.head>div:first-child,header.head nav.main{display:none !important}header.head .who{margin:0 !important}header.head .burger{display:block}.band>.sticky{margin-bottom:64px !important}}@media (prefers-reduced-motion:reduce){.mnav,.burger span{transition:none}}
 .pinbar{position:fixed;top:0;left:0;right:0;z-index:50;background:#121211;transform:translateY(-100%);transition:transform .5s cubic-bezier(.2,.7,.2,1)}.pinbar.on{transform:none}@media (prefers-reduced-motion:reduce){.pinbar{transition:none}}
 </style>
 <style>
@@ -329,6 +330,33 @@ document.querySelectorAll('[data-track-wrap]').forEach(function (wrap) {
     b.addEventListener('click', function () { track.scrollBy({ left: (+wrap.dataset.trackWrap || 340) * +b.dataset.step, behavior: 'smooth' }); });
   });
 });
+</script>
+<script>
+// mobile: the menu hides behind a two-line button and opens full screen; the lines turn into an X
+(function () {
+  var head = document.querySelector('header.head'); if (!head) return;
+  var de = document.documentElement.lang === 'de';
+  var L = de ? ['Menü öffnen', 'Menü schliessen'] : ['Open menu', 'Close menu'];
+  var mk = function () { var b = document.createElement('button'); b.type = 'button'; b.className = 'burger'; b.setAttribute('aria-label', L[0]); b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-controls', 'mnav'); b.innerHTML = '<span></span><span></span>'; return b; };
+  head.appendChild(mk());
+  var nav = head.querySelector('nav.main'), lang = head.querySelector('div > a[lang]'), who = head.querySelector('.who a');
+  var o = document.createElement('div'); o.id = 'mnav'; o.className = 'mnav'; o.setAttribute('role', 'dialog'); o.setAttribute('aria-modal', 'true'); o.setAttribute('aria-label', de ? 'Menü' : 'Menu'); o.hidden = true;
+  var row = document.createElement('div'); row.className = 'mrow';
+  if (who) { var w = who.cloneNode(true); w.className = 'mwho'; w.removeAttribute('style'); row.appendChild(w); }
+  var x = mk(); x.setAttribute('aria-label', L[1]); x.setAttribute('aria-expanded', 'true'); row.appendChild(x); o.appendChild(row);
+  var list = document.createElement('nav'); list.className = 'mlinks'; list.setAttribute('aria-label', de ? 'Hauptnavigation' : 'Main');
+  if (nav) nav.querySelectorAll('a').forEach(function (a) { var c = a.cloneNode(true); c.removeAttribute('style'); list.appendChild(c); });
+  o.appendChild(list);
+  if (lang) { var l = lang.cloneNode(true); l.className = 'mlang'; l.removeAttribute('style'); o.appendChild(l); }
+  document.body.appendChild(o);
+  var opener = null;
+  var open = function (btn) { opener = btn; o.hidden = false; document.documentElement.classList.add('mnav-open'); requestAnimationFrame(function () { requestAnimationFrame(function () { o.classList.add('open'); }); }); document.querySelectorAll('.burger').forEach(function (b) { if (b !== x) b.setAttribute('aria-expanded', 'true'); }); setTimeout(function () { x.focus(); }, 50); };
+  var close = function () { o.classList.remove('open'); document.documentElement.classList.remove('mnav-open'); document.querySelectorAll('.burger').forEach(function (b) { if (b !== x) b.setAttribute('aria-expanded', 'false'); }); setTimeout(function () { o.hidden = true; }, 350); if (opener && opener.offsetParent) opener.focus(); };
+  document.addEventListener('click', function (e) { var b = e.target.closest('.burger'); if (!b) return; if (b === x) close(); else open(b); });
+  o.addEventListener('click', function (e) { if (e.target.closest('.mlinks a, .mlang, .mwho')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && o.classList.contains('open')) close(); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 768 && o.classList.contains('open')) close(); });
+})();
 </script>
 <script>
 // scrolling up brings the menu back as a bar pinned to the top; scrolling down hides it again

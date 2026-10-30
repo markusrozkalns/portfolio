@@ -92,6 +92,9 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 /* arrow gap: rounded where it meets the ground colour */
 .site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
 
+
+/* mobile: all six logos in one row */
+@media (max-width:768px){#top .bar .logos{flex-wrap:nowrap !important;gap:0 !important;justify-content:space-between !important;zoom:.6 !important}}
 </style>
 </helmet>
 <div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
