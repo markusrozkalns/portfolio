@@ -287,12 +287,15 @@ document.querySelectorAll('[data-track-wrap]').forEach(function (wrap) {
 (function () {
   var root = document.documentElement; root.classList.add('fitw');
   var els = [].slice.call(document.querySelectorAll('main :is(h1,h2,h3,h4,dd,p,.disp,.ttl), footer :is(h1,h2,h3,p)'));
+  var scroller = function (e) { for (var a = e.parentElement; a && a !== document.body; a = a.parentElement) { var o = getComputedStyle(a).overflowX; if (o !== 'visible' && o !== 'clip') return true; } return false; };
   var fit = function () {
     els.forEach(function (e) {
-      e.style.fontSize = '';
-      if (!e.offsetWidth || e.scrollWidth <= e.clientWidth + 1) return;
+      if (e.dataset.fs === undefined) e.dataset.fs = e.style.fontSize || '';
+      e.style.fontSize = e.dataset.fs;
+      var over = function () { return e.scrollWidth > e.clientWidth + 1 || (e.parentElement && e.offsetWidth > e.parentElement.clientWidth + 1) || (!scroller(e) && e.getBoundingClientRect().right > document.documentElement.clientWidth + 1); };
+      if (!e.offsetWidth || !over()) return;
       var s = parseFloat(getComputedStyle(e).fontSize), n = 0;
-      while (e.scrollWidth > e.clientWidth + 1 && n++ < 30) { s *= .96; e.style.fontSize = s + 'px'; }
+      while (over() && n++ < 30) { s *= .96; e.style.fontSize = s + 'px'; }
     });
     // section headings on one page share one size: the smallest one that fits
     var secs = [].slice.call(document.querySelectorAll('main h2.sec')).filter(function (e) { return e.offsetWidth; });
