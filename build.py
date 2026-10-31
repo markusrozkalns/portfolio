@@ -26,7 +26,7 @@ def route(name):
     """src file name -> site path (without language prefix), e.g. 'work/lofthub/'."""
     base = name.replace('-DE.dc.html', '').replace('.dc.html', '')
     if base == 'V4': return ''
-    if base in ('Work', 'Approach', 'About', 'Contact', 'Imprint', 'Privacy'): return base.lower() + '/'
+    if base in ('Work', 'Approach', 'About', 'Contact', 'Imprint', 'Privacy', 'Reference'): return base.lower() + '/'
     m = re.match(r'Case-(\w+)$', base)
     return 'work/%s/' % SLUGS[m.group(1)]
 
@@ -239,7 +239,7 @@ def convert(name, src):
     def link(mm):
         target, anchor = mm.group(1), mm.group(2) or ''
         return 'href="%s%s%s"' % (rel(me, url_for(target)), 'index.html' if EXPLICIT else '', anchor)
-    body = re.sub(r'href="((?:V4|Work|About|Approach|Contact|Imprint|Privacy|Case-\w+?)(?:-DE)?\.dc\.html)(#[^"]*)?"', link, body)
+    body = re.sub(r'href="((?:V4|Work|About|Approach|Contact|Imprint|Privacy|Reference|Case-\w+?)(?:-DE)?\.dc\.html)(#[^"]*)?"', link, body)
     # hero fills the viewport on the real site (the canvas previews it at 900px)
     body = body.replace('<section id="top" style="position: relative; height: 900px;', '<section id="top" style="position: relative; height: 100vh; height: 100svh; min-height: 560px;')
     # strip autoplay: videos start when scrolled into view (script below)
