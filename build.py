@@ -73,6 +73,69 @@ MOTION_SCRIPT = '''
 })();
 </script>'''
 
+MEET_SCRIPT = '''
+<style>
+.meet-ov{position:fixed;inset:0;z-index:200;background:#121211;display:flex;align-items:center;justify-content:center}
+.meet-ov[hidden]{display:none !important}
+.meet-bg,.meet-bg img,.meet-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0 !important}
+.meet-bg::after{content:"";position:absolute;inset:0;background:rgba(18,18,17,.55)}
+.meet-stage{position:relative;height:min(86vh,86svh,calc((100vw - 32px) * 16 / 9));aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#1c1c1b}
+.meet-stage video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.meet-stage .ph{position:absolute;inset:0;padding:24px;text-align:center;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;line-height:1.5;color:#8c8c89;border-radius:12px}
+.meet-x{position:absolute;top:16px;right:16px;width:44px;height:44px;border:0;border-radius:8px;background:rgba(18,18,17,.78);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.meet-x:focus-visible{outline:2px solid #eeede9;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.meet-bg video{display:none}}
+</style>
+<script>
+// intro video: the card previews 2 s muted, then stops and shows the play button; play opens a portrait player over the blurred loop
+(function () {
+  var cards = [].slice.call(document.querySelectorAll('.meet')); if (!cards.length) return;
+  var de = document.documentElement.lang === 'de';
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var paused = function () { return document.documentElement.classList.contains('rz-paused'); };
+  var X = '<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3l14 14M17 3L3 17" stroke="#eeede9" stroke-width="1.5"/></svg>';
+  cards.forEach(function (card) {
+    var frame = card.querySelector('.meet-frame'), btn = card.querySelector('.meet-play'), d = card.dataset;
+    var ready = d.ready === '1';
+    if (ready) {
+      var v = document.createElement('video'); v.muted = true; v.playsInline = true; v.setAttribute('playsinline', ''); v.preload = 'auto'; v.src = d.mv; if (d.mp) v.poster = d.mp; v.setAttribute('aria-hidden', 'true');
+      var ph = frame.querySelector('.ph'); if (ph) ph.remove(); frame.insertBefore(v, btn);
+      if (!still && 'IntersectionObserver' in window) {
+        card.classList.add('previewing');
+        var done = function () { v.pause(); card.classList.remove('previewing'); };
+        v.addEventListener('timeupdate', function () { if (v.currentTime >= 2) done(); });
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting && e.intersectionRatio >= .5) { io.disconnect(); if (paused()) done(); else v.play().catch(done); } }); }, { threshold: [.5] });
+        io.observe(card);
+      }
+    }
+    var ov, last;
+    var close = function () { if (!ov) return; var pv = ov.querySelector('.meet-stage video'); if (pv) pv.pause(); var bv = ov.querySelector('.meet-bg video'); if (bv) bv.pause(); ov.hidden = true; document.documentElement.style.overflow = ''; if (last) last.focus(); };
+    var open = function () {
+      last = document.activeElement;
+      if (!ov) {
+        ov = document.createElement('div'); ov.className = 'meet-ov'; ov.hidden = true; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true'); ov.setAttribute('aria-label', btn.textContent.trim());
+        var bg = '<div class="meet-bg" aria-hidden="true"><img src="' + d.blurp + '" alt="">' + (still ? '' : '<video src="' + d.blur + '" muted loop playsinline></video>') + '</div>';
+        var stage = ready ? '<video controls playsinline' + (d.mp ? ' poster="' + d.mp + '"' : '') + ' src="' + d.mv + '">' + (d.mt ? '<track kind="captions" src="' + d.mt + '" srclang="' + (de ? 'de' : 'en') + '" label="' + (de ? 'Deutsch' : 'English') + '" default>' : '') + '</video>' : card.querySelector('.meet-ph-big').outerHTML.replace('meet-ph-big', 'ph').replace(' hidden', '');
+        ov.innerHTML = bg + '<div class="meet-stage">' + stage + '</div><button type="button" class="meet-x" aria-label="' + (de ? 'Schliessen' : 'Close') + '">' + X + '</button>';
+        document.body.appendChild(ov);
+        ov.querySelector('.meet-x').addEventListener('click', close);
+        ov.addEventListener('click', function (e) { if (e.target === ov || e.target.closest('.meet-bg')) close(); });
+        ov.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') close();
+          if (e.key === 'Tab') { var f = [].slice.call(ov.querySelectorAll('button,video[controls]')); var i = f.indexOf(document.activeElement); if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); } else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); } }
+        });
+      }
+      ov.hidden = false; document.documentElement.style.overflow = 'hidden';
+      var bv = ov.querySelector('.meet-bg video'); if (bv && !paused()) bv.play().catch(function () {});
+      var pv = ov.querySelector('.meet-stage video'); if (pv) { pv.currentTime = 0; pv.muted = false; pv.play().catch(function () {}); }
+      ov.querySelector('.meet-x').focus();
+    };
+    btn.addEventListener('click', open);
+    frame.addEventListener('click', function (e) { if (e.target !== btn && !btn.contains(e.target)) open(); });
+  });
+})();
+</script>'''
+
 MNAV_SCRIPT = '''
 <script>
 // mobile: the menu hides behind a two-line button and opens full screen; the lines turn into an X
@@ -246,7 +309,7 @@ def convert(name, src):
     body = re.sub(r'(<video class="loop"[^>]*?) autoplay', r'\1', body)
     # lazy photos fade in once loaded (script below)
     body = re.sub(r'<img (?![^>]*data-fade)([^>]*loading="lazy")', r'<img data-fade \1', body)
-    body = re.sub(r'(src|poster)="img/', lambda m: '%s="%simg/' % (m.group(1), '../' * me.count('/')), body)
+    body = re.sub(r'(src|poster|data-m[vpt]|data-blurp?)="img/', lambda m: '%s="%simg/' % (m.group(1), '../' * me.count('/')), body)
     body = re.sub(r'href="files/', 'target="_blank" rel="noopener" href="%sfiles/' % ('../' * me.count('/')), body)
     # main landmark and a skip link (WCAG 2.4.1)
     if '<section id="top"' in body and body.index('<header') > body.index('<section id="top"'):
@@ -290,6 +353,7 @@ def convert(name, src):
 <body>
 '''
     yt = YT_SCRIPT if 'data-yt' in body else ''
+    yt += MEET_SCRIPT if 'class="meet"' in body else ''
     mo = MOTION_SCRIPT if re.search(r'<video[^>]* loop', body) else ''
     return head + body + '\n' + (SCRIPT if 'data-track' in body else TOP_SCRIPT) + MNAV_SCRIPT + PIN_SCRIPT + mo + yt + '\n</body>\n</html>\n'
 

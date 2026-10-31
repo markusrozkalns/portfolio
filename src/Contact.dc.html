@@ -71,6 +71,13 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 /* arrow gap: rounded where it meets the ground colour */
 .site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
 
+.meet{margin:0}.meet-frame{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:#1c1c1b;cursor:pointer}
+.meet-frame>.ph{position:absolute;inset:0;padding:24px;text-align:center;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;line-height:1.5;color:#8c8c89}
+.meet-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.meet-play{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 16px 10px 14px;box-sizing:border-box;border:0;border-radius:8px;background:rgba(18,18,17,.78);color:#eeede9;font-family:inherit;font-size:16px;line-height:1.2;text-align:left;cursor:pointer;transition:opacity .5s ease,background-color .3s ease}
+.meet-play:hover{background:#121211}.meet-play:focus-visible{outline:2px solid #eeede9;outline-offset:2px}
+.meet.previewing .meet-play{opacity:0;pointer-events:none}
+@media (max-width:768px){.grid>.meet{margin-top:40px !important;order:2}.grid>.meet+div{grid-row:auto !important}}
 </style>
 </helmet>
 <div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
@@ -92,7 +99,8 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 </section>
 
 <section class="wrap grid" style="padding: 104px 48px 0; align-items: start;">
-  <div style="grid-column: 5 / span 7;">
+  <figure class="meet" style="grid-column: 2 / span 3;" data-ready="0" data-mv="img/intro-en.mp4" data-mp="img/intro-en-poster.jpg" data-mt="img/intro-en.vtt" data-blur="img/clients-blur.mp4" data-blurp="img/clients-blur-poster.jpg"><div class="meet-frame"><div class="ph">[VIDEO: Markus introduces himself, 15 s, portrait; 2 s smiling preview, then Play]</div><button type="button" class="meet-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" style="flex:none"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>Meet me in 15 seconds</button></div><div class="meet-ph-big" hidden>[VIDEO: Markus introduces himself, 15 s, portrait 9:16, with sound and captions]</div></figure>
+  <div style="grid-column: 5 / span 7; grid-row: 1;">
     <a href="mailto:markus@rozkalns.design" class="disp" style="display: inline-block; font-size: clamp(32px, 4vw, 56px); line-height: 1; letter-spacing: -0.035em; text-decoration-thickness: 2px;">markus@rozkalns.design</a>
     <ul class="rows ind" style="margin-top: 72px;">
       <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/markusrozkalns/">linkedin.com/in/markusrozkalns</a></span></li>
