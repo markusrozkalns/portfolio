@@ -136,6 +136,30 @@ MEET_SCRIPT = '''
 })();
 </script>'''
 
+FIT_SCRIPT = '''
+<style>.fitw :is(h1,h2,h3,h4,dd,p,.disp,.ttl){overflow-wrap:normal}.item>.txt{min-width:0;max-width:100%}</style>
+<script>
+// no hyphenation: a word that is too wide for its box makes the text a little smaller instead of breaking
+(function () {
+  var root = document.documentElement; root.classList.add('fitw');
+  var els = [].slice.call(document.querySelectorAll('main :is(h1,h2,h3,h4,dd,p,.disp,.ttl), footer :is(h1,h2,h3,p)'));
+  var fit = function () {
+    els.forEach(function (e) {
+      e.style.fontSize = '';
+      if (!e.offsetWidth || e.scrollWidth <= e.clientWidth + 1) return;
+      var s = parseFloat(getComputedStyle(e).fontSize), n = 0;
+      while (e.scrollWidth > e.clientWidth + 1 && n++ < 30) { s *= .96; e.style.fontSize = s + 'px'; }
+    });
+    // section headings on one page share one size: the smallest one that fits
+    var secs = [].slice.call(document.querySelectorAll('main h2.sec')).filter(function (e) { return e.offsetWidth; });
+    var min = Math.min.apply(null, secs.map(function (e) { return parseFloat(getComputedStyle(e).fontSize); }));
+    secs.forEach(function (e) { if (parseFloat(getComputedStyle(e).fontSize) > min + .1) e.style.fontSize = min + 'px'; });
+  };
+  var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fit, 120); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit); fit();
+})();
+</script>'''
+
 MNAV_SCRIPT = '''
 <script>
 // mobile: the menu hides behind a two-line button and opens full screen; the lines turn into an X
@@ -355,7 +379,7 @@ def convert(name, src):
     yt = YT_SCRIPT if 'data-yt' in body else ''
     yt += MEET_SCRIPT if 'class="meet"' in body else ''
     mo = MOTION_SCRIPT if re.search(r'<video[^>]* loop', body) else ''
-    return head + body + '\n' + (SCRIPT if 'data-track' in body else TOP_SCRIPT) + MNAV_SCRIPT + PIN_SCRIPT + mo + yt + '\n</body>\n</html>\n'
+    return head + body + '\n' + (SCRIPT if 'data-track' in body else TOP_SCRIPT) + FIT_SCRIPT + MNAV_SCRIPT + PIN_SCRIPT + mo + yt + '\n</body>\n</html>\n'
 
 def main():
     if os.path.isdir(DIST): shutil.rmtree(DIST)

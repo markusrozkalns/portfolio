@@ -151,7 +151,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <h1 class="disp title rise" style="grid-column: 2 / span 10;">Globale Websites von Metrohm</h1>
   <p class="lead rise d1" style="grid-column: 5 / span 7;">Mitgearbeitet am Redesign des globalen Website-Systems von Metrohm, inklusive eines mit Nutzern getesteten Instrumentenfilters, der schneller zum richtigen Produkt führt.</p>
   <dl class="facts" style="grid-column: 5 / span 8; margin-top: 24px;">
-    <div><dt>Kunde</dt><dd>Metrohm</dd></div><div><dt>Land</dt><dd>Schweiz</dd></div><div><dt>Branche</dt><dd>Labor&shy;instrumente, B2B</dd></div><div><dt>Jahr</dt><dd>2020–2021</dd></div><div><dt>Meine Rolle</dt><dd>Unterstützender Designer, etwa 70% UI und 30% UX</dd></div><div><dt>Team</dt><dd>Unter der Leitung eines Schweizer Lead UX Designers</dd></div>
+    <div><dt>Kunde</dt><dd>Metrohm</dd></div><div><dt>Land</dt><dd>Schweiz</dd></div><div><dt>Branche</dt><dd>Laborinstrumente, B2B</dd></div><div><dt>Jahr</dt><dd>2020–2021</dd></div><div><dt>Meine Rolle</dt><dd>Unterstützender Designer, etwa 70% UI und 30% UX</dd></div><div><dt>Team</dt><dd>Unter der Leitung eines Schweizer Lead UX Designers</dd></div>
   </dl>
 </section>
 
@@ -210,7 +210,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div style="grid-column: 1 / span 12; border-top: 1px solid #262626; padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px;">
     <div>
       <p class="meta">Nächstes Projekt</p>
-      <a href="../../../de/work/roche/" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">Roche Kampagne zur personali&shy;sierten Gesundheits&shy;versorgung</a>
+      <a href="../../../de/work/roche/" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">Roche Kampagne zur personalisierten Gesundheitsversorgung</a>
     </div>
     <a href="../../../de/work/" style="font-size: 16px;">Alle Projekte</a>
   </div>
@@ -222,7 +222,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <a href="#page" class="foot-up" aria-label="Nach oben"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
   <div class="foot-row">
     <p class="meta">© 2026 Markus Rozkalns · Riga · Zürich</p>
-    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="../../../de/imprint/" style="color: #a3a3a3;">Impressum</a><a href="../../../de/privacy/" style="color: #a3a3a3;">Daten&shy;schutz</a><a href="../../../work/metrohm/" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></span>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="../../../de/imprint/" style="color: #a3a3a3;">Impressum</a><a href="../../../de/privacy/" style="color: #a3a3a3;">Datenschutz</a><a href="../../../work/metrohm/" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></span>
   </div>
 </footer>
 
@@ -269,6 +269,28 @@ document.querySelectorAll('[data-track-wrap]').forEach(function (wrap) {
     b.addEventListener('click', function () { track.scrollBy({ left: (+wrap.dataset.trackWrap || 340) * +b.dataset.step, behavior: 'smooth' }); });
   });
 });
+</script>
+<style>.fitw :is(h1,h2,h3,h4,dd,p,.disp,.ttl){overflow-wrap:normal}.item>.txt{min-width:0;max-width:100%}</style>
+<script>
+// no hyphenation: a word that is too wide for its box makes the text a little smaller instead of breaking
+(function () {
+  var root = document.documentElement; root.classList.add('fitw');
+  var els = [].slice.call(document.querySelectorAll('main :is(h1,h2,h3,h4,dd,p,.disp,.ttl), footer :is(h1,h2,h3,p)'));
+  var fit = function () {
+    els.forEach(function (e) {
+      e.style.fontSize = '';
+      if (!e.offsetWidth || e.scrollWidth <= e.clientWidth + 1) return;
+      var s = parseFloat(getComputedStyle(e).fontSize), n = 0;
+      while (e.scrollWidth > e.clientWidth + 1 && n++ < 30) { s *= .96; e.style.fontSize = s + 'px'; }
+    });
+    // section headings on one page share one size: the smallest one that fits
+    var secs = [].slice.call(document.querySelectorAll('main h2.sec')).filter(function (e) { return e.offsetWidth; });
+    var min = Math.min.apply(null, secs.map(function (e) { return parseFloat(getComputedStyle(e).fontSize); }));
+    secs.forEach(function (e) { if (parseFloat(getComputedStyle(e).fontSize) > min + .1) e.style.fontSize = min + 'px'; });
+  };
+  var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fit, 120); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit); fit();
+})();
 </script>
 <script>
 // mobile: the menu hides behind a two-line button and opens full screen; the lines turn into an X
