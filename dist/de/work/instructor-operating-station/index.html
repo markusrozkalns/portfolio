@@ -98,7 +98,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #eeede9;outline-offset:4p
 .d1{animation-delay:0.2s}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.rise{animation:none}video.loop{display:none}}
-.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}
+.disp,.ttl,.h3,h1,h2,h3,h4,dd{-webkit-hyphens:manual;hyphens:manual;overflow-wrap:break-word}
 a[href^="mailto:"]{overflow-wrap:anywhere}
 @media (max-width:768px){
 section[style*="padding: 168px"],section[style*="padding: 200px"],section[style*="padding: 240px"]{padding-top:104px !important}
@@ -261,7 +261,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
     <blockquote style="margin: 0;">
       <p class="disp" style="font-size: clamp(30px, 3.6vw, 52px); line-height: 1.08; letter-spacing: -0.035em;">«Besonders hervorzuheben sind seine Fähigkeit, komplexe Anforderungen schnell zu erfassen, unterschiedliche Nutzer- und Geschäftsinteressen zu strukturieren und daraus nachvollziehbare und praxisorientierte Designlösungen abzuleiten.»</p>
     </blockquote>
-    <figcaption class="meta ind" style="margin-top: 36px; color: #a3a3a3; display: flex; align-items: center; gap: 16px;"><img data-fade src="../../../img/fabi-riesen.jpg" alt="" width="44" height="44" loading="lazy" style="flex: none; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; display: block;"><span>Fabi Riesen, Gründer und ehemaliger CEO &amp; CTO · Loft Dynamics · Schweiz<br>Aus dem Referenzschreiben</span></figcaption>
+    <figcaption class="meta ind" style="margin-top: 36px; color: #a3a3a3; display: flex; align-items: center; gap: 16px;"><img data-fade src="../../../img/fabi-riesen.jpg" alt="" width="44" height="44" loading="lazy" style="flex: none; width: 44px; height: 44px; border-radius: 50%; object-fit: cover; display: block;"><span>Fabi Riesen, Gründer und ehemaliger CEO &amp; CTO · Loft Dynamics · Schweiz<br>Aus dem <a href="../../../de/reference/">Referenz&shy;schreiben</a></span></figcaption>
   </figure>
 </section>
 
@@ -281,7 +281,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <a href="#page" class="foot-up" aria-label="Nach oben"><svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M11 30V2M1 12L11 2l10 10"/></svg></a>
   <div class="foot-row">
     <p class="meta">© 2026 Markus Rozkalns · Riga · Zürich</p>
-    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="../../../de/imprint/" style="color: #a3a3a3;">Impressum</a><a href="../../../de/privacy/" style="color: #a3a3a3;">Datenschutz</a><a href="../../../work/instructor-operating-station/" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></span>
+    <span style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px;"><a href="../../../de/imprint/" style="color: #a3a3a3;">Impressum</a><a href="../../../de/privacy/" style="color: #a3a3a3;">Daten&shy;schutz</a><a href="../../../work/instructor-operating-station/" lang="en" aria-label="English" style="color: #a3a3a3;">EN</a></span>
   </div>
 </footer>
 
@@ -383,7 +383,7 @@ document.querySelectorAll('[data-track-wrap]').forEach(function (wrap) {
   var Y = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>';
   var btns = [];
   var paint = function () { btns.forEach(function (b) { b.innerHTML = paused ? Y : P; b.setAttribute('aria-label', paused ? (de ? 'Videos abspielen' : 'Play videos') : (de ? 'Videos pausieren' : 'Pause videos')); b.setAttribute('aria-pressed', paused ? 'true' : 'false'); }); };
-  var apply = function () { vids.forEach(function (v) { if (paused) v.pause(); else if (v.dataset.inview !== '0') v.play().catch(function () {}); }); paint(); };
+  var apply = function () { document.documentElement.classList.toggle('rz-paused', paused); vids.forEach(function (v) { if (paused) v.pause(); else if (v.dataset.inview !== '0') v.play().catch(function () {}); }); paint(); };
   vids.forEach(function (v) {
     var b = document.createElement('button'); b.type = 'button'; b.className = 'vctl';
     var link = v.closest('a'), host = link ? link.parentElement : v.parentElement;

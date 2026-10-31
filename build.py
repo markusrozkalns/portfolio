@@ -59,7 +59,7 @@ MOTION_SCRIPT = '''
   var Y = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>';
   var btns = [];
   var paint = function () { btns.forEach(function (b) { b.innerHTML = paused ? Y : P; b.setAttribute('aria-label', paused ? (de ? 'Videos abspielen' : 'Play videos') : (de ? 'Videos pausieren' : 'Pause videos')); b.setAttribute('aria-pressed', paused ? 'true' : 'false'); }); };
-  var apply = function () { vids.forEach(function (v) { if (paused) v.pause(); else if (v.dataset.inview !== '0') v.play().catch(function () {}); }); paint(); };
+  var apply = function () { document.documentElement.classList.toggle('rz-paused', paused); vids.forEach(function (v) { if (paused) v.pause(); else if (v.dataset.inview !== '0') v.play().catch(function () {}); }); paint(); };
   vids.forEach(function (v) {
     var b = document.createElement('button'); b.type = 'button'; b.className = 'vctl';
     var link = v.closest('a'), host = link ? link.parentElement : v.parentElement;
