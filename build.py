@@ -247,7 +247,7 @@ def convert(name, src):
     # lazy photos fade in once loaded (script below)
     body = re.sub(r'<img (?![^>]*data-fade)([^>]*loading="lazy")', r'<img data-fade \1', body)
     body = re.sub(r'(src|poster)="img/', lambda m: '%s="%simg/' % (m.group(1), '../' * me.count('/')), body)
-    body = re.sub(r'href="files/', 'href="%sfiles/' % ('../' * me.count('/')), body)
+    body = re.sub(r'href="files/', 'target="_blank" rel="noopener" href="%sfiles/' % ('../' * me.count('/')), body)
     # main landmark and a skip link (WCAG 2.4.1)
     if '<section id="top"' in body and body.index('<header') > body.index('<section id="top"'):
         body = body.replace('<section id="top"', '<main id="main">\n<section id="top"', 1)
