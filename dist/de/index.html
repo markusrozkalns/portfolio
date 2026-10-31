@@ -127,6 +127,10 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 .meet-play{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 16px 10px 14px;box-sizing:border-box;border:0;border-radius:8px;background:rgba(18,18,17,.78);color:#eeede9;font-family:inherit;font-size:16px;line-height:1.2;text-align:left;cursor:pointer;transition:opacity .5s ease,background-color .3s ease}
 .meet-play:hover{background:#121211}.meet-play:focus-visible{outline:2px solid #eeede9;outline-offset:2px}
 .meet.previewing .meet-play{opacity:0;pointer-events:none}
+.meet-frame{container-type:inline-size}
+@container (max-width:340px){.meet-play{right:16px;font-size:15px;gap:9px;padding:10px 14px}}
+@container (max-width:240px){.meet-play{left:12px;right:12px;bottom:12px;font-size:14px}}
+@media (min-width:769px) and (max-width:1100px){#intro>p.ind{grid-column:1 / span 6 !important}#intro>.meet{grid-column:8 / span 4 !important}}
 @media (max-width:768px){.grid>.meet{margin-top:40px !important}}
 </style>
 </head>
