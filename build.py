@@ -104,7 +104,7 @@ MEET_SCRIPT = '''
       if (!still && 'IntersectionObserver' in window) {
         card.classList.add('previewing');
         var done = function () { v.pause(); card.classList.remove('previewing'); };
-        v.addEventListener('timeupdate', function () { if (v.currentTime >= 2) done(); });
+        var stop = parseFloat(d.stop) || 2; v.addEventListener('timeupdate', function () { if (v.currentTime >= stop) done(); });
         var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting && e.intersectionRatio >= .5) { io.disconnect(); if (paused()) done(); else v.play().catch(done); } }); }, { threshold: [.5] });
         io.observe(card);
       }

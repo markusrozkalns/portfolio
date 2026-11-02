@@ -130,7 +130,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 </section>
 
 <section class="wrap grid" style="padding: 104px 48px 0; align-items: start;">
-  <figure class="meet" style="grid-column: 1 / span 3;" data-ready="1" data-cues="[[3.2, 4.45, &quot;Hi, I’m Markus.&quot;], [4.5, 7.95, &quot;I design interfaces for complex systems, like flight simulators.&quot;], [8.6, 10.55, &quot;People tell me I ask the right questions,&quot;], [10.6, 12.35, &quot;and that’s where good design starts.&quot;], [12.9, 14.4, &quot;Let’s talk.&quot;]]" data-mv="../img/intro-en.mp4" data-mp="../img/intro-en-poster.jpg" data-mt="../img/intro-en.vtt" data-blur="../img/clients-blur.mp4" data-blurp="../img/clients-blur-poster.jpg"><div class="meet-frame"><img class="meet-poster" src="../img/intro-en-poster.jpg" alt="" width="720" height="1280"><button type="button" class="meet-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" style="flex:none"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>Meet me in 15 seconds</button></div><div class="meet-ph-big" hidden>[VIDEO: Markus introduces himself, 15 s, portrait 9:16, with sound and captions]</div></figure>
+  <figure class="meet" style="grid-column: 1 / span 3;" data-ready="1" data-stop="1.1" data-cues="[[3.2, 4.45, &quot;Hi, I’m Markus.&quot;], [4.5, 7.95, &quot;I design interfaces for complex systems, like flight simulators.&quot;], [8.6, 10.55, &quot;People tell me I ask the right questions,&quot;], [10.6, 12.35, &quot;and that’s where good design starts.&quot;], [12.9, 14.4, &quot;Let’s talk.&quot;]]" data-mv="../img/intro-en.mp4" data-mp="../img/intro-en-poster.jpg" data-mt="../img/intro-en.vtt" data-blur="../img/clients-blur.mp4" data-blurp="../img/clients-blur-poster.jpg"><div class="meet-frame"><img class="meet-poster" src="../img/intro-en-poster.jpg" alt="" width="720" height="1280"><button type="button" class="meet-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" style="flex:none"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>Meet me in 15 seconds</button></div><div class="meet-ph-big" hidden>[VIDEO: Markus introduces himself, 15 s, portrait 9:16, with sound and captions]</div></figure>
   <div style="grid-column: 5 / span 7; grid-row: 1;">
     <a href="mailto:markus@rozkalns.design" class="disp" style="display: inline-block; font-size: clamp(32px, 4vw, 56px); line-height: 1; letter-spacing: -0.035em; text-decoration-thickness: 2px;">markus@rozkalns.design</a>
     <ul class="rows ind" style="margin-top: 72px;">
@@ -289,7 +289,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
       if (!still && 'IntersectionObserver' in window) {
         card.classList.add('previewing');
         var done = function () { v.pause(); card.classList.remove('previewing'); };
-        v.addEventListener('timeupdate', function () { if (v.currentTime >= 2) done(); });
+        var stop = parseFloat(d.stop) || 2; v.addEventListener('timeupdate', function () { if (v.currentTime >= stop) done(); });
         var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting && e.intersectionRatio >= .5) { io.disconnect(); if (paused()) done(); else v.play().catch(done); } }); }, { threshold: [.5] });
         io.observe(card);
       }
