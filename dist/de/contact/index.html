@@ -94,18 +94,6 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 /* arrow gap: rounded where it meets the ground colour */
 .site-foot .foot-tab::after{content:"";position:absolute;right:-16px;top:0;width:16px;height:16px;background:radial-gradient(circle at 100% 100%,transparent 15.5px,#121211 16px);pointer-events:none}
 
-.meet{margin:0}.meet-frame{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:#1c1c1b;cursor:pointer}
-.meet-frame>.ph{position:absolute;inset:0;padding:24px;text-align:center;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;line-height:1.5;color:#8c8c89}
-.meet-frame .meet-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
-.meet-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.meet-play{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 16px 10px 14px;box-sizing:border-box;border:0;border-radius:8px;background:rgba(18,18,17,.78);color:#eeede9;font-family:inherit;font-size:16px;line-height:1.2;text-align:left;cursor:pointer;transition:opacity .5s ease,background-color .3s ease}
-.meet-play:hover{background:#121211}.meet-play:focus-visible{outline:2px solid #eeede9;outline-offset:2px}
-.meet.previewing .meet-play{opacity:0;pointer-events:none}
-.meet-frame{container-type:inline-size}
-@container (max-width:340px){.meet-play{right:16px;font-size:15px;gap:9px;padding:10px 14px}}
-@media (min-width:769px) and (max-width:1100px){.grid>.meet{grid-column:5 / span 4 !important;grid-row:2 !important;margin-top:72px !important}}
-@container (max-width:240px){.meet-play{left:12px;right:12px;bottom:12px;font-size:14px}}
-@media (max-width:768px){.grid>.meet{margin-top:40px !important;order:2}.grid>.meet+div{grid-row:auto !important}}
 </style>
 </head>
 <body>
@@ -130,8 +118,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 </section>
 
 <section class="wrap grid" style="padding: 104px 48px 0; align-items: start;">
-  <figure class="meet" style="grid-column: 1 / span 3;" data-ready="1" data-stop="1.2" data-cues="[[2.45, 4.1, &quot;Hallo, ich bin Markus.&quot;], [4.3, 8.3, &quot;Ich gestalte Interfaces für komplexe Systeme, zum Beispiel für Flugsimulatoren.&quot;], [8.8, 11.2, &quot;Man sagt mir nach, dass ich die richtigen Fragen stelle,&quot;], [11.25, 13.2, &quot;und genau da beginnt gutes Design.&quot;], [13.9, 15.6, &quot;Ich freue mich auf das Gespräch.&quot;]]" data-mv="../../img/intro-de.mp4" data-mp="../../img/intro-de-poster.jpg" data-mt="../../img/intro-de.vtt" data-blur="../../img/clients-blur.mp4" data-blurp="../../img/clients-blur-poster.jpg"><div class="meet-frame"><img class="meet-poster" src="../../img/intro-de-poster.jpg" alt="" width="720" height="1280"><button type="button" class="meet-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" style="flex:none"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>In 15 Sekunden kennenlernen</button></div><div class="meet-ph-big" hidden>[VIDEO: Markus introduces himself in German, 15 s, portrait 9:16, with sound and captions]</div></figure>
-  <div style="grid-column: 5 / span 7; grid-row: 1;">
+  <div style="grid-column: 5 / span 7;">
     <a href="mailto:markus@rozkalns.design" class="disp" style="display: inline-block; font-size: clamp(32px, 4vw, 56px); line-height: 1; letter-spacing: -0.035em; text-decoration-thickness: 2px;">markus@rozkalns.design</a>
     <ul class="rows ind" style="margin-top: 72px;">
       <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/markusrozkalns/" target="_blank" rel="noopener">linkedin.com/in/markusrozkalns</a></span></li>
@@ -257,72 +244,6 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
     if (!past) set(false); else if (d < -4) set(true); else if (d > 4) set(false);
     if (Math.abs(d) > 4) last = y;
   }, { passive: true });
-})();
-</script>
-<style>
-.meet-ov{position:fixed;inset:0;z-index:200;background:#121211;display:flex;align-items:center;justify-content:center}
-.meet-ov[hidden]{display:none !important}
-.meet-bg,.meet-bg img,.meet-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0 !important}
-.meet-bg::after{content:"";position:absolute;inset:0;background:rgba(18,18,17,.55)}
-.meet-stage{position:relative;height:min(86vh,86svh,calc((100vw - 32px) * 16 / 9));aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#1c1c1b}
-.meet-stage video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
-.meet-stage .ph{position:absolute;inset:0;padding:24px;text-align:center;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;line-height:1.5;color:#8c8c89;border-radius:12px}
-.meet-cap{position:absolute;left:50%;bottom:88px;transform:translateX(-50%);width:max-content;max-width:calc(100% - 40px);box-sizing:border-box;padding:8px 14px;border-radius:8px;background:rgba(18,18,17,.78);color:#eeede9;font-family:Geist,system-ui,sans-serif;font-size:clamp(15px,2.1vh,19px);line-height:1.35;text-align:center;pointer-events:none;transition:opacity .2s ease}.meet-cap:empty{opacity:0;padding:0}
-.meet-x{position:absolute;top:16px;right:16px;width:44px;height:44px;border:0;border-radius:8px;background:rgba(18,18,17,.78);cursor:pointer;display:flex;align-items:center;justify-content:center}
-.meet-x:focus-visible{outline:2px solid #eeede9;outline-offset:2px}
-@media (prefers-reduced-motion:reduce){.meet-bg video{display:none}}
-</style>
-<script>
-// intro video: the card previews 2 s muted, then stops and shows the play button; play opens a portrait player over the blurred loop
-(function () {
-  var cards = [].slice.call(document.querySelectorAll('.meet')); if (!cards.length) return;
-  var de = document.documentElement.lang === 'de';
-  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var paused = function () { return document.documentElement.classList.contains('rz-paused'); };
-  var X = '<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3l14 14M17 3L3 17" stroke="#eeede9" stroke-width="1.5"/></svg>';
-  cards.forEach(function (card) {
-    var frame = card.querySelector('.meet-frame'), btn = card.querySelector('.meet-play'), d = card.dataset;
-    var ready = d.ready === '1';
-    if (ready) {
-      var v = document.createElement('video'); v.muted = true; v.playsInline = true; v.setAttribute('playsinline', ''); v.preload = 'auto'; v.src = d.mv; if (d.mp) v.poster = d.mp; v.setAttribute('aria-hidden', 'true'); v.style.objectPosition = '50% 30%';
-      var ph = frame.querySelector('.ph'); if (ph) ph.remove(); frame.insertBefore(v, btn);
-      if (!still && 'IntersectionObserver' in window) {
-        card.classList.add('previewing');
-        var done = function () { v.pause(); card.classList.remove('previewing'); };
-        var stop = parseFloat(d.stop) || 2; v.addEventListener('timeupdate', function () { if (v.currentTime >= stop) done(); });
-        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting && e.intersectionRatio >= .5) { io.disconnect(); if (paused()) done(); else v.play().catch(done); } }); }, { threshold: [.5] });
-        io.observe(card);
-      }
-    }
-    var ov, last;
-    var close = function () { if (!ov) return; var pv = ov.querySelector('.meet-stage video'); if (pv) pv.pause(); var bv = ov.querySelector('.meet-bg video'); if (bv) bv.pause(); ov.hidden = true; document.documentElement.style.overflow = ''; if (last) last.focus(); };
-    var open = function () {
-      last = document.activeElement;
-      if (!ov) {
-        ov = document.createElement('div'); ov.className = 'meet-ov'; ov.hidden = true; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true'); ov.setAttribute('aria-label', btn.textContent.trim());
-        var bg = '<div class="meet-bg" aria-hidden="true"><img src="' + d.blurp + '" alt="">' + (still ? '' : '<video src="' + d.blur + '" muted loop playsinline></video>') + '</div>';
-        var stage = ready ? '<video controls playsinline controlslist="nofullscreen noplaybackrate nodownload" disablepictureinpicture' + (d.mp ? ' poster="' + d.mp + '"' : '') + ' src="' + d.mv + '"></video><p class="meet-cap" aria-live="off"></p>' : card.querySelector('.meet-ph-big').outerHTML.replace('meet-ph-big', 'ph').replace(' hidden', '');
-        ov.innerHTML = bg + '<div class="meet-stage">' + stage + '</div><button type="button" class="meet-x" aria-label="' + (de ? 'Schliessen' : 'Close') + '">' + X + '</button>';
-        document.body.appendChild(ov);
-        // captions in the site font: cues come from the card's data-cues (start, end, text)
-        var cues = []; try { cues = JSON.parse(d.cues || '[]'); } catch (e) {}
-        var sv = ov.querySelector('.meet-stage video'), cap = ov.querySelector('.meet-cap');
-        if (sv && cap) sv.addEventListener('timeupdate', function () { var t = sv.currentTime, txt = ''; cues.forEach(function (c) { if (t >= c[0] && t < c[1]) txt = c[2]; }); if (cap.textContent !== txt) cap.textContent = txt; });
-        ov.querySelector('.meet-x').addEventListener('click', close);
-        ov.addEventListener('click', function (e) { if (e.target === ov || e.target.closest('.meet-bg')) close(); });
-        ov.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape') close();
-          if (e.key === 'Tab') { var f = [].slice.call(ov.querySelectorAll('button,video[controls]')); var i = f.indexOf(document.activeElement); if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); } else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); } }
-        });
-      }
-      ov.hidden = false; document.documentElement.style.overflow = 'hidden';
-      var bv = ov.querySelector('.meet-bg video'); if (bv && !paused()) bv.play().catch(function () {});
-      var pv = ov.querySelector('.meet-stage video'); if (pv) { pv.currentTime = 0; pv.muted = false; pv.play().catch(function () {}); }
-      ov.querySelector('.meet-x').focus();
-    };
-    btn.addEventListener('click', open);
-    frame.addEventListener('click', function (e) { if (e.target !== btn && !btn.contains(e.target)) open(); });
-  });
 })();
 </script>
 </body>

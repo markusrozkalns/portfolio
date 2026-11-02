@@ -88,6 +88,17 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 .bleed img,.bleed video{border-radius:0 !important}
 @media (max-width:768px){.academy{padding-top:72px !important}.academy>figure+figure{margin-top:40px !important}}
 @media (max-width:768px){.berkeley{padding-top:72px !important}.berkeley>figure+figure{margin-top:40px !important}}
+.meet{margin:0}.meet-frame{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:#1c1c1b;cursor:pointer}
+.meet-frame>.ph{position:absolute;inset:0;padding:24px;text-align:center;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;line-height:1.5;color:#8c8c89}
+.meet-frame .meet-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
+.meet-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.meet-play{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 16px 10px 14px;box-sizing:border-box;border:0;border-radius:8px;background:rgba(18,18,17,.78);color:#eeede9;font-family:inherit;font-size:16px;line-height:1.2;text-align:left;cursor:pointer;transition:opacity .5s ease,background-color .3s ease}
+.meet-play:hover{background:#121211}.meet-play:focus-visible{outline:2px solid #eeede9;outline-offset:2px}
+.meet.previewing .meet-play{opacity:0;pointer-events:none}
+.meet-frame{container-type:inline-size}
+@container (max-width:340px){.meet-play{right:16px;font-size:15px;gap:9px;padding:10px 14px}}
+@container (max-width:240px){.meet-play{left:12px;right:12px;bottom:12px;font-size:14px}}
+@media (max-width:768px){.grid>.meet{margin:0 0 40px !important}}
 </style>
 </helmet>
 <div id="page" style="background: #121211; color: #eeede9; font-family: 'Geist', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; line-height: 1.5; min-width: 0;">
@@ -108,7 +119,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 </section>
 
 <section class="wrap grid" style="padding: 72px 48px 0; align-items: start;">
-  <img class="photo" src="img/portrait-wide.jpg" alt="Markus Rozkalns" width="1366" height="912" style="grid-column: 1 / span 4; width: 100%; height: auto; aspect-ratio: 1366 / 912; object-fit: cover; display: block;">
+  <figure class="meet" style="grid-column: 1 / span 4;" data-ready="1" data-stop="1.1" data-cues="[[3.2, 4.45, &quot;Hi, I’m Markus.&quot;], [4.5, 7.95, &quot;I design interfaces for complex systems, like flight simulators.&quot;], [8.6, 10.55, &quot;People tell me I ask the right questions,&quot;], [10.6, 12.35, &quot;and that’s where good design starts.&quot;], [12.9, 14.4, &quot;Let’s talk.&quot;]]" data-mv="img/intro-en.mp4" data-mp="img/intro-en-wave.jpg" data-mt="img/intro-en.vtt" data-blur="img/clients-blur.mp4" data-blurp="img/clients-blur-poster.jpg"><div class="meet-frame"><img class="meet-poster" src="img/intro-en-wave.jpg" alt="" width="720" height="1280"><button type="button" class="meet-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" style="flex:none"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>Meet me in 15 seconds</button></div><div class="meet-ph-big" hidden>[VIDEO: Markus introduces himself, 15 s, portrait 9:16, with sound and captions]</div></figure>
   <div style="grid-column: 6 / span 7; padding-top: 0;">
     <p class="lead rise d1">UX/UI designer based in Riga and working closely with Switzerland. I design interfaces for complex, high-stakes systems, from flight simulators to banks and railways.</p>
     <div class="ind" style="margin-top: 48px; display: flex; flex-direction: column; gap: 24px;">
