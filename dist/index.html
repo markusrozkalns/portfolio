@@ -123,6 +123,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 @media (max-width:768px) and (prefers-reduced-motion:reduce){#top .bar{overflow-x:auto}#top .bar .ltrack{animation:none}#top .bar .logos.dup{display:none}}
 .meet{margin:0}.meet-frame{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:#1c1c1b;cursor:pointer}
 .meet-frame>.ph{position:absolute;inset:0;padding:24px;text-align:center;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;line-height:1.5;color:#8c8c89}
+.meet-frame .meet-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block}
 .meet-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .meet-play{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 16px 10px 14px;box-sizing:border-box;border:0;border-radius:8px;background:rgba(18,18,17,.78);color:#eeede9;font-family:inherit;font-size:16px;line-height:1.2;text-align:left;cursor:pointer;transition:opacity .5s ease,background-color .3s ease}
 .meet-play:hover{background:#121211}.meet-play:focus-visible{outline:2px solid #eeede9;outline-offset:2px}
@@ -188,7 +189,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 
 <section id="intro" class="wrap grid" style="padding: 160px 48px 0; align-items: start;">
   <p class="ind" style="grid-column: 1 / span 7; align-self: center; margin: 0; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.15; letter-spacing: -0.025em;">I go to the people who use the product, let them dream the ideal, and turn it into clear systems that ship and last. <span style="color: #8f8f8c;">AI speeds up my delivery, but it never replaces the research.</span></p>
-  <figure class="meet" style="grid-column: 9 / span 3;" data-ready="0" data-mv="img/intro-en.mp4" data-mp="img/intro-en-poster.jpg" data-mt="img/intro-en.vtt" data-blur="img/clients-blur.mp4" data-blurp="img/clients-blur-poster.jpg"><div class="meet-frame"><div class="ph">[VIDEO: Markus introduces himself, 15 s, portrait; 2 s smiling preview, then Play]</div><button type="button" class="meet-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" style="flex:none"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>Meet me in 15 seconds</button></div><div class="meet-ph-big" hidden>[VIDEO: Markus introduces himself, 15 s, portrait 9:16, with sound and captions]</div></figure>
+  <figure class="meet" style="grid-column: 9 / span 3;" data-ready="1" data-cues="[[3.2, 4.45, &quot;Hi, I’m Markus.&quot;], [4.5, 7.95, &quot;I design interfaces for complex systems, like flight simulators.&quot;], [8.6, 10.55, &quot;People tell me I ask the right questions,&quot;], [10.6, 12.35, &quot;and that’s where good design starts.&quot;], [12.9, 14.4, &quot;Let’s talk.&quot;]]" data-mv="img/intro-en.mp4" data-mp="img/intro-en-poster.jpg" data-mt="img/intro-en.vtt" data-blur="img/clients-blur.mp4" data-blurp="img/clients-blur-poster.jpg"><div class="meet-frame"><img class="meet-poster" src="img/intro-en-poster.jpg" alt="" width="720" height="1280"><button type="button" class="meet-play"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" style="flex:none"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>Meet me in 15 seconds</button></div><div class="meet-ph-big" hidden>[VIDEO: Markus introduces himself, 15 s, portrait 9:16, with sound and captions]</div></figure>
 </section>
 
 <section id="work" class="wrap grid band" style="margin-top: 160px; padding: 144px 48px 160px;">
@@ -440,6 +441,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 .meet-stage{position:relative;height:min(86vh,86svh,calc((100vw - 32px) * 16 / 9));aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#1c1c1b}
 .meet-stage video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
 .meet-stage .ph{position:absolute;inset:0;padding:24px;text-align:center;font-family:"Geist Mono",ui-monospace,Menlo,monospace;font-size:13px;line-height:1.5;color:#8c8c89;border-radius:12px}
+.meet-cap{position:absolute;left:50%;bottom:88px;transform:translateX(-50%);width:max-content;max-width:calc(100% - 40px);box-sizing:border-box;padding:8px 14px;border-radius:8px;background:rgba(18,18,17,.78);color:#eeede9;font-family:Geist,system-ui,sans-serif;font-size:clamp(15px,2.1vh,19px);line-height:1.35;text-align:center;pointer-events:none;transition:opacity .2s ease}.meet-cap:empty{opacity:0;padding:0}
 .meet-x{position:absolute;top:16px;right:16px;width:44px;height:44px;border:0;border-radius:8px;background:rgba(18,18,17,.78);cursor:pointer;display:flex;align-items:center;justify-content:center}
 .meet-x:focus-visible{outline:2px solid #eeede9;outline-offset:2px}
 @media (prefers-reduced-motion:reduce){.meet-bg video{display:none}}
@@ -456,7 +458,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
     var frame = card.querySelector('.meet-frame'), btn = card.querySelector('.meet-play'), d = card.dataset;
     var ready = d.ready === '1';
     if (ready) {
-      var v = document.createElement('video'); v.muted = true; v.playsInline = true; v.setAttribute('playsinline', ''); v.preload = 'auto'; v.src = d.mv; if (d.mp) v.poster = d.mp; v.setAttribute('aria-hidden', 'true');
+      var v = document.createElement('video'); v.muted = true; v.playsInline = true; v.setAttribute('playsinline', ''); v.preload = 'auto'; v.src = d.mv; if (d.mp) v.poster = d.mp; v.setAttribute('aria-hidden', 'true'); v.style.objectPosition = '50% 30%';
       var ph = frame.querySelector('.ph'); if (ph) ph.remove(); frame.insertBefore(v, btn);
       if (!still && 'IntersectionObserver' in window) {
         card.classList.add('previewing');
@@ -473,9 +475,13 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
       if (!ov) {
         ov = document.createElement('div'); ov.className = 'meet-ov'; ov.hidden = true; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true'); ov.setAttribute('aria-label', btn.textContent.trim());
         var bg = '<div class="meet-bg" aria-hidden="true"><img src="' + d.blurp + '" alt="">' + (still ? '' : '<video src="' + d.blur + '" muted loop playsinline></video>') + '</div>';
-        var stage = ready ? '<video controls playsinline' + (d.mp ? ' poster="' + d.mp + '"' : '') + ' src="' + d.mv + '">' + (d.mt ? '<track kind="captions" src="' + d.mt + '" srclang="' + (de ? 'de' : 'en') + '" label="' + (de ? 'Deutsch' : 'English') + '" default>' : '') + '</video>' : card.querySelector('.meet-ph-big').outerHTML.replace('meet-ph-big', 'ph').replace(' hidden', '');
+        var stage = ready ? '<video controls playsinline controlslist="nofullscreen noplaybackrate nodownload" disablepictureinpicture' + (d.mp ? ' poster="' + d.mp + '"' : '') + ' src="' + d.mv + '"></video><p class="meet-cap" aria-live="off"></p>' : card.querySelector('.meet-ph-big').outerHTML.replace('meet-ph-big', 'ph').replace(' hidden', '');
         ov.innerHTML = bg + '<div class="meet-stage">' + stage + '</div><button type="button" class="meet-x" aria-label="' + (de ? 'Schliessen' : 'Close') + '">' + X + '</button>';
         document.body.appendChild(ov);
+        // captions in the site font: cues come from the card's data-cues (start, end, text)
+        var cues = []; try { cues = JSON.parse(d.cues || '[]'); } catch (e) {}
+        var sv = ov.querySelector('.meet-stage video'), cap = ov.querySelector('.meet-cap');
+        if (sv && cap) sv.addEventListener('timeupdate', function () { var t = sv.currentTime, txt = ''; cues.forEach(function (c) { if (t >= c[0] && t < c[1]) txt = c[2]; }); if (cap.textContent !== txt) cap.textContent = txt; });
         ov.querySelector('.meet-x').addEventListener('click', close);
         ov.addEventListener('click', function (e) { if (e.target === ov || e.target.closest('.meet-bg')) close(); });
         ov.addEventListener('keydown', function (e) {
