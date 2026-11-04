@@ -182,7 +182,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div class="wrap grid" style="padding: 0 48px; align-items: end; margin-bottom: 64px;">
     <div style="grid-column: 1 / span 8;">
       <h2 class="disp sec">Approach</h2>
-      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Every decision traces back to evidence. Each step has an ID, and every insight and decision names the evidence it came from.</p>
+      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Every decision traces back to evidence. Each step has an ID, and every insight and decision names the evidence it came from. The steps below are an example from this project.</p>
     </div>
     <div class="hidesm" style="grid-column: 10 / span 3; display: flex; justify-content: flex-end; gap: 8px;">
       <button type="button" class="iconbtn" aria-label="Previous step" data-step="-1"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M30 11H2M12 1L2 11l10 10"/></svg></button>
@@ -191,11 +191,15 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   </div>
 
   <ol class="track" data-track style="list-style: none; margin: 0;">
-    <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Two field trips</h3><p class="copy">Watching passengers validate their tickets, and interviewing them on the spot.</p></li>
-    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Tickets held to the screen</h3><p class="copy">Passengers expected the front screen to read their ticket.</p><p class="from">From S001</p></li>
-    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>Nobody read the instructions</h3><p class="copy">Small text, Latvian only.</p><p class="from">From S001</p></li>
-    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>The scanner needs a signal</h3><p class="copy">People look where the screen is, not at the side of the device.</p><p class="from">From E001</p></li>
-    <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>One round, bilingual cue</h3><p class="copy">A visual element next to the scanner with a clear arrow, in two languages.</p><p class="from">From I001, E002</p></li>
+    <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Stakeholder interviews</h3><p class="copy">Talks with Vivi about the validators and the problem they saw on board.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S002</p><p class="type">Source</p><h3>Two field trips</h3><p class="copy">Watching passengers validate their tickets on board.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S003</p><p class="type">Source</p><h3>Passenger interviews</h3><p class="copy">Asking passengers on the spot what they expected the validator to do.</p></li>
+    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Tickets held to the screen</h3><p class="copy">Passengers expected the front screen to read their ticket.</p><p class="from">From S002, S003</p></li>
+    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>Nobody read the instructions</h3><p class="copy">Too much text, set small, in Latvian only.</p><p class="from">From S002</p></li>
+    <li class="step"><span class="node"></span><p class="id">E003</p><p class="type">Evidence</p><h3>Validation took too long</h3><p class="copy">Failed attempts slowed every passenger down, and queues built up at the doors.</p><p class="from">From S002</p></li>
+    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>The scanner needs a signal</h3><p class="copy">People look where the screen is, not at the side of the device.</p><p class="from">From E001, E003</p></li>
+    <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>One round, clear cue</h3><p class="copy">A visual element next to the scanner with a clear arrow.</p><p class="from">From I001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>English on the cue</h3><p class="copy">Latvian and English side by side, so every passenger can read it.</p><p class="from">From E002</p></li>
   </ol>
 </section>
 
@@ -213,7 +217,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 <section class="wrap grid aband" style="margin-top: 168px; padding: 144px 48px 160px; background: #1c1c1b;">
   <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Outcome</h2></div>
   <div style="grid-column: 5 / span 8;">
-    <p class="body ind" style="max-width: 808px;">After two field trips on board, the cue was so clear that Vivi removed the instruction sheet entirely.</p>
+    <p class="body" style="max-width: 720px;">After two field trips on board, the cue was so clear that Vivi removed the instruction sheet entirely. Vivi has since invited me to the UX research for its ticket vending machines, an active project.</p>
   </div>
 </section>
 

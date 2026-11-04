@@ -137,7 +137,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Problem</h2></div>
   <div style="grid-column: 5 / span 7;">
     <p class="body">Personalisierte Gesundheit war in der breiten Öffentlichkeit weitgehend unbekannt.</p>
-    <ul class="list ind" style="margin-top: 40px;"><li>Eine komplexe medizinische Idee für ein breites Publikum</li><li style="border-bottom: 1px solid #262626;">Sie musste zeigen, was personalisierte gegenüber allgemeiner Versorgung bietet</li></ul>
+    <ul class="list ind" style="margin-top: 40px;"><li>Eine komplexe medizinische Idee für ein breites Publikum</li><li>Sie musste zeigen, was personalisierte gegenüber allgemeiner Versorgung bietet</li><li style="border-bottom: 1px solid #262626;">Künstliche Intelligenz, ein Kernstück personalisierter Versorgung, war im Gesundheitswesen noch ein fremdes Element</li></ul>
     
   </div>
 </section>
@@ -146,7 +146,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div class="wrap grid" style="padding: 0 48px; align-items: end; margin-bottom: 64px;">
     <div style="grid-column: 1 / span 8;">
       <h2 class="disp sec">Vorgehen</h2>
-      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Jede Entscheidung lässt sich auf Evidenz zurückführen. Jeder Schritt hat eine ID, und jedes Insight und jede Entscheidung nennt die Evidenz, aus der es stammt.</p>
+      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Jede Entscheidung lässt sich auf Evidenz zurückführen. Jeder Schritt hat eine ID, und jedes Insight und jede Entscheidung nennt die Evidenz, aus der es stammt. Die folgenden Schritte sind ein Beispiel aus diesem Projekt.</p>
     </div>
     <div class="hidesm" style="grid-column: 10 / span 3; display: flex; justify-content: flex-end; gap: 8px;">
       <button type="button" class="iconbtn" aria-label="Vorheriger Schritt" onClick="{{prev}}"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M30 11H2M12 1L2 11l10 10"/></svg></button>
@@ -156,10 +156,14 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 
   <ol class="track" ref="{{trackRef}}" style="list-style: none; margin: 0;">
     <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Kampagnen-Briefing</h3><p class="copy">Personalisierte Gesundheit für die Öffentlichkeit verständlich machen.</p></li>
-    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Eine unbekannte Idee</h3><p class="copy">Die meisten Menschen hatten noch nie von personalisierter Gesundheit gehört.</p><p class="from">Aus S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">S002</p><p class="type">Source</p><h3>Stakeholder-Interviews</h3><p class="copy">Gespräche mit Roche über Ziele und Zielgruppe der Kampagne.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S003</p><p class="type">Source</p><h3>Visuelle Richtlinien von Roche</h3><p class="copy">Die Markenregeln, mit Freiheit bei der Gestaltung der Illustrationen.</p></li>
+    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Eine unbekannte Idee</h3><p class="copy">Die meisten Menschen hatten noch nie von personalisierter Gesundheit gehört.</p><p class="from">Aus S001, S002</p></li>
+    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>KI wirkte fremd</h3><p class="copy">Künstliche Intelligenz war für die meisten Menschen noch ein fremdes Element im Gesundheitswesen.</p><p class="from">Aus S001, S002</p></li>
     <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Die Verbindungen zeigen</h3><p class="copy">Personalisierte Gesundheit verknüpft viele Gesundheitsfaktoren.</p><p class="from">Aus E001</p></li>
     <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>Ein neuronales Netz</h3><p class="copy">Gesundheitselemente als verbundene, animierte Knoten.</p><p class="from">Aus I001</p></li>
     <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>Klicken und vergleichen</h3><p class="copy">Jeder Knoten zeigt die Vorteile personalisierter gegenüber allgemeiner Versorgung.</p><p class="from">Aus I001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D003</p><p class="type">Decision</p><h3>Ein freundlicher Look</h3><p class="copy">Ein freundlicher visueller Stil, für mehr Akzeptanz eines ungewohnten Themas.</p><p class="from">Aus E002, S003</p></li>
   </ol>
 </section>
 
@@ -167,7 +171,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Lösung</h2></div>
   <div style="grid-column: 5 / span 8;">
     <p class="body" style="max-width: 720px;">Ich habe das Projekt und die UX geleitet. Ein UI-Designer hat die Visuals gestaltet.</p>
-    <div style="margin-top: 104px;"><h3 class="h3" style="margin-top: 0;">Ein Netzwerk von Gesundheitselementen</h3><p class="copy ind" style="margin-top: 16px; max-width: 728px;">Gesundheitselemente erscheinen als verbundene, animierte Knoten, wie ein neuronales Netz. Ein Klick auf einen Knoten zeigt die Vorteile personalisierter gegenüber allgemeiner Gesundheitsversorgung. Die Kampagne stellte zudem künstliche Intelligenz als zentralen Bestandteil personalisierter Gesundheitsversorgung vor.</p><figure style="margin: 56px 0 0;"><img src="img/roche-category.jpg" alt="Kategorieseite mit Artikel, den vier Themen rund um das animierte Element und den Kennzahlen" width="1440" height="810" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Kategorieseite: Ein Gesundheitselement öffnet sich mit Themen, Kennzahlen und einem Artikel</figcaption></figure></div>
+    <div style="margin-top: 104px;"><h3 class="h3" style="margin-top: 0;">Ein Netzwerk von Gesundheitselementen</h3><p class="copy" style="margin-top: 16px; max-width: 728px;">Gesundheitselemente erscheinen als verbundene, animierte Knoten, wie ein neuronales Netz. Ein Klick auf einen Knoten zeigt die Vorteile personalisierter gegenüber allgemeiner Gesundheitsversorgung. Die Kampagne stellte zudem künstliche Intelligenz als zentralen Bestandteil personalisierter Gesundheitsversorgung vor.</p><figure style="margin: 56px 0 0;"><img src="img/roche-category.jpg" alt="Kategorieseite mit Artikel, den vier Themen rund um das animierte Element und den Kennzahlen" width="1440" height="810" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Kategorieseite: Ein Gesundheitselement öffnet sich mit Themen, Kennzahlen und einem Artikel</figcaption></figure></div>
   </div>
 </section>
 
@@ -183,7 +187,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div style="grid-column: 1 / span 12; border-top: 1px solid #262626; padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px;">
     <div>
       <p class="meta">Nächstes Projekt</p>
-      <a href="Case-Theapolis-DE.dc.html" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">Theapolis Plattform</a>
+      <a href="Case-Theapolis-DE.dc.html" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">Theapolis Plattform und Marke</a>
     </div>
     <a href="Work-DE.dc.html" style="font-size: 16px;">Alle Projekte</a>
   </div>

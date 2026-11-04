@@ -182,7 +182,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div class="wrap grid" style="padding: 0 48px; align-items: end; margin-bottom: 64px;">
     <div style="grid-column: 1 / span 8;">
       <h2 class="disp sec">Vorgehen</h2>
-      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Jede Entscheidung lässt sich auf Evidenz zurückführen. Jeder Schritt hat eine ID, und jedes Insight und jede Entscheidung nennt die Evidenz, aus der es stammt.</p>
+      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Jede Entscheidung lässt sich auf Evidenz zurückführen. Jeder Schritt hat eine ID, und jedes Insight und jede Entscheidung nennt die Evidenz, aus der es stammt. Die folgenden Schritte sind ein Beispiel aus diesem Projekt.</p>
     </div>
     <div class="hidesm" style="grid-column: 10 / span 3; display: flex; justify-content: flex-end; gap: 8px;">
       <button type="button" class="iconbtn" aria-label="Vorheriger Schritt" data-step="-1"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M30 11H2M12 1L2 11l10 10"></path></svg></button>
@@ -192,12 +192,13 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 
   <ol class="track" data-track style="list-style: none; margin: 0;">
     <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Stakeholder-Interviews</h3><p class="copy">Quer durchs Unternehmen: an wen Loft verkauft und was jede Gruppe braucht.</p></li>
-    <li class="step"><span class="node"></span><p class="id">S002</p><p class="type">Source</p><h3>Website-Analytics</h3><p class="copy">Wie sich Besucher tatsächlich durch die alte Website bewegten.</p></li>
-    <li class="step"><span class="node"></span><p class="id">S003</p><p class="type">Source</p><h3>Marktforschung</h3><p class="copy">Wie sich andere Simulator- und Aviatikmarken präsentieren.</p></li>
-    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Überall Navy</h3><p class="copy">Navyblau ist in der Branche allgegenwärtig.</p><p class="from">Aus S003</p></li>
-    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>Zu viel Website</h3><p class="copy">Viele Seiten und tiefe Navigation für Besucher mit sehr unterschiedlichen Zielen.</p><p class="from">Aus S002</p></li>
-    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Vier Zielgruppen</h3><p class="copy">Betreiber, Piloten, OEMs und Airlines, jede mit eigenen Bedürfnissen und einem eigenen Weg durch die Website.</p><p class="from">Aus S001, S002</p></li>
-    <li class="step"><span class="node"></span><p class="id">I002</p><p class="type">Insight</p><h3>Das Erlebnis verkaufen</h3><p class="copy">Kunden kaufen den ganzen Service, nicht nur den Simulator als Objekt.</p><p class="from">Aus S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">S002</p><p class="type">Source</p><h3>Nutzerinterviews</h3><p class="copy">Mit Piloten und Instruktoren: wie sie die Website nutzen und was sie dort suchen.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S003</p><p class="type">Source</p><h3>Website-Analytics</h3><p class="copy">Wie sich Besucher tatsächlich durch die alte Website bewegten.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S004</p><p class="type">Source</p><h3>Marktforschung</h3><p class="copy">Wie sich andere Simulator- und Aviatikmarken präsentieren.</p></li>
+    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Überall Navy</h3><p class="copy">Navyblau ist in der Branche allgegenwärtig.</p><p class="from">Aus S004</p></li>
+    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>Schwer zu navigieren</h3><p class="copy">Zu viele Seiten und eine tiefe Navigation für Besucher mit sehr unterschiedlichen Zielen.</p><p class="from">Aus S003</p></li>
+    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Vier Zielgruppen</h3><p class="copy">Betreiber, Piloten, OEMs und Airlines, jede mit eigenen Bedürfnissen und Wegen durch die Website.</p><p class="from">Aus S001, S002, S003</p></li>
+    <li class="step"><span class="node"></span><p class="id">I002</p><p class="type">Insight</p><h3>Das Erlebnis verkaufen</h3><p class="copy">Kunden kaufen den ganzen Service, nicht nur den Simulator als Produkt.</p><p class="from">Aus S001</p></li>
     <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>Himmelblau statt Navy</h3><p class="copy">Vom Meer in den Himmel. Die Eule als Logo bleibt.</p><p class="from">Aus E001</p></li>
     <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>Dark Mode</h3><p class="copy">Der weisse Simulator sticht hervor, und die Marke zeigt das ganze Erlebnis.</p><p class="from">Aus I002</p></li>
     <li class="step"><span class="node"></span><p class="id">D003</p><p class="type">Decision</p><h3>Weniger Seiten, einstufiges Menü</h3><p class="copy">Eine leichtere Website, auf der man sich schnell zurechtfindet.</p><p class="from">Aus E002</p></li>
@@ -212,8 +213,8 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 
     <div style="margin-top: 104px;">
       <h3 class="h3" style="margin-top: 0;">Marke: ein leichtes Facelift</h3>
-      <p class="copy ind" style="margin-top: 16px; max-width: 728px;">Die Eule blieb. Alles darum herum zog vom Meer in den Himmel und von hell zu dunkel.</p>
-      <ul class="list ind" style="margin-top: 32px;">
+      <p class="copy" style="margin-top: 16px; max-width: 728px;">Die Eule blieb. Alles darum herum zog vom Meer in den Himmel und von hell zu dunkel.</p>
+      <ul class="list" style="margin-top: 32px;">
         <li>Aus Navyblau wurde Himmelblau</li>
         <li>Aus Light Mode wurde Dark Mode, damit der weisse Simulator hervorsticht</li>
         <li>Messeboxen, Verpackungen und Rückwände im Dark Mode, mit dunklen VR-Szenen der Flugumgebung</li>
@@ -225,7 +226,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 
     <div style="margin-top: 144px;">
       <h3 class="h3" style="margin-top: 0;">Website: um die Zielgruppen gebaut</h3>
-      <p class="copy ind" style="margin-top: 16px; max-width: 728px;">Weniger Seiten und ein einstufiges Menü. Unter Produkte stehen die drei Simulatoren, unter Lösungen, was jede Zielgruppe für ihre Bedürfnisse bekommt.</p>
+      <p class="copy" style="margin-top: 16px; max-width: 728px;">Weniger Seiten und ein einstufiges Menü. Unter Produkte stehen die drei Simulatoren, unter Lösungen, was jede Zielgruppe für ihre Bedürfnisse bekommt.</p>
       <div class="sub" style="margin-top: 72px; align-items: start;"><figure style="grid-column: 1 / span 4; margin: 0;"><img data-fade src="../../../img/loft-web-audiences.jpg" alt="Vier Zielgruppen-Kacheln: für Betreiber, Piloten, OEMs und Airlines" width="1800" height="1126" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Ein Einstieg pro Zielgruppe: Betreiber, Piloten, OEMs und Airlines</figcaption></figure><figure style="grid-column: 5 / span 4; margin: 96px 0 0;"><img data-fade src="../../../img/loft-web-airlines.jpg" alt="Lösungsseite für Airlines mit einem 3D-Rendering zweier Simulatoren" width="1800" height="1126" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Eine Lösungsseite pro Zielgruppe, hier für Airlines</figcaption></figure></div>
       <div class="sub" style="margin-top: 72px; align-items: start;"><figure style="grid-column: 1 / span 4; margin: 0;"><img data-fade src="../../../img/loft-web-products.jpg" alt="Produktübersicht mit den Simulatoren Airbus H145, Airbus H125 und Robinson R22" width="1800" height="1051" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Produkte: die drei Simulatoren</figcaption></figure><figure style="grid-column: 5 / span 4; margin: 96px 0 0;"><img data-fade src="../../../img/loft-web-product-h145.jpg" alt="Produktseite des Airbus-H145-Simulators" width="1800" height="1123" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Produktseite: Airbus H145</figcaption></figure></div>
       <figure style="margin: 72px 0 0;"><img data-fade src="../../../img/loft-web-news.jpg" alt="News-Artikel im dunklen Look" width="1800" height="1098" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">News, im selben dunklen Look</figcaption></figure>
@@ -233,7 +234,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 
     <div style="margin-top: 144px;">
       <h3 class="h3" style="margin-top: 0;">Loft Fest: die Hauptbühne</h3>
-      <p class="copy ind" style="margin-top: 16px; max-width: 728px;">Die Marke trug auch das jährliche Loft Fest von Loft Dynamics. Ich habe bei den Visuals mitgearbeitet, darunter Animationen und Videos für den Screen der Hauptbühne.</p>
+      <p class="copy" style="margin-top: 16px; max-width: 728px;">Die Marke trug auch das jährliche Loft Fest von Loft Dynamics. Ich habe bei den Visuals mitgearbeitet, darunter Animationen und Videos für den Screen der Hauptbühne.</p>
       <figure style="margin: 40px 0 0;"><img data-fade src="../../../img/loft-fest.jpg" alt="Preisverleihung am Loft Fest, mit dem Instructor Award auf dem Screen der Hauptbühne" width="1200" height="900" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Der Instructor Award am Loft Fest, auf dem Screen der Hauptbühne</figcaption></figure>
     </div>
   </div>
@@ -242,8 +243,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 <section class="wrap grid aband" style="margin-top: 168px; padding: 144px 48px 160px; background: #1c1c1b;">
   <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Ergebnis</h2></div>
   <div style="grid-column: 5 / span 8;">
-    <p class="body" style="max-width: 720px;">Der Website-Traffic stieg im Folgejahr um 30%, die Conversion-Rate um 10 Prozentpunkte. Die Marke kam gut an: seriöser und zugleich dynamischer.</p>
-    <p class="copy ind" style="margin-top: 24px; max-width: 808px;">An Messen hebt sich Himmelblau heute vom branchenüblichen Navy ab.</p>
+    <p class="body" style="max-width: 720px;">Der Website-Traffic stieg im Folgejahr um 30%, die Conversion-Rate um 10 Prozentpunkte. Die Marke kam gut an: seriöser und zugleich dynamischer. An Messen hebt sich Himmelblau heute vom branchenüblichen Navy ab.</p>
   </div>
 </section>
 

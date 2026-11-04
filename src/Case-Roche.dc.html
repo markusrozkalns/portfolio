@@ -137,7 +137,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Problem</h2></div>
   <div style="grid-column: 5 / span 7;">
     <p class="body">Personalized health was largely unknown to the general public.</p>
-    <ul class="list ind" style="margin-top: 40px;"><li>A complex medical idea for a general audience</li><li style="border-bottom: 1px solid #262626;">It had to show what personalized care offers compared with generalized care</li></ul>
+    <ul class="list ind" style="margin-top: 40px;"><li>A complex medical idea for a general audience</li><li>It had to show what personalized care offers compared with generalized care</li><li style="border-bottom: 1px solid #262626;">Artificial intelligence, a core part of personalized care, was still a foreign element in healthcare</li></ul>
     
   </div>
 </section>
@@ -146,7 +146,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div class="wrap grid" style="padding: 0 48px; align-items: end; margin-bottom: 64px;">
     <div style="grid-column: 1 / span 8;">
       <h2 class="disp sec">Approach</h2>
-      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Every decision traces back to evidence. Each step has an ID, and every insight and decision names the evidence it came from.</p>
+      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Every decision traces back to evidence. Each step has an ID, and every insight and decision names the evidence it came from. The steps below are an example from this project.</p>
     </div>
     <div class="hidesm" style="grid-column: 10 / span 3; display: flex; justify-content: flex-end; gap: 8px;">
       <button type="button" class="iconbtn" aria-label="Previous step" onClick="{{prev}}"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M30 11H2M12 1L2 11l10 10"/></svg></button>
@@ -156,10 +156,14 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 
   <ol class="track" ref="{{trackRef}}" style="list-style: none; margin: 0;">
     <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Campaign brief</h3><p class="copy">Make personalized health understandable to the public.</p></li>
-    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>An unknown idea</h3><p class="copy">Most people had never heard of personalized health.</p><p class="from">From S001</p></li>
+    <li class="step"><span class="node"></span><p class="id">S002</p><p class="type">Source</p><h3>Stakeholder interviews</h3><p class="copy">Talks with Roche on the campaign’s goals and audience.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S003</p><p class="type">Source</p><h3>Roche visual guidelines</h3><p class="copy">The brand rules to follow, with freedom to design the illustrations.</p></li>
+    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>An unknown idea</h3><p class="copy">Most people had never heard of personalized health.</p><p class="from">From S001, S002</p></li>
+    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>AI felt foreign</h3><p class="copy">Artificial intelligence was still a foreign element in healthcare for most people.</p><p class="from">From S001, S002</p></li>
     <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Show the connections</h3><p class="copy">Personalized health links many health factors together.</p><p class="from">From E001</p></li>
     <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>A neural network</h3><p class="copy">Health elements as connected, animated nodes.</p><p class="from">From I001</p></li>
     <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>Click to compare</h3><p class="copy">Each node shows the benefits of personalized versus generalized care.</p><p class="from">From I001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D003</p><p class="type">Decision</p><h3>A friendly look</h3><p class="copy">A friendly visual style, for higher acceptance of an unfamiliar topic.</p><p class="from">From E002, S003</p></li>
   </ol>
 </section>
 
@@ -167,7 +171,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Solution</h2></div>
   <div style="grid-column: 5 / span 8;">
     <p class="body" style="max-width: 720px;">I led the project and the UX. A UI designer did the visuals.</p>
-    <div style="margin-top: 104px;"><h3 class="h3" style="margin-top: 0;">A network of health elements</h3><p class="copy ind" style="margin-top: 16px; max-width: 728px;">Health elements appear as connected, animated nodes, like a neural network. Click a node to see the benefits of personalized versus generalized healthcare. The campaign also introduced artificial intelligence as a core part of personalized healthcare.</p><figure style="margin: 56px 0 0;"><img src="img/roche-category.jpg" alt="Category page with the article, the four topics around the animated element and the key facts" width="1440" height="810" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Category page: a health element opens into its topics, key facts and an article</figcaption></figure></div>
+    <div style="margin-top: 104px;"><h3 class="h3" style="margin-top: 0;">A network of health elements</h3><p class="copy" style="margin-top: 16px; max-width: 728px;">Health elements appear as connected, animated nodes, like a neural network. Click a node to see the benefits of personalized versus generalized healthcare. The campaign also introduced artificial intelligence as a core part of personalized healthcare.</p><figure style="margin: 56px 0 0;"><img src="img/roche-category.jpg" alt="Category page with the article, the four topics around the animated element and the key facts" width="1440" height="810" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Category page: a health element opens into its topics, key facts and an article</figcaption></figure></div>
   </div>
 </section>
 
@@ -183,7 +187,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div style="grid-column: 1 / span 12; border-top: 1px solid #262626; padding-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px;">
     <div>
       <p class="meta">Next project</p>
-      <a href="Case-Theapolis.dc.html" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">Theapolis platform</a>
+      <a href="Case-Theapolis.dc.html" class="disp" style="display: inline-block; margin-top: 12px; font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; text-decoration-thickness: 2px;">Theapolis platform and brand</a>
     </div>
     <a href="Work.dc.html" style="font-size: 16px;">All work</a>
   </div>

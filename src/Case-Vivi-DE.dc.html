@@ -156,7 +156,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   <div class="wrap grid" style="padding: 0 48px; align-items: end; margin-bottom: 64px;">
     <div style="grid-column: 1 / span 8;">
       <h2 class="disp sec">Vorgehen</h2>
-      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Jede Entscheidung lässt sich auf Evidenz zurückführen. Jeder Schritt hat eine ID, und jedes Insight und jede Entscheidung nennt die Evidenz, aus der es stammt.</p>
+      <p class="copy ind" style="margin-top: 20px; max-width: 708px;">Jede Entscheidung lässt sich auf Evidenz zurückführen. Jeder Schritt hat eine ID, und jedes Insight und jede Entscheidung nennt die Evidenz, aus der es stammt. Die folgenden Schritte sind ein Beispiel aus diesem Projekt.</p>
     </div>
     <div class="hidesm" style="grid-column: 10 / span 3; display: flex; justify-content: flex-end; gap: 8px;">
       <button type="button" class="iconbtn" aria-label="Vorheriger Schritt" onClick="{{prev}}"><svg width="30" height="22" viewBox="0 0 30 22" fill="none" stroke="#eeede9" stroke-width="1.5" aria-hidden="true"><path d="M30 11H2M12 1L2 11l10 10"/></svg></button>
@@ -165,11 +165,15 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
   </div>
 
   <ol class="track" ref="{{trackRef}}" style="list-style: none; margin: 0;">
-    <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Zwei Feldbesuche</h3><p class="copy">Fahrgäste beim Entwerten beobachten und sie vor Ort befragen.</p></li>
-    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Tickets vor dem Bildschirm</h3><p class="copy">Fahrgäste erwarteten, dass der Bildschirm ihr Ticket liest.</p><p class="from">Aus S001</p></li>
-    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>Niemand las die Anleitung</h3><p class="copy">Kleine Schrift, nur Lettisch.</p><p class="from">Aus S001</p></li>
-    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Der Scanner braucht ein Signal</h3><p class="copy">Man schaut dorthin, wo der Bildschirm ist, nicht auf die Seite des Geräts.</p><p class="from">Aus E001</p></li>
-    <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>Ein runder, zweisprachiger Hinweis</h3><p class="copy">Ein visuelles Element neben dem Scanner mit klarem Pfeil, in zwei Sprachen.</p><p class="from">Aus I001, E002</p></li>
+    <li class="step"><span class="node"></span><p class="id">S001</p><p class="type">Source</p><h3>Stakeholder-Interviews</h3><p class="copy">Gespräche mit Vivi über die Entwerter und das Problem, das sie an Bord sahen.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S002</p><p class="type">Source</p><h3>Zwei Feldbesuche</h3><p class="copy">Fahrgäste an Bord beim Entwerten beobachten.</p></li>
+    <li class="step"><span class="node"></span><p class="id">S003</p><p class="type">Source</p><h3>Fahrgast-Interviews</h3><p class="copy">Fahrgäste vor Ort fragen, was sie vom Entwerter erwarteten.</p></li>
+    <li class="step"><span class="node"></span><p class="id">E001</p><p class="type">Evidence</p><h3>Tickets vor dem Bildschirm</h3><p class="copy">Fahrgäste erwarteten, dass der Bildschirm ihr Ticket liest.</p><p class="from">Aus S002, S003</p></li>
+    <li class="step"><span class="node"></span><p class="id">E002</p><p class="type">Evidence</p><h3>Niemand las die Anleitung</h3><p class="copy">Zu viel Text, klein gesetzt, nur Lettisch.</p><p class="from">Aus S002</p></li>
+    <li class="step"><span class="node"></span><p class="id">E003</p><p class="type">Evidence</p><h3>Entwerten dauerte zu lange</h3><p class="copy">Fehlversuche bremsten alle Fahrgäste, und an den Türen bildeten sich Schlangen.</p><p class="from">Aus S002</p></li>
+    <li class="step"><span class="node"></span><p class="id">I001</p><p class="type">Insight</p><h3>Der Scanner braucht ein Signal</h3><p class="copy">Man schaut dorthin, wo der Bildschirm ist, nicht auf die Seite des Geräts.</p><p class="from">Aus E001, E003</p></li>
+    <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>Ein runder, klarer Hinweis</h3><p class="copy">Ein visuelles Element neben dem Scanner mit klarem Pfeil.</p><p class="from">Aus I001</p></li>
+    <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>Englisch auf dem Hinweis</h3><p class="copy">Lettisch und Englisch nebeneinander, damit alle Fahrgäste ihn lesen können.</p><p class="from">Aus E002</p></li>
   </ol>
 </section>
 
@@ -187,7 +191,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 <section class="wrap grid aband" style="margin-top: 168px; padding: 144px 48px 160px; background: #1c1c1b;">
   <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Ergebnis</h2></div>
   <div style="grid-column: 5 / span 8;">
-    <p class="body ind" style="max-width: 808px;">Nach zwei Feldbesuchen an Bord war der Hinweis so klar, dass Vivi das Merkblatt ganz entfernte.</p>
+    <p class="body" style="max-width: 720px;">Nach zwei Feldbesuchen an Bord war der Hinweis so klar, dass Vivi das Merkblatt ganz entfernte. Inzwischen hat Vivi mich zur UX-Forschung für seine Ticketautomaten eingeladen, ein laufendes Projekt.</p>
   </div>
 </section>
 
