@@ -477,7 +477,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
     var reset = function () { state = 'idle'; card.classList.remove('live'); cap.textContent = ''; v.muted = true; v.pause(); try { v.currentTime = stop; } catch (e) {} paint(); btn.focus({ preventScroll: true }); };
     v.addEventListener('ended', reset);
     v.addEventListener('play', paint); v.addEventListener('pause', paint);
-    var start = function () { previewing = false; card.classList.remove('previewing'); state = 'live'; card.classList.add('live'); v.muted = false; v.currentTime = 0; v.play().catch(function () {}); paint(); ctl.focus({ preventScroll: true }); };
+    var start = function () { previewing = false; card.classList.remove('previewing'); state = 'live'; card.classList.add('live'); v.muted = false; v.play().catch(function () {}); paint(); ctl.focus({ preventScroll: true }); };
     var toggle = function () { if (state !== 'live') return start(); if (v.paused) v.play().catch(function () {}); else v.pause(); };
     btn.addEventListener('click', start);
     ctl.addEventListener('click', function (e) { e.stopPropagation(); toggle(); });
