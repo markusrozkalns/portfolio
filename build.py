@@ -16,6 +16,12 @@ SRC = os.path.join(ROOT, 'src')
 DIST = os.path.join(ROOT, 'preview' if EXPLICIT else 'dist')
 DOMAIN = 'https://rozkalns.design'
 
+# Visitor statistics: Umami Cloud (cookieless; unique visitors, page views, countries, cities).
+# Paste the Website ID from cloud.umami.is (Settings > Websites > Edit). Empty = no tracking.
+# data-domains limits counting to the live domain, so Vercel previews and local builds are ignored.
+UMAMI_ID = ''
+UMAMI_SRC = 'https://cloud.umami.is/script.js'
+
 SLUGS = {
     'IOS': 'instructor-operating-station', 'LoftHUB': 'lofthub', 'Brand': 'loft-dynamics-website-and-brand',
     'DNB': 'dnb', 'BankOfLatvia': 'bank-of-latvia', 'Vivi': 'vivi', 'Metrohm': 'metrohm', 'Roche': 'roche',
@@ -351,6 +357,8 @@ def convert(name, src):
     body = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener"', body)
     other = name.replace('-DE.dc.html', '.dc.html') if de else name.replace('.dc.html', '-DE.dc.html')
     en_url, de_url = (url_for(other), me) if de else (me, url_for(other))
+    analytics = ('' if EXPLICIT or not UMAMI_ID else
+                 f'\n<script defer src="{UMAMI_SRC}" data-website-id="{UMAMI_ID}" data-domains="{DOMAIN.split("//")[1]},www.{DOMAIN.split("//")[1]}"></script>')
     head = f'''<!doctype html>
 <html lang="{lang}">
 <head>
@@ -374,7 +382,7 @@ def convert(name, src):
 <link rel="icon" href="{fp}favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="{fp}img/favicon-32.png">
 <link rel="apple-touch-icon" href="{fp}img/apple-touch-icon.png">
-{helmet}
+{helmet}{analytics}
 </head>
 <body>
 '''

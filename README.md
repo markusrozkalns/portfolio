@@ -7,3 +7,5 @@ Portfolio site of Markus Rozkalns, UX/UI designer.
 - `dist/` — the built site that Vercel serves (see `vercel.json`)
 
 To publish a change: edit `src/`, run `python3 build.py`, commit `src/` and `dist/`, push.
+
+Visitor statistics: Umami Cloud, cookieless (unique visitors, page views, countries, cities). Set `UMAMI_ID` in `build.py` to the Website ID from cloud.umami.is; leave it empty to build without tracking. Only the live domain is counted, not Vercel previews or `--preview` builds.
