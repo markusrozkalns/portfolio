@@ -191,6 +191,62 @@ MNAV_SCRIPT = '''
 })();
 </script>'''
 
+PARALLAX_SCRIPT = '''
+<style>
+@media (prefers-reduced-motion:no-preference){
+  html.js #top{overflow:hidden}
+  html.js #top>img,html.js #top>video.hero-video{will-change:translate}
+  html.js [data-px]{scale:1.1;will-change:translate}
+  html.js section.clients>img,html.js section.clients>video{scale:1.2}
+}
+</style>
+<script>
+(function () {
+  if (!window.matchMedia || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var hero = document.getElementById('top');
+  var heroMedia = hero ? [].slice.call(hero.querySelectorAll(':scope > img, :scope > video.hero-video')) : [];
+  var heroText = hero ? hero.querySelector('.hero-h1') : null;
+  heroText = heroText ? heroText.parentElement : null;
+  var imgs = [].slice.call(document.querySelectorAll('#work a[href] > img, #other-industries a[href] > img'));
+  imgs.forEach(function (i) { i.setAttribute('data-px', '0.04'); });
+  var clients = document.querySelector('section.clients');
+  var clientMedia = clients ? [].slice.call(clients.querySelectorAll(':scope > img, :scope > video')) : [];
+  var ticking = false;
+  var paused = function () { return document.documentElement.classList.contains('rz-paused'); };
+  var frame = function () {
+    ticking = false;
+    var vh = window.innerHeight, y = window.scrollY || window.pageYOffset;
+    if (paused()) {
+      heroMedia.concat(imgs, clientMedia).forEach(function (el) { el.style.translate = ''; });
+      if (heroText) { heroText.style.translate = ''; heroText.style.opacity = ''; }
+      return;
+    }
+    if (hero) {
+      var h = hero.offsetHeight;
+      if (y < h) {
+        heroMedia.forEach(function (el) { el.style.translate = '0 ' + (y * 0.35).toFixed(1) + 'px'; });
+        if (heroText) { heroText.style.translate = '0 ' + (y * 0.18).toFixed(1) + 'px'; heroText.style.opacity = Math.max(0, 1 - y / (h * 0.75)).toFixed(3); }
+      }
+    }
+    var move = function (el, frameEl, amount) {
+      var r = frameEl.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      var p = (vh - r.top) / (vh + r.height);
+      p = Math.min(1, Math.max(0, p));
+      el.style.translate = '0 ' + ((0.5 - p) * 2 * amount * r.height).toFixed(1) + 'px';
+    };
+    imgs.forEach(function (el) { move(el, el.parentElement, 0.04); });
+    clientMedia.forEach(function (el) { move(el, clients, 0.08); });
+  };
+  var req = function () { if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
+  window.addEventListener('scroll', req, { passive: true });
+  window.addEventListener('resize', req);
+  new MutationObserver(req).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  req();
+})();
+</script>
+'''
+
 PIN_SCRIPT = '''
 <script>
 // scrolling up brings the menu back as a bar pinned to the top; scrolling down hides it again
@@ -381,6 +437,7 @@ def convert(name, src):
     yt = YT_SCRIPT if 'data-yt' in body else ''
     yt += MEET_SCRIPT if 'class="meet"' in body else ''
     mo = MOTION_SCRIPT if re.search(r'<video[^>]* loop', body) else ''
+    yt += PARALLAX_SCRIPT if ('id="top"' in body and 'hero-video' in body) else ''
     return head + body + '\n' + (SCRIPT if 'data-track' in body else TOP_SCRIPT) + FIT_SCRIPT + MNAV_SCRIPT + PIN_SCRIPT + mo + yt + '\n</body>\n</html>\n'
 
 def main():

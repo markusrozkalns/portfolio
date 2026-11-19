@@ -206,6 +206,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
     <li class="step"><span class="node"></span><p class="id">D001</p><p class="type">Decision</p><h3>One altitude-based weather page</h3><p class="copy">Weather layers set by drag and drop, for several airports at once.</p><p class="from">From E002, I001</p></li>
     <li class="step"><span class="node"></span><p class="id">D002</p><p class="type">Decision</p><h3>Temperature by altitude</h3><p class="copy">I'd planned a single field. Instructors asked for temperature curves, and I changed my mind.</p><p class="from">From I001</p></li>
     <li class="step"><span class="node"></span><p class="id">D003</p><p class="type">Decision</p><h3>One IOS for both</h3><p class="copy">A single flexible IOS for helicopter and fixed-wing.</p><p class="from">From I002, I003</p></li>
+    <li class="step"><span class="node"></span><p class="id">D004</p><p class="type">Decision</p><h3>Eight design pillars</h3><p class="copy">Defined and presented at Alaska Airlines to guide every page.</p><p class="from">From E001, I003</p></li>
   </ol>
 </section>
 
@@ -224,13 +225,14 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
         <li style="border-bottom: 1px solid #262626;">Temperature curves by altitude, asked for by instructors once the layout was altitude-based</li>
       </ul>
       <div class="sub" style="margin-top: 56px; align-items: start;">
-        <figure style="grid-column: 1 / span 8; margin: 0;"><img data-fade src="../../img/ios-loft-fest-2026.jpg" alt="An instructor at the Instructor Operating Station follows a pilot in the Loft Dynamics H125 VR simulator" width="1800" height="1200" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">The Instructor Operating Station in use at Loft Fest 2026, with the H125 simulator</figcaption></figure>
+        <div style="grid-column: 1 / span 5;"><div style="position: relative; aspect-ratio: 16 / 9; overflow: hidden;"><img src="../../img/ios-weather-poster.jpg" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><video class="loop" src="../../img/ios-weather.mp4" poster="../../img/ios-weather-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></div><p class="meta" style="margin-top: 12px;">Several other pages followed and shipped on the same principles</p></div>
+        <figure style="grid-column: 6 / span 3; margin: 96px 0 0;"><img data-fade src="../../img/ios-temperature-curve.jpg" alt="Weather page detail: outside air temperature as a curve by altitude" width="1160" height="1346" loading="lazy" style="width: 100%; height: auto; display: block;"><figcaption class="meta" style="margin-top: 12px;">Temperature curve on the weather page, set point by point by altitude</figcaption></figure>
       </div>
     </div>
 
     <div style="margin-top: 144px;">
       <h3 class="h3" style="margin-top: 0;">Phase 2: a concept for one touch-first IOS, for both helicopter and fixed-wing</h3>
-      <p class="copy" style="margin-top: 16px; max-width: 728px;">Research at Alaska Airlines and Lufthansa Aviation Training shaped the next step: a concept for one touch-first IOS for both helicopter and fixed-wing. The concept was not implemented.</p>
+      <p class="copy" style="margin-top: 16px; max-width: 728px;">From the research at Alaska Airlines and Lufthansa, I defined eight design pillars and presented them to Alaska's leadership. The map was the open question: available on every page, and as familiar as the maps people use on their phones.</p>
       <figure class="sub" style="margin: 56px 0 0; align-items: start;">
         <div style="grid-column: 1 / span 5;">
           <img data-fade src="../../img/alaska-airlines-seattle.jpg" alt="Markus Rozkalns at Alaska Airlines headquarters in Seattle" width="1800" height="1350" loading="lazy" style="width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block;">
@@ -248,7 +250,7 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 <section class="wrap grid aband" style="margin-top: 168px; padding: 144px 48px 160px; background: #1c1c1b;">
   <div class="sticky" style="grid-column: 1 / span 3;"><h2 class="disp sec">Outcome</h2></div>
   <div style="grid-column: 5 / span 8;">
-    <p class="body" style="max-width: 720px;">The helicopter pages shipped, with one weather page in place of five tabs. Built from 30+ instructor and pilot interviews, it felt tailor-made to the instructors.</p>
+    <p class="body" style="max-width: 720px;">The helicopter pages shipped, with one weather page in place of five tabs. Built from 30+ instructor and pilot interviews, it felt tailor-made to the instructors, and the concept work that followed rests on eight design pillars I defined. Alaska Airlines leadership valued the long-term thinking and a concept that is expandable, adjustable, customizable and timeless. With less than a year in the industry, my outside view was called an advantage: not the same solution in new packaging, but a concept that tackles problems they had faced for decades.</p>
   </div>
 </section>
 
@@ -391,6 +393,30 @@ document.querySelectorAll('[data-track-wrap]').forEach(function (wrap) {
     if (!past) set(false); else if (d < -4) set(true); else if (d > 4) set(false);
     if (Math.abs(d) > 4) last = y;
   }, { passive: true });
+})();
+</script>
+<script>
+// every looping video gets a pause button; the choice is shared by all videos and remembered across pages
+(function () {
+  var vids = [].slice.call(document.querySelectorAll('video[loop]')); if (!vids.length) return;
+  var de = document.documentElement.lang === 'de';
+  var get = function () { try { return localStorage.getItem('rz-motion') === 'paused'; } catch (e) { return false; } };
+  var paused = get(); window.rzPaused = function () { return paused; };
+  var P = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M4 2v10M10 2v10" stroke="#eeede9" stroke-width="2"/></svg>';
+  var Y = '<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 2l8 5-8 5z" fill="none" stroke="#eeede9" stroke-width="1.5" stroke-linejoin="round"/></svg>';
+  var btns = [];
+  var paint = function () { btns.forEach(function (b) { b.innerHTML = paused ? Y : P; b.setAttribute('aria-label', paused ? (de ? 'Videos abspielen' : 'Play videos') : (de ? 'Videos pausieren' : 'Pause videos')); b.setAttribute('aria-pressed', paused ? 'true' : 'false'); }); };
+  var apply = function () { document.documentElement.classList.toggle('rz-paused', paused); vids.forEach(function (v) { if (paused) v.pause(); else if (v.dataset.inview !== '0') v.play().catch(function () {}); }); paint(); };
+  vids.forEach(function (v) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'vctl';
+    var link = v.closest('a'), host = link ? link.parentElement : v.parentElement;
+    if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+    if (v.classList.contains('hero-video')) { b.classList.add('vctl-hero'); var bar = host.querySelector('.bar'); var lift = function () { b.style.bottom = ((bar ? bar.offsetHeight : 0) + 16) + 'px'; }; lift(); window.addEventListener('resize', lift); window.addEventListener('load', lift); }
+    if (link) { var place = function () { b.style.top = (link.offsetTop + link.offsetHeight - 52) + 'px'; b.style.left = (link.offsetLeft + link.offsetWidth - 52) + 'px'; b.style.right = 'auto'; b.style.bottom = 'auto'; }; place(); window.addEventListener('resize', place); window.addEventListener('load', place); }
+    b.addEventListener('click', function () { paused = !paused; try { localStorage.setItem('rz-motion', paused ? 'paused' : 'play'); } catch (e) {} apply(); });
+    host.appendChild(b); btns.push(b);
+  });
+  apply();
 })();
 </script>
 </body>
