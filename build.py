@@ -431,6 +431,17 @@ def convert(name, src):
 <link rel="icon" type="image/png" href="{fp}img/favicon-32.png">
 <link rel="apple-touch-icon" href="{fp}img/apple-touch-icon.png">
 {helmet}
+<style>
+/* page-load fade for titles and hero text (19 Nov 2026): opacity only, no movement */
+@keyframes rzfade{{from{{opacity:0}}to{{opacity:1}}}}
+.rise{{animation:rzfade 1.4s cubic-bezier(.25,.1,.25,1) both}}
+.d1{{animation-delay:.2s}}
+section:has(>h1) > p.meta:first-child,section:has(>h1) > dl.facts,section:has(>h1) > nav,section:has(>h1) > p.lead,.lead{{animation:rzfade 1.4s cubic-bezier(.25,.1,.25,1) both}}
+section:has(>h1) > p.meta:first-child{{animation-delay:0s}}
+section:has(>h1) > p.lead,.lead,.rise.d1{{animation-delay:.2s}}
+section:has(>h1) > dl.facts,section:has(>h1) > nav{{animation-delay:.4s}}
+@media (prefers-reduced-motion:reduce){{.rise,.lead,section:has(>h1) > *{{animation:none !important}}}}
+</style>
 </head>
 <body>
 '''

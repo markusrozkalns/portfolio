@@ -125,6 +125,17 @@ section[style*="padding-top: 168px"],section[style*="padding-top: 200px"],sectio
 .hike-txt a{text-decoration-thickness:2px}
 @media (max-width:768px){.hike .bleed{aspect-ratio:auto !important;min-height:440px}.hike-txt{padding:0 16px 80px !important}.hike-txt p{font-size:22px !important}}
 </style>
+<style>
+/* page-load fade for titles and hero text (19 Nov 2026): opacity only, no movement */
+@keyframes rzfade{from{opacity:0}to{opacity:1}}
+.rise{animation:rzfade 1.4s cubic-bezier(.25,.1,.25,1) both}
+.d1{animation-delay:.2s}
+section:has(>h1) > p.meta:first-child,section:has(>h1) > dl.facts,section:has(>h1) > nav,section:has(>h1) > p.lead,.lead{animation:rzfade 1.4s cubic-bezier(.25,.1,.25,1) both}
+section:has(>h1) > p.meta:first-child{animation-delay:0s}
+section:has(>h1) > p.lead,.lead,.rise.d1{animation-delay:.2s}
+section:has(>h1) > dl.facts,section:has(>h1) > nav{animation-delay:.4s}
+@media (prefers-reduced-motion:reduce){.rise,.lead,section:has(>h1) > *{animation:none !important}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
