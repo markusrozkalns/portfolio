@@ -61,6 +61,7 @@ MOTION_SCRIPT = '''
   var paint = function () { btns.forEach(function (b) { b.innerHTML = paused ? Y : P; b.setAttribute('aria-label', paused ? (de ? 'Videos abspielen' : 'Play videos') : (de ? 'Videos pausieren' : 'Pause videos')); b.setAttribute('aria-pressed', paused ? 'true' : 'false'); }); };
   var apply = function () { document.documentElement.classList.toggle('rz-paused', paused); vids.forEach(function (v) { if (paused) v.pause(); else if (v.dataset.inview !== '0') v.play().catch(function () {}); }); paint(); };
   vids.forEach(function (v) {
+    if (v.hasAttribute('data-nopause')) return;
     var b = document.createElement('button'); b.type = 'button'; b.className = 'vctl';
     var link = v.closest('a'), host = link ? link.parentElement : v.parentElement;
     if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
