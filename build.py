@@ -191,6 +191,19 @@ MNAV_SCRIPT = '''
 })();
 </script>'''
 
+HERO_FADE_SCRIPT = '''
+<script>
+(function () {
+  var hero = document.getElementById('top'); if (!hero) return;
+  var on = function (el) { requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.add('is-on'); }); }); };
+  var poster = hero.querySelector(':scope > img');
+  if (poster) { if (poster.complete && poster.naturalWidth) on(poster); else { poster.addEventListener('load', function () { on(poster); }, { once: true }); poster.addEventListener('error', function () { on(poster); }, { once: true }); } }
+  var v = hero.querySelector(':scope > video.hero-video');
+  if (v) { if (!v.paused && v.readyState >= 3) on(v); else v.addEventListener('playing', function () { on(v); }, { once: true }); }
+})();
+</script>
+'''
+
 PARALLAX_SCRIPT = '''
 <style>
 @media (prefers-reduced-motion:no-preference){
@@ -441,6 +454,10 @@ section:has(>h1) > p.meta:first-child{{animation-delay:0s}}
 section:has(>h1) > p.lead,.lead,.rise.d1{{animation-delay:.2s}}
 section:has(>h1) > dl.facts,section:has(>h1) > nav{{animation-delay:.4s}}
 @media (prefers-reduced-motion:reduce){{.rise,.lead,section:has(>h1) > *{{animation:none !important}}}}
+/* hero video and poster fade in on load (21 Nov 2026) */
+html.js #top:has(>video.hero-video)>img,html.js #top>video.hero-video{{opacity:0;transition:opacity 1.6s cubic-bezier(.25,.1,.25,1)}}
+html.js #top:has(>video.hero-video)>img.is-on,html.js #top>video.hero-video.is-on{{opacity:1}}
+@media (prefers-reduced-motion:reduce){{html.js #top:has(>video.hero-video)>img{{opacity:1;transition:none}}}}
 </style>
 </head>
 <body>
@@ -448,7 +465,7 @@ section:has(>h1) > dl.facts,section:has(>h1) > nav{{animation-delay:.4s}}
     yt = YT_SCRIPT if 'data-yt' in body else ''
     yt += MEET_SCRIPT if 'class="meet"' in body else ''
     mo = MOTION_SCRIPT if re.search(r'<video[^>]* loop', body) else ''
-    yt += PARALLAX_SCRIPT if ('id="top"' in body and 'hero-video' in body) else ''
+    yt += (HERO_FADE_SCRIPT + PARALLAX_SCRIPT) if ('id="top"' in body and 'hero-video' in body) else ''
     return head + body + '\n' + (SCRIPT if 'data-track' in body else TOP_SCRIPT) + FIT_SCRIPT + MNAV_SCRIPT + PIN_SCRIPT + mo + yt + '\n</body>\n</html>\n'
 
 def main():
