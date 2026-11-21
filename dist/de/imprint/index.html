@@ -111,6 +111,7 @@ section:has(>h1) > dl.facts,section:has(>h1) > nav{animation-delay:.4s}
 @media (prefers-reduced-motion:reduce){.rise,.lead,section:has(>h1) > *{animation:none !important}}
 /* hero video and poster fade in on load (21 Nov 2026) */
 html.js #top:has(>video.hero-video)>img,html.js #top>video.hero-video{opacity:0;transition:opacity 1.6s cubic-bezier(.25,.1,.25,1)}
+html.js #top:has(>video.hero-video)>img{transition-duration:.7s}
 html.js #top:has(>video.hero-video)>img.is-on,html.js #top>video.hero-video.is-on{opacity:1}
 @media (prefers-reduced-motion:reduce){html.js #top:has(>video.hero-video)>img{opacity:1;transition:none}}
 </style>

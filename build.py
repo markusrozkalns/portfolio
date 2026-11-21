@@ -197,9 +197,19 @@ HERO_FADE_SCRIPT = '''
   var hero = document.getElementById('top'); if (!hero) return;
   var on = function (el) { requestAnimationFrame(function () { requestAnimationFrame(function () { el.classList.add('is-on'); }); }); };
   var poster = hero.querySelector(':scope > img');
-  if (poster) { if (poster.complete && poster.naturalWidth) on(poster); else { poster.addEventListener('load', function () { on(poster); }, { once: true }); poster.addEventListener('error', function () { on(poster); }, { once: true }); } }
   var v = hero.querySelector(':scope > video.hero-video');
-  if (v) { if (!v.paused && v.readyState >= 3) on(v); else v.addEventListener('playing', function () { on(v); }, { once: true }); }
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var playing = false, fallback = null;
+  // the still image is only a fallback: show it if the video has not started after 2.5 s (autoplay blocked, slow network, paused motion)
+  var showPoster = function () { if (!poster || playing) return; if (poster.complete && poster.naturalWidth) on(poster); else poster.addEventListener('load', function () { if (!playing) on(poster); }, { once: true }); };
+  if (!v || reduce || getComputedStyle(v).display === 'none' || document.documentElement.classList.contains('rz-paused')) { showPoster(); if (v) v.addEventListener('playing', function () { playing = true; poster && poster.classList.remove('is-on'); setTimeout(function () { on(v); }, 700); }, { once: true }); return; }
+  fallback = setTimeout(showPoster, 2500);
+  var start = function () {
+    if (playing) return; playing = true; clearTimeout(fallback);
+    if (poster && poster.classList.contains('is-on')) { poster.classList.remove('is-on'); setTimeout(function () { on(v); }, 700); }
+    else on(v);
+  };
+  if (!v.paused && v.readyState >= 3) start(); else v.addEventListener('playing', start, { once: true });
 })();
 </script>
 '''
@@ -456,6 +466,7 @@ section:has(>h1) > dl.facts,section:has(>h1) > nav{{animation-delay:.4s}}
 @media (prefers-reduced-motion:reduce){{.rise,.lead,section:has(>h1) > *{{animation:none !important}}}}
 /* hero video and poster fade in on load (21 Nov 2026) */
 html.js #top:has(>video.hero-video)>img,html.js #top>video.hero-video{{opacity:0;transition:opacity 1.6s cubic-bezier(.25,.1,.25,1)}}
+html.js #top:has(>video.hero-video)>img{{transition-duration:.7s}}
 html.js #top:has(>video.hero-video)>img.is-on,html.js #top>video.hero-video.is-on{{opacity:1}}
 @media (prefers-reduced-motion:reduce){{html.js #top:has(>video.hero-video)>img{{opacity:1;transition:none}}}}
 </style>
